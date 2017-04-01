@@ -6,7 +6,7 @@ import android.os.Bundle;
 public class MainActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {//、、s撒发过的爱的旦撒多d 人、
+    protected void onCreate(Bundle savedInstanceState) {//、、s撒发过的发个爱的旦撒多d 人、
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
