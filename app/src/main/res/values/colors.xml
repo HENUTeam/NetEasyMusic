@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary1">#3d48c3</color>
+    <color name="colorPrimaryDark1">#030789</color>
+    <color name="colorPrimaryLight1">#235ea7</color>
+    <color name="colorAccent1">#FF4081</color>
+    <color name="colorPrimary">#43b32a</color>
+    <color name="colorPrimaryDark">#058903</color>
+    <color name="colorPrimaryLight">#90e37d</color>
+    <color name="colorAccent">#942fcf</color>
+    <color name="colorWhite">#fffdfe</color>
+    <color name="colornone">#00000000</color>
+    <color name="colorGreenLightGreater">#6acf2f</color>
+    <color name="color_bantoumin">#515050</color>
+    <color name="colorlightWhite">#b4afaf</color>
+    <dimen name="layout_height_edittext">250dp</dimen>
+    <color name="red">#e22733</color>
+    <color name="lightred">#d1434d</color>
+    <color name="orange">#FF6600</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey_200">#EEEEEE</color>
+    <color name="grey_300">#E0E0E0</color>
+    <color name="black">#000000</color>
+    <color name="black_1">#333333</color>
+    <color name="amber">#BBFFC107</color>
+    <color name="color_appmain_toobar">#f510b9bc</color>
+
+</resources>
