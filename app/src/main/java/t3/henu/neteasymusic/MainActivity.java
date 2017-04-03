@@ -7,13 +7,11 @@ import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
+import android.support.v4.view.*;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.Toast;
+import android.widget.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +19,6 @@ import java.util.List;
 import t3.henu.neteasymusic.appMain.MyViewPagerAdapter;
 import t3.henu.neteasymusic.appMain.TabLayout_Mid;
 import t3.henu.neteasymusic.appMain_left.LogInactivity;
-//2request合格合格合格
 public class MainActivity extends AppCompatActivity {
 
     private TabLayout tabLayout;
@@ -62,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }//环2的少
+    }
 
     private void initToolbar() {
         tabLayout= (TabLayout) findViewById(R.id.id_appmain_toolbar_tabLayout);
