@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,7 +14,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/bg_drawerlayout_left_headbg">
+        android:background="@drawable/bg_drawerlayout_left_headbg"
+        android:id="@+id/relativeLayout">
 
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/roundedImageView"
@@ -21,10 +23,9 @@
             android:layout_height="60dp"
             android:src="@drawable/icon_login_photo"
             app:riv_corner_radius="100dp"
+            android:layout_marginLeft="15dp"
             android:layout_above="@+id/id_appmain_drawelayout_left_btn_signin"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="9dp"
-            android:layout_marginBottom="9dp" />
+            android:layout_alignStart="@+id/id_appmain_drawelayout_left_btn_signin" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -32,15 +33,36 @@
             android:textSize="20sp"
             android:textColor="@color/colorWhite"
             android:id="@+id/id_appmain_drawelayout_left_btn_signin"
+            android:background="@color/colornone"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
-            android:background="@color/colornone"/>
+            android:layout_marginStart="23dp" />
+        <Button
+            android:background="@drawable/appmain_left_bg_btn_qiandao"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:text="签到"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp"
+            android:layout_below="@+id/roundedImageView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="18dp" />
     </RelativeLayout>
 
 
-    <LinearLayout
+    <View
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="1dp"
+        android:background="@color/grey_300"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/view" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -49,26 +71,53 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:id="@+id/linearLayout">
+        app:layout_constraintRight_toRightOf="parent">
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="夜间模式" />
+            android:background="@color/colornone"
+            android:drawableLeft="@drawable/icon_drawer_left_yejian"
+            android:text="夜间模式"
+            android:textAlignment="center"
+            android:textSize="14sp" />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="设置" />
+            android:background="@color/colornone"
+            android:drawableLeft="@drawable/icon_drawer_left_shezhi"
+            android:paddingLeft="30dp"
+            android:text=" 设置"
+            android:textAlignment="textStart"
+            android:textSize="14sp" />
 
         <Button
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="退出" />
+           android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@color/colornone"
+            android:drawableLeft="@drawable/icon_drawer_left_tuichu"
+            android:text=" 退出"
+            android:textAlignment="textStart"
+            android:textSize="14sp" />
     </LinearLayout>
+
+    <ListView
+        android:id="@+id/id_appmain_drawelayout_left_recyclerview1"
+        android:layout_width="0dp"
+        android:scrollbars="none"
+        android:layout_height="0dp"
+        android:divider="@color/colornone"
+        android:dividerHeight="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/view"/>
+
 
 </android.support.constraint.ConstraintLayout>
