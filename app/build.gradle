@@ -1,5 +1,9 @@
 apply plugin: 'com.android.application'
 
+dependencies {
+    compile 'com.android.support:support-v4:25.+'
+    compile 'com.android.support:recyclerview-v7:25.+'
+}
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"

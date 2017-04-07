@@ -2,7 +2,7 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:state_selected="true"
-        android:drawable="@drawable/icon_appmain_music2_2"/>
-    <item android:drawable="@drawable/icon_appmain_music2_1"/>
+        android:drawable="@drawable/icon_appmain_music2_1"/>
+    <item android:drawable="@drawable/icon_appmain_music2_2"/>
 
 </selector>
