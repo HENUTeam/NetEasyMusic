@@ -42,8 +42,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".appMain_left.LogInactivity"/>
-        <activity android:name=".appMain_left.RegistActivity"/>
+        <activity android:name=".appMain_drawerlayout_start.LogInactivity"/>
+        <activity android:name=".appMain_drawerlayout_start.RegistActivity"/>
         <activity android:name=".MainActivity"/>
 
     </application>

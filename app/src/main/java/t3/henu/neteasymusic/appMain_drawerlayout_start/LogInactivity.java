@@ -1,4 +1,4 @@
-package t3.henu.neteasymusic.appMain_left;
+package t3.henu.neteasymusic.appMain_drawerlayout_start;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -39,6 +39,12 @@ public class LogInactivity extends AppCompatActivity implements View.OnClickList
         btn_forget.setOnClickListener(this);
         btn_newUser = (Button)findViewById(R.id.id_main_btn_newUser);
         btn_newUser.setOnClickListener(this);
+        findViewById(R.id.id_login_btn_return1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LogInactivity.this.finish();
+            }
+        });
     }
 
     @Override

@@ -15,16 +15,16 @@
     <color name="color_bantoumin">#515050</color>
     <color name="colorlightWhite">#b4afaf</color>
     <dimen name="layout_height_edittext">250dp</dimen>
-    <color name="red">#e22733</color>
-    <color name="lightred">#d1434d</color>
+    <color name="red">#ef1422</color>
+    <color name="lightred">#a6e71a28</color>
     <color name="orange">#FF6600</color>
     <color name="transparent">#00000000</color>
     <color name="white">#FFFFFF</color>
-    <color name="grey_200">#EEEEEE</color>
+    <color name="grey_200">#796e6e</color>
     <color name="grey_300">#E0E0E0</color>
     <color name="black">#000000</color>
     <color name="black_1">#333333</color>
     <color name="amber">#BBFFC107</color>
     <color name="color_appmain_toobar">#f510b9bc</color>
-
+    <color name="bantouming">#53c2bcbc</color>
 </resources>

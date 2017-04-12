@@ -2,15 +2,16 @@
 <resources>
     <string-array name="appmain_drawerlayout_left_menu_itemNames">
         <item>我的消息</item>
+        <item>我的消息</item>
         <item>会员中心</item>
         <item>商城</item>
-        <item>在线听歌听流量</item>
-        <item>"你好"</item>
+        <item>在线听歌免流量</item>
         <item>我的好友</item>
+        <item>"你好"</item>
 
         <item>附近的人</item>
-        <item>"你好"</item>
         <item>个性皮肤</item>
+        <item>"你好"</item>
         <item>听歌识曲</item>
         <item>定时停止播放</item>
         <item>音乐闹钟</item>
