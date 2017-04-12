@@ -1,4 +1,4 @@
-package t3.henu.neteasymusic.appMain_left;
+package t3.henu.neteasymusic.appMain_drawerlayout_start;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

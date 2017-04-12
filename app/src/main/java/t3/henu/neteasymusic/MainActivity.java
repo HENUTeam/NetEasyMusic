@@ -10,12 +10,13 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ListView;
 import android.widget.Toast;
+
+import com.chad.library.adapter.base.BaseQuickAdapter;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -23,9 +24,13 @@ import java.util.List;
 
 import t3.henu.neteasymusic.appMain.MyViewPagerAdapter;
 import t3.henu.neteasymusic.appMain.TabLayout_Mid;
-import t3.henu.neteasymusic.appMain_left.LogInactivity;
-import t3.henu.neteasymusic.appMain_left.ReViewAdaoter;
-import t3.henu.neteasymusic.appMain_left.RecyclerData;
+import t3.henu.neteasymusic.appMain_drawerlayout_start.LogInactivity;
+import t3.henu.neteasymusic.appMain_drawerlayout_start.RecyclerData;
+import t3.henu.neteasymusic.appMain_drawerlayout_start.RecyclerViewAdapter;
+import t3.henu.neteasymusic.appMain_left.GetAllMusic;
+
+;
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -37,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private RecyclerView appmain_drawerlayout_left_recyclerView;
     private String[] menuNames;
-    private int[] menuicons = new int[]{R.drawable.icon_appmain_left_menu_01, R.drawable.icon_appmain_left_menu_02,
+    private int[] menuicons = new int[]{R.drawable.icon_appmain_left_menu_01,
+            R.drawable.icon_appmain_left_menu_01, R.drawable.icon_appmain_left_menu_02,
             R.drawable.icon_appmain_left_menu_03, R.drawable.icon_appmain_left_menu_02
             , R.drawable.icon_appmain_left_menu_02, R.drawable.icon_appmain_left_menu_02,
             R.drawable.icon_appmain_left_menu_02, R.drawable.icon_appmain_left_menu_02
@@ -73,14 +79,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        Button btn_signin = (Button) findViewById(R.id.id_appmain_drawelayout_left_btn_signin);
-        btn_signin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LogInactivity.class);
-                startActivity(intent);
-            }
-        });
         initDrawerlayout_left_RecyclerView();
     }
 
@@ -93,8 +91,26 @@ public class MainActivity extends AppCompatActivity {
                 RecView_Datas.add(rd);
             }
         }
-        ReViewAdaoter adaoter = new ReViewAdaoter(this, RecView_Datas);
-        appmain_drawerlayout_left_recyclerView = (RecyclerView) findViewById(R.id.id_appmain_drawelayout_left_recyclerview1)
+
+        appmain_drawerlayout_left_recyclerView = (RecyclerView)
+                findViewById(R.id.id_appmain_drawelayout_left_recyclerview1);
+        appmain_drawerlayout_left_recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        RecyclerViewAdapter adaoter=new RecyclerViewAdapter(RecView_Datas);
+
+        adaoter.setOnRecyclerViewItemChildClickListener(new BaseQuickAdapter.OnRecyclerViewItemChildClickListener() {
+            @Override
+            public void onItemChildClick(BaseQuickAdapter baseQuickAdapter, View view, int i) {
+                if(view.getId()==R.id.id_appmain_drawelayout_left_btn_signin){
+                    startActivity(new Intent(MainActivity.this, LogInactivity.class));
+                }
+            }
+        });
+        adaoter.setOnRecyclerViewItemClickListener(new BaseQuickAdapter.OnRecyclerViewItemClickListener() {
+            @Override
+            public void onItemClick(View view, int i) {
+                startActivity(new Intent(MainActivity.this, LogInactivity.class));
+            }
+        });
         appmain_drawerlayout_left_recyclerView.setAdapter(adaoter);
     }
 
@@ -124,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
             if (fragment_appmain_left != null) {
                 fragment_appmain_left = new BlankFragment("第三个");
             }
-            fragments.add(new BlankFragment("第一个"));
+            fragments.add(new GetAllMusic());
             fragments.add(new TabLayout_Mid());
             fragments.add(new BlankFragment("第三个"));
         }
