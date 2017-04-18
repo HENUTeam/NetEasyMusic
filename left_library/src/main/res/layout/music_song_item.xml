@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginLeft="16dp"
+        android:background="@color/grey_200"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        android:id="@+id/textView2" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="-2dp">
+
+        <ImageView
+            android:id="@+id/id_songinfo_isplay"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_isplay"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.724"
+            android:layout_marginStart="16dp" />
+
+        <TextView
+            android:id="@+id/id_songinfo_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="17dp"
+            android:text="忘了哭"
+            android:textColor="@color/black_1"
+            android:textSize="25dp"
+            app:layout_constraintLeft_toRightOf="@+id/id_songinfo_isplay"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="15dp" />
+
+        <TextView
+            android:id="@+id/id_songinfo_author"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="-11dp"
+            android:maxWidth="250dp"
+            android:singleLine="true"
+            android:text="张学友阿打发打发打发按时发生sad萨达阿萨德"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/id_songinfo_isplay"
+            app:layout_constraintRight_toLeftOf="@+id/id_songinfo_more"
+            app:layout_constraintTop_toBottomOf="@+id/id_songinfo_name" />
+
+        <ImageButton
+            android:id="@+id/id_songinfo_mv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colornone"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_mv"
+            android:layout_marginStart="9dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintLeft_toRightOf="@+id/id_songinfo_name"
+            android:layout_marginLeft="8dp" />
+
+        <ImageButton
+            android:id="@+id/id_songinfo_more"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/colornone"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_more"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.533"
+            android:layout_marginEnd="8dp" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
