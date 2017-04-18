@@ -22,14 +22,14 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import t3.henu.left_library.Fragments.LeftRecyclerView;
 import t3.henu.neteasymusic.appMain.MyViewPagerAdapter;
 import t3.henu.neteasymusic.appMain.TabLayout_Mid;
 import t3.henu.neteasymusic.appMain_drawerlayout_start.LogInactivity;
 import t3.henu.neteasymusic.appMain_drawerlayout_start.RecyclerData;
 import t3.henu.neteasymusic.appMain_drawerlayout_start.RecyclerViewAdapter;
-import t3.henu.neteasymusic.appMain_left.GetAllMusic;
 
-;
+
 
 
 
@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
             if (fragment_appmain_left != null) {
                 fragment_appmain_left = new BlankFragment("第三个");
             }
-            fragments.add(new GetAllMusic());
+            fragments.add(new LeftRecyclerView());
             fragments.add(new TabLayout_Mid());
             fragments.add(new BlankFragment("第三个"));
         }
