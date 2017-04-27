@@ -5,22 +5,40 @@ package t3.henu.left_library.Activities;
  */
 
 public class SongInfo {
-    private String songName;
-    private String singer;
+    public long Id,size,duration;
+    public String song,path,singer;
 
-    public String getSongName() {
-        return songName;
+    public long getId() {
+        return Id;
     }
 
-    public void setSongName(String songName) {
-        this.songName = songName;
+    public void setId(long id) {
+        Id = id;
     }
 
-    public String getSinger() {
-        return singer;
+    public long getSize() {
+        return size;
     }
 
-    public void setSinger(String singer) {
-        this.singer = singer;
+    public void setSize(long size) {
+        this.size = size;
+    }
+
+    public long getDuration() {
+        return duration;
+    }
+
+    public void setDuration(long duration) {
+        this.duration = duration;
+    }
+
+    public String getSong() {
+        int i=song.lastIndexOf('.');
+        String song1="";
+        if(i<song.length()){
+             song1=song.substring(0,song.length()-4);
+        }
+
+        return song1;
     }
 }
