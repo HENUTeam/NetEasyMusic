@@ -20,8 +20,8 @@
             android:layout_marginLeft="-10dp"
             android:src="@drawable/icon_return"
             android:background="@color/colornone"
-            android:layout_width="50dp"
-            android:layout_height="30dp"
+            android:layout_width="35dp"
+            android:layout_height="20dp"
             android:onClick="finish"/>
         <TextView
             android:text="本地音乐"

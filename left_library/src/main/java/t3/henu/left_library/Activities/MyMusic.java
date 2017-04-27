@@ -5,21 +5,19 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import t3.henu.left_library.Activities.Fragments.SongRecyclerview;
-import t3.henu.left_library.BlankFragment;
-import t3.henu.left_library.R;
+import t3.henu.left_library.Activities.Fragments.*;
+import t3.henu.left_library.*;
 
 /**
  * Created by 高逸博 on 2017/4/14.
  */
 
-public class MyMusic extends AppCompatActivity {
+public class MyMusic extends MainActivity {
 
     private ViewPager viewPager;
     private TabLayout tabLayout;

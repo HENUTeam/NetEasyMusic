@@ -16,7 +16,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import t3.henu.left_library.Activities.*;
+import t3.henu.left_library.Activities.MyMusic;
 import t3.henu.left_library.R;
 
 /**
@@ -32,6 +32,7 @@ public class LeftRecyclerView extends Fragment {
     private String []numbers;
     private int images[]={R.drawable.icon_music_first,R.drawable.icon_bofang,R.drawable.icon_mydown,
                         R.drawable.icon_diantai,R.drawable.icon_shoucang};
+    private Intent intent1=null;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +40,7 @@ public class LeftRecyclerView extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(final LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         rootView=inflater.inflate(R.layout.fragment_recyclerview,container,false);
         recyclerView= (RecyclerView) rootView.findViewById(R.id.id_recycler_Allmusic);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -62,7 +63,6 @@ public class LeftRecyclerView extends Fragment {
             String nu[]={"6","25"};
             for(int i=0;i<nu.length;i++){
                 RecyclerData recyclerData=new RecyclerData(image,text[i],nu[i]);
-                
                 mDatas.add(recyclerData);
             }
         }
@@ -72,10 +72,15 @@ public class LeftRecyclerView extends Fragment {
             @Override
             public void onItemClick(View view, int i) {
                 if(i==0){
-                    startActivity(new Intent(getContext(), MyMusic.class));
+                    if(intent1==null){
+                        intent1=new Intent(getContext(), MyMusic.class);
+                    }
+                    startActivity(intent1);
+                }else{
+                    toast(mDatas.get(i).getText());
                 }
 
-                toast(mDatas.get(i).getText());
+
             }
         });
         return rootView;
