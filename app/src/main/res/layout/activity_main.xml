@@ -11,9 +11,6 @@
         android:id="@+id/id_appmain_toobar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginTop="0dp"
         android:background="@color/red"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -48,24 +45,37 @@
                 android:icon="@drawable/appmain_toolbar_tablayout_icon1" />
 
             <android.support.design.widget.TabItem
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:icon="@drawable/appmain_toolbar_tablayout_icon2" />
 
         </android.support.design.widget.TabLayout>
     </android.support.v7.widget.Toolbar>
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/id_appmain_viewpager"
+    <FrameLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="0dp"
-        app:layout_constraintTop_toBottomOf="@+id/id_appmain_toobar" />
+        app:layout_constraintTop_toBottomOf="@+id/id_appmain_toobar">
 
+        <android.support.v4.view.ViewPager
+            android:id="@+id/id_appmain_viewpager"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"/>
+        <include layout="@layout/flowplaymusic"
+            android:layout_gravity="bottom"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+    </FrameLayout>
 
 
 </android.support.constraint.ConstraintLayout>
