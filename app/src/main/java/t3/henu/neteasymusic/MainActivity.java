@@ -5,6 +5,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.TabLayout;
@@ -12,6 +13,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -23,18 +25,18 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
 import t3.henu.left_library.Fragments.LeftRecyclerView;
+import t3.henu.left_library.Services.PlayService;
 import t3.henu.neteasymusic.appMain.MyViewPagerAdapter;
 import t3.henu.neteasymusic.appMain.TabLayout_Mid;
 import t3.henu.neteasymusic.appMain_drawerlayout_start.LogInactivity;
-import t3.henu.neteasymusic.appMain_drawerlayout_start.RecyclerData;
-import t3.henu.neteasymusic.appMain_drawerlayout_start.RecyclerViewAdapter;
+import t3.henu.neteasymusic.appMain_drawerlayout_start.RecyclerViewData;
+import t3.henu.neteasymusic.appMain_drawerlayout_start.RecyclerviewAdapter;
 
-public class MainActivity extends t3.henu.left_library.MainActivity  {
+public class MainActivity extends AppCompatActivity {
     final private int REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS = 124;
     final private int WRITE_EXTERNAL_STORAGE_REQUEST_CODE = 122;
     final private int READ_SMS_REQUES_CODE = 122;
@@ -44,25 +46,17 @@ public class MainActivity extends t3.henu.left_library.MainActivity  {
     private List<Fragment> fragments = new ArrayList<Fragment>();
     private ConstraintLayout constraintLayout_left;
     private DrawerLayout drawerLayout;
-    private RecyclerView appmain_drawerlayout_left_recyclerView;
-    private String[] menuNames;
-    private int[] menuicons = new int[]{R.drawable.icon_appmain_left_menu_01,
-            R.drawable.icon_appmain_left_menu_01, R.drawable.icon_appmain_left_menu_02,
-            R.drawable.icon_appmain_left_menu_03, R.drawable.icon_appmain_left_menu_02
-            , R.drawable.icon_appmain_left_menu_02, R.drawable.icon_appmain_left_menu_02,
-            R.drawable.icon_appmain_left_menu_02, R.drawable.icon_appmain_left_menu_02
-            , R.drawable.icon_appmain_left_menu_02, R.drawable.icon_appmain_left_menu_02,
-            R.drawable.icon_appmain_left_menu_02, R.drawable.icon_appmain_left_menu_02
-            , R.drawable.icon_appmain_left_menu_02, R.drawable.icon_appmain_left_menu_02
-            , R.drawable.icon_appmain_left_menu_02, R.drawable.icon_appmain_left_menu_02};
+    private RecyclerView recyclerView;
     Fragment fragment_appmain_left = null;
-    private List<RecyclerData> RecView_Datas = new LinkedList<RecyclerData>();
-
+    List<RecyclerViewData>lists=new ArrayList<RecyclerViewData>();
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_drawerlayout);
         initView();
+        Intent in=new Intent(this, PlayService.class);
+        bindService(in, t3.henu.left_library.MainActivity.con,BIND_AUTO_CREATE);
+
     }
 
     private void initView() {
@@ -71,7 +65,9 @@ public class MainActivity extends t3.henu.left_library.MainActivity  {
         initDrawerlayout();
         solvePermisson();
         drawerLayout = (DrawerLayout) findViewById(R.id.id_appmain_drawelayout);
+
     }
+
 
     private void solvePermisson() {
         List<String> permissionsNeeded = new ArrayList<String>();
@@ -168,43 +164,64 @@ public class MainActivity extends t3.henu.left_library.MainActivity  {
                 }
             }
         });
+        /*Toolbar toolbar= (Toolbar) findViewById(R.id.id_appmain_toobar);
+        setSupportActionBar(toolbar);
+        ActionBar actionBar=getSupportActionBar();
+        if(actionBar!=null){
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeAsUpIndicator(R.drawable.icon_menu);
+        }*/
         final RelativeLayout relativeLayout=(RelativeLayout)findViewById(R.id.id_base_play);
-
-        initDrawerlayout_left_RecyclerView();
+        initNavigationView();
 
     }
 
-    private void initDrawerlayout_left_RecyclerView() {
-
-        menuNames = getResources().getStringArray(R.array.appmain_drawerlayout_left_menu_itemNames);
-        if (RecView_Datas.size() <= 0) {
-            for (int i = 0; i < menuNames.length; i++) {
-                RecyclerData rd = new RecyclerData(menuicons[i], menuNames[i]);
-                RecView_Datas.add(rd);
+    private void initNavigationView() {
+        recyclerView= (RecyclerView) findViewById(R.id.id_left_recyclerview);
+        if(lists.size()<=0){
+            String []texs=getResources().getStringArray(R.array.appmain_drawerlayout_left_menu_itemNames);
+            int []images={R.mipmap.ic_launcher,R.drawable.icon_appmain_left_menu_01,R.drawable.icon_appmain_left_menu_02,R.drawable.icon_appmain_left_menu_03,
+                    R.drawable.icon_appmain_left_menu_01,R.drawable.icon_appmain_left_menu_02,R.drawable.icon_appmain_left_menu_03,
+                    R.drawable.icon_appmain_left_menu_01,R.drawable.icon_appmain_left_menu_02,R.drawable.icon_appmain_left_menu_03,
+                    R.drawable.icon_appmain_left_menu_01,R.drawable.icon_appmain_left_menu_02,R.drawable.icon_appmain_left_menu_03,
+                    R.drawable.icon_appmain_left_menu_01,R.drawable.icon_appmain_left_menu_02,R.drawable.icon_appmain_left_menu_03,
+                    R.drawable.icon_appmain_left_menu_01,R.drawable.icon_appmain_left_menu_02};
+            for(int i=0;i<texs.length;i++){
+                RecyclerViewData r=new RecyclerViewData(images[i],texs[i]);
+                lists.add(r);
             }
         }
-
-        appmain_drawerlayout_left_recyclerView = (RecyclerView)
-                findViewById(R.id.id_appmain_drawelayout_left_recyclerview1);
-        appmain_drawerlayout_left_recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        RecyclerViewAdapter adaoter = new RecyclerViewAdapter(RecView_Datas);
-
-        adaoter.setOnRecyclerViewItemChildClickListener(new BaseQuickAdapter.OnRecyclerViewItemChildClickListener() {
+        RecyclerviewAdapter adapter=new RecyclerviewAdapter(lists);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        adapter.setOnRecyclerViewItemClickListener(new BaseQuickAdapter.OnRecyclerViewItemClickListener() {
             @Override
-            public void onItemChildClick(BaseQuickAdapter baseQuickAdapter, View view, int i) {
-                if (view.getId() == R.id.id_appmain_drawelayout_left_btn_signin) {
-                    startActivity(new Intent(MainActivity.this, LogInactivity.class));
+            public void onItemClick(View view, int i) {
+                if(i!=0&&i!=5&&i!=8){
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            Intent in=new Intent(MainActivity.this, LogInactivity.class);
+                            startActivity(in);
+                        }
+                    },500);
+
                 }
             }
         });
-        adaoter.setOnRecyclerViewItemClickListener(new BaseQuickAdapter.OnRecyclerViewItemClickListener() {
+        adapter.setOnRecyclerViewItemChildClickListener(new BaseQuickAdapter.OnRecyclerViewItemChildClickListener() {
             @Override
-            public void onItemClick(View view, int i) {
-                startActivity(new Intent(MainActivity.this, LogInactivity.class));
+            public void onItemChildClick(BaseQuickAdapter baseQuickAdapter, View view, int i) {
+                switch (view.getId()){
+                    case R.id.id_appmain_drawelayout_left_btn_signin:
+                        Intent in=new Intent(MainActivity.this, LogInactivity.class);
+                        startActivity(in);
+                        break;
+                }
             }
         });
-        appmain_drawerlayout_left_recyclerView.setAdapter(adaoter);
+        recyclerView.setAdapter(adapter);
     }
+
 
     private void initToolbar() {
         tabLayout = (TabLayout) findViewById(R.id.id_appmain_toolbar_tabLayout);
@@ -262,6 +279,8 @@ public class MainActivity extends t3.henu.left_library.MainActivity  {
         Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
     }
 
-
-
+    @Override
+    protected void onDestroy() {
+        unbindService(t3.henu.left_library.MainActivity.con);
+    }
 }

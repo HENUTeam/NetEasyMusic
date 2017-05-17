@@ -15,7 +15,7 @@
     <color name="color_bantoumin">#515050</color>
     <color name="colorlightWhite">#b4afaf</color>
     <dimen name="layout_height_edittext">250dp</dimen>
-    <color name="red">#ef1422</color>
+    <color name="red">#e1333e</color>
     <color name="lightred">#a6e71a28</color>
     <color name="orange">#FF6600</color>
     <color name="transparent">#00000000</color>

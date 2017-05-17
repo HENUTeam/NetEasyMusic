@@ -48,14 +48,9 @@ public class LeftRecyclerView extends Fragment {
         if(mDatas.size()<=0){
             texts=getResources().getStringArray(R.array.strs_music_liebiao);
             numbers=getResources().getStringArray(R.array.strs_music_number);
-            for(int i=0;i<texts.length*2-1;i++){
+            for(int i=0;i<texts.length;i++){
                 RecyclerData recyclerData;
-                if(i%2==1){
-                    recyclerData=new RecyclerData(images[0]);
-                }
-                else{
-                    recyclerData=new RecyclerData(images[i/2],texts[i/2],numbers[i/2]);
-                }
+                recyclerData=new RecyclerData(images[i],texts[i],numbers[i]);
                 mDatas.add(recyclerData);
             }
             int image=R.drawable.icon_next_right;

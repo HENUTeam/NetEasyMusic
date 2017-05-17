@@ -21,7 +21,6 @@ public class RecyclerAdapter extends BaseMultiItemQuickAdapter<RecyclerData> {
         super(data);
         this.datas=data;
         addItemType(RecyclerData.STYLE, R.layout.recyclerviewitem);
-        addItemType(RecyclerData.DIVIDER, R.layout.recyclerview_divider);
         addItemType(RecyclerData.GEDAN,R.layout.recyclerview_gedan);
         addItemType(RecyclerData.DIVIDER_CHILD,R.layout.recyclerview_gedan_item);
     }
@@ -29,16 +28,11 @@ public class RecyclerAdapter extends BaseMultiItemQuickAdapter<RecyclerData> {
     @Override
     protected int getDefItemViewType(int position) {
         //Log.e(TAG, "convert: "+ position );
-        if (position < 9) {
-            if (position%2 == 0) {
-                return RecyclerData.STYLE;
-            } else if(position%2==1) {
-                return RecyclerData.DIVIDER;
-            }
+        if (position < 5) {
+            return RecyclerData.STYLE;
         }else {
             return RecyclerData.GEDAN;
         }
-        return RecyclerData.STYLE;
     }
 
 
@@ -53,7 +47,6 @@ public class RecyclerAdapter extends BaseMultiItemQuickAdapter<RecyclerData> {
                 baseViewHolder.setText(R.id.id_recycler_Allmusic_recyclerItem_tview1, recyclerData.getText());
                 baseViewHolder.setText(R.id.id_recycler_Allmusic_recyclerItem_tview2, recyclerData.getNum());
                 break;
-            case RecyclerData.DIVIDER:break;
             case RecyclerData.GEDAN:
                 baseViewHolder.setText(R.id.id_recycler_Allmusic_recyclerItem_gedan_tview1,recyclerData.getText());
                 baseViewHolder.setText(R.id.id_recycler_Allmusic_recyclerItem_gedan_tview2,recyclerData.getNum());
