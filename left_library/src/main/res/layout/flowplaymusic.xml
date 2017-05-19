@@ -34,35 +34,40 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
                 android:gravity="center_vertical">
                 <TextView
-                    android:text="六月的雨"
+                    android:text="欢迎来到网易云"
+                    android:id="@+id/id_textview_songName"
                     android:textColor="@color/black"
+                    android:maxEms="11"
                     android:textSize="17dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:text="胡歌"
                     android:textSize="14dp"
+                    android:id="@+id/id_textview_songsinger"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>
         </LinearLayout>
 
         <ImageButton
-            android:id="@+id/id_btn_play_music"
+            android:src="@drawable/icon_play1"
             android:background="@drawable/touch_bg"
-            android:src="@drawable/icon_play"
+            android:id="@+id/id_flow_play"
             android:scaleType="centerCrop"
             android:layout_marginRight="10dp"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
         <ImageButton
-            android:src="@drawable/icon_liebiao"
+            android:src="@drawable/icon_liebiao1"
             android:background="@drawable/touch_bg"
             android:scaleType="centerCrop"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="10dp"/>
     </LinearLayout>
 
 </RelativeLayout>
