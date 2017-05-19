@@ -18,7 +18,7 @@ import android.widget.TextView;
 import t3.henu.left_library.Services.PlayService;
 
 public class MainActivity extends AppCompatActivity {
-    public static enum play_status{IS_PLAY,STOP};
+    public static enum play_status{IS_PLAY,STOP};//已经成功了
     private FrameLayout mContentContainer;
     public static View mFloatView;
     protected Context mContext;
