@@ -15,7 +15,7 @@ public class PlayReceive extends BroadcastReceiver {
         // an Intent broadcast.
         Bundle bun=intent.getBundleExtra("Bunde");
         SongInfo songInfo= (SongInfo) bun.getSerializable("songinfo");
-       MainActivity.text_singer.setText(songInfo.singer);
+       MainActivity.text_singer.setText(songInfo.getSinger());
         MainActivity.text_song.setText(songInfo.getSong());
         boolean status= (boolean) intent.getExtras().get("play_status");
         if(status==false){

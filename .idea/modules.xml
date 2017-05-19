@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/NetEasyMusic.iml" filepath="$PROJECT_DIR$/NetEasyMusic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/left_library/left_library.iml" filepath="$PROJECT_DIR$/left_library/left_library.iml" />
     </modules>
   </component>
 </project>

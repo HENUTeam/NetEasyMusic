@@ -15,7 +15,7 @@ public class PlayMusic_Receiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         Bundle bun=intent.getBundleExtra("Bunde");
         SongInfo songInfo= (SongInfo) bun.getSerializable("songinfo");
-        MainActivity.t_singer.setText(songInfo.singer);
+        MainActivity.t_singer.setText(songInfo.getSinger());
         MainActivity.t_songname.setText(songInfo.getSong());
         boolean status= (boolean) intent.getExtras().get("play_status");
         if(status==false){
