@@ -35,17 +35,17 @@ public class MusicUtils {
 
             do {
                 SongInfo mp3 = new SongInfo();
-                mp3.song = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DISPLAY_NAME));
-                mp3.singer = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ARTIST));
-                mp3.path = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DATA));
-                mp3.duration = cursor.getInt(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DURATION));
-                mp3.size = cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.SIZE));
-                if (mp3.size > 1000 * 800) {
+                mp3.setSong(cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DISPLAY_NAME)));
+                mp3.setSinger( cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ARTIST)));
+                mp3.setPath(cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DATA)));
+                mp3.setDuration(cursor.getInt(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.DURATION)));
+                mp3.setSize( cursor.getLong(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.SIZE)));
+                if (mp3.getSize() > 1000 * 800) {
                     // 注释部分是切割标题，分离出歌曲名和歌手 （本地媒体库读取的歌曲信息不规范）
-                    if (mp3.song.contains("-")) {
-                        String[] str = mp3.song.split("-");
-                        mp3.singer = str[0];
-                        mp3.song = str[1];
+                    if (mp3.getSong().contains("-")) {
+                        String[] str = mp3.getSong().split("-");
+                        mp3.setSinger( str[0]);
+                        mp3.setSong( str[1]);
                     }
                     list.add(mp3);
                 }
