@@ -39,7 +39,7 @@
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="gyb.ne.play_music" />
+                <action android:name="gyb.ne.play_music.play" />
             </intent-filter>
         </receiver>
 

@@ -19,6 +19,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -37,7 +38,7 @@ import t3.henu.neteasymusic.appMain_drawerlayout_start.RecyclerViewData;
 import t3.henu.neteasymusic.appMain_drawerlayout_start.RecyclerviewAdapter;
 
 public class MainActivity extends AppCompatActivity {
-    final private int REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS = 124;
+    final private int REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS = 124;//高逸博2017/5/19水电费多少
     final private int WRITE_EXTERNAL_STORAGE_REQUEST_CODE = 122;
     final private int READ_SMS_REQUES_CODE = 122;
     final private int READ_EXTERNAL_STORAGE_REQUEST_CODE = 123;
@@ -47,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
     private ConstraintLayout constraintLayout_left;
     private DrawerLayout drawerLayout;
     private RecyclerView recyclerView;
+    public static TextView text_singer,text_song;
+    public static ImageButton btn_play;
     Fragment fragment_appmain_left = null;
     List<RecyclerViewData>lists=new ArrayList<RecyclerViewData>();
     @Override
@@ -65,12 +68,26 @@ public class MainActivity extends AppCompatActivity {
         initDrawerlayout();
         solvePermisson();
         drawerLayout = (DrawerLayout) findViewById(R.id.id_appmain_drawelayout);
+        initflow();
+    }
 
+    private void initflow() {
+        text_singer= (TextView) findViewById(R.id.id_textview_songsinger);
+        text_song= (TextView) findViewById(R.id.id_textview_songName);
+        btn_play= (ImageButton) findViewById(R.id.id_flow_play);
+        btn_play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                t3.henu.left_library.MainActivity.playBinder.setIsPlay();
+                toast("播放");
+            }
+        });
     }
 
 
     private void solvePermisson() {
         List<String> permissionsNeeded = new ArrayList<String>();
+
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_SMS)
                 != PackageManager.PERMISSION_GRANTED) {

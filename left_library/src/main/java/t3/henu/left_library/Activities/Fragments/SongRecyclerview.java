@@ -23,6 +23,7 @@ import java.util.List;
 
 import t3.henu.left_library.Activities.MusicUtils;
 import t3.henu.left_library.Activities.SongInfo;
+import t3.henu.left_library.MainActivity;
 import t3.henu.left_library.R;
 
 /**
@@ -94,7 +95,9 @@ public class SongRecyclerview extends Fragment {
         adapter.setOnRecyclerViewItemClickListener(new BaseQuickAdapter.OnRecyclerViewItemClickListener() {
             @Override
             public void onItemClick(View view, int i) {
-                toast(listsong.get(i).getSong() + ",路径：" + listsong.get(i).path);
+                //toast(listsong.get(i).getSong() + ",路径：" + listsong.get(i).path);
+                MainActivity.playBinder.setPlayList(listsong);
+                MainActivity.playBinder.setCurrent(i);
             }
         });
         adapter.setOnRecyclerViewItemChildClickListener(new BaseQuickAdapter.OnRecyclerViewItemChildClickListener() {

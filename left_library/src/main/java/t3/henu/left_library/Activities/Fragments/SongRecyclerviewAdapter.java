@@ -33,7 +33,7 @@ public class SongRecyclerviewAdapter extends BaseQuickAdapter<SongInfo> {
 
     @Override
     protected void convert(BaseViewHolder baseViewHolder, SongInfo songInfo) {
-        baseViewHolder.setText(R.id.id_songinfo_author,songInfo.singer);
+        baseViewHolder.setText(R.id.id_songinfo_author,songInfo.getSinger());
         baseViewHolder.setText(R.id.id_songinfo_name,songInfo.getSong());
         baseViewHolder.setOnClickListener(R.id.id_songinfo_more,new OnItemChildClickListener());
         baseViewHolder.setOnClickListener(R.id.id_songinfo_mv,new OnItemChildClickListener());

@@ -4,7 +4,9 @@ import android.app.Service;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Binder;
+import android.os.Bundle;
 import android.os.IBinder;
+import android.widget.Toast;
 
 import java.util.List;
 import java.util.Random;
@@ -13,11 +15,12 @@ import t3.henu.left_library.Activities.MusicUtils;
 import t3.henu.left_library.Activities.SongInfo;
 
 public class PlayService extends Service {
+    public final static String RECiEVE1="gyb.ne.play_music.play";
     public static MediaPlayer mediaPlayer;
     public static List<SongInfo>play_list;//当前播放的列表
     public static int status=1;//1代表顺序循环，2代表随机循环，3代表单曲循环
     public int current=0;//当前播放的歌曲序号
-    public boolean isplay=false;//是否播放
+    public static boolean isplay=false;//是否播放
     public long hasTime=0;//已经播放的歌曲时间
     public long allTime;//歌曲总时间
 
@@ -29,16 +32,41 @@ public class PlayService extends Service {
         public void setPlayList(List<SongInfo> list){
             play_list=list;
         }
-        public void setIsPlay(boolean b){
-            isplay=b;
+        public void setIsPlay(){
+           if(isplay==true){
+               //toast("停止");
+               pause();
+           }else{ //toast("开始");
+               resume();
+           }
+        }
 
+        public void setCurrent(int curr) {
+            current = curr;
+            play(0);
         }
     }
 
     @Override
     public void onCreate() {
-        mediaPlayer=new MediaPlayer();
-        play_list=MusicUtils.getMp3Infos(getBaseContext());
+        init();
+    }
+
+    public PlayService() {
+    }
+
+
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        init();
+        return super.onStartCommand(intent, flags, startId);
+    }
+
+    private void init() {
+        if(mediaPlayer==null){
+            mediaPlayer=new MediaPlayer();
+        }
+        play_list= MusicUtils.getMp3Infos(getBaseContext());
         current=0;
         hasTime=0;
         allTime=play_list.get(current).getDuration();
@@ -56,10 +84,6 @@ public class PlayService extends Service {
         });
     }
 
-    public PlayService() {
-    }
-
-
     /**
      * 播放音乐
      *
@@ -67,14 +91,19 @@ public class PlayService extends Service {
      */
     private void play(int currentTime) {
         try {
+            isplay=true; sendBroad();
             mediaPlayer.reset();// 把各项参数恢复到初始状态
             mediaPlayer.setDataSource(play_list.get(current).path);
             mediaPlayer.prepare(); // 进行缓冲
             mediaPlayer.setOnPreparedListener(new PreparedListener(currentTime));// 注册一个监听器
-
+           // toast(current+":"+play_list.get(current).path);
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private void toast(String s) {
+        Toast.makeText(getBaseContext(),s,Toast.LENGTH_SHORT).show();
     }
 
     /**
@@ -83,14 +112,31 @@ public class PlayService extends Service {
     private void pause() {
         if (mediaPlayer != null && mediaPlayer.isPlaying()) {
             mediaPlayer.pause();
-            isplay = true;
+            //MainActivity.btn_play.setImageResource(R.drawable.icon_play1);
+            isplay = false;
+            sendBroad();
         }
     }
 
+    public  void sendBroad() {
+        Intent in=new Intent();
+        in.putExtra("play_status",isplay);
+        if(play_list.size()>0){
+            Bundle bund=new Bundle();
+            bund.putSerializable("songinfo",play_list.get(current));
+            in.putExtra("Bunde",bund);
+        }
+        in.setAction(RECiEVE1);
+        sendBroadcast(in);
+    }
+
     private void resume() {
-        if (isplay) {
+        if (!isplay) {
+          //  MainActivity.btn_play.setImageResource(R.drawable.icon_pause);
+            isplay = true; sendBroad();
             mediaPlayer.start();
-            isplay = false;
+
+            //play(0);
         }
     }
 
