@@ -8,7 +8,9 @@ import java.util.List;
 import t3.henu.neteasymusic.R;
 
 /**
- * Created by 高逸博  撒打算 on 2017/5/3.
+ * Created by 高逸博  撒打算 on 2017/5/3.  分个1
+ * 
+ *
  */
 
 public class RecyclerviewAdapter extends BaseMultiItemQuickAdapter<RecyclerViewData> {
