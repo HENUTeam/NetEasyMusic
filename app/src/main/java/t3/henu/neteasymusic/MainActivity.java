@@ -38,7 +38,7 @@ import t3.henu.neteasymusic.appMain_drawerlayout_start.RecyclerViewData;
 import t3.henu.neteasymusic.appMain_drawerlayout_start.RecyclerviewAdapter;
 
 public class MainActivity extends AppCompatActivity {
-    final private int REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS = 124;//高逸博2017/5/19水电费多少
+    final private int REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS = 124;//高逸博2017/5/19
     final private int WRITE_EXTERNAL_STORAGE_REQUEST_CODE = 122;
     final private int READ_SMS_REQUES_CODE = 122;
     final private int READ_EXTERNAL_STORAGE_REQUEST_CODE = 123;
