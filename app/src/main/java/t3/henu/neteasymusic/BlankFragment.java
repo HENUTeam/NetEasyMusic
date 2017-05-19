@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 /**
- * Created by 高逸博 on 2017/4/1.
+ * Created by 高逸博 on 2017/4/1.   卡是单卡双卡大时代撒
  */
 
 public class BlankFragment extends Fragment {
