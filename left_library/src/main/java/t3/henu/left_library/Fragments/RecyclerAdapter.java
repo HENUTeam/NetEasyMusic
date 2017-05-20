@@ -1,13 +1,11 @@
 package t3.henu.left_library.Fragments;
 
 import android.view.View;
-
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import t3.henu.left_library.R;
 
 import java.util.List;
-
-import t3.henu.left_library.R;
 
 
 /**
@@ -41,7 +39,7 @@ public class RecyclerAdapter extends BaseMultiItemQuickAdapter<RecyclerData> {
     protected void convert(final BaseViewHolder baseViewHolder, RecyclerData recyclerData) {
         switch (baseViewHolder.getItemViewType()) {
             case RecyclerData.STYLE:
-                int pos=baseViewHolder.getPosition();
+
 
                 baseViewHolder.setImageResource(R.id.id_recycler_Allmusic_recyclerItem_iview1, recyclerData.getImage());
                 baseViewHolder.setText(R.id.id_recycler_Allmusic_recyclerItem_tview1, recyclerData.getText());
