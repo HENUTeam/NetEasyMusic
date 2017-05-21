@@ -55,12 +55,15 @@ public class SongInfo implements Serializable {
     }
 
     public String getSong() {
-        int i=song.lastIndexOf('.');
-        String song1="";
-        if(i<song.length()){
-             song1=song.substring(0,song.length()-4);
+        //int i=song.lastIndexOf('.');
+        //String song1="";
+        if(song.contains(".mp3")){
+            song=song.replace(".mp3","");
+        }
+        if(song.contains(".MP#")){
+            song=song.replace(".MP3","");
         }
 
-        return song1;
+        return song;
     }
 }

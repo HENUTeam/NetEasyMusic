@@ -38,7 +38,7 @@ import t3.henu.neteasymusic.appMain_drawerlayout_start.RecyclerViewData;
 import t3.henu.neteasymusic.appMain_drawerlayout_start.RecyclerviewAdapter;
 
 public class MainActivity extends AppCompatActivity {
-    final private int REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS = 124;//高逸博2017/5/19
+    final private int REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS = 124;
     final private int WRITE_EXTERNAL_STORAGE_REQUEST_CODE = 122;
     final private int READ_SMS_REQUES_CODE = 122;
     final private int READ_EXTERNAL_STORAGE_REQUEST_CODE = 123;
@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         initView();
         Intent in=new Intent(this, PlayService.class);
         bindService(in, t3.henu.left_library.MainActivity.con,BIND_AUTO_CREATE);
+
 
     }
 
@@ -87,8 +88,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void solvePermisson() {
         List<String> permissionsNeeded = new ArrayList<String>();
-
-
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_SMS)
                 != PackageManager.PERMISSION_GRANTED) {
             //申请WRITE_EXTERNAL_STORAGE权限
@@ -107,7 +106,6 @@ public class MainActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
                     READ_EXTERNAL_STORAGE_REQUEST_CODE);
         }
-
         final List<String> permissionsList = new ArrayList<String>();
         if (!addPermission(permissionsList, Manifest.permission.ACCESS_FINE_LOCATION))
             permissionsNeeded.add("GPS");

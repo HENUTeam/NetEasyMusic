@@ -15,14 +15,19 @@ public class PlayMusic_Receiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         Bundle bun=intent.getBundleExtra("Bunde");
         SongInfo songInfo= (SongInfo) bun.getSerializable("songinfo");
-        MainActivity.t_singer.setText(songInfo.getSinger());
-        MainActivity.t_songname.setText(songInfo.getSong());
-        boolean status= (boolean) intent.getExtras().get("play_status");
-        if(status==false){
-            MainActivity.btn_play.setImageResource(R.drawable.icon_play1);
-        }else{
-            MainActivity.btn_play.setImageResource(R.drawable.icon_pause);
+        if(MainActivity.t_singer!=null){
+            MainActivity.t_singer.setText(songInfo.getSinger());
+            MainActivity.t_songname.setText(songInfo.getSong());
         }
+        boolean status= (boolean) intent.getExtras().get("play_status");
+        if( MainActivity.btn_play!=null){
+            if(status==false){
+                MainActivity.btn_play.setImageResource(R.drawable.icon_play1);
+            }else{
+                MainActivity.btn_play.setImageResource(R.drawable.icon_pause);
+            }
+        }
+
        // Toast.makeText(context,"收到广播："+(status),Toast.LENGTH_LONG).show();
     }
 }

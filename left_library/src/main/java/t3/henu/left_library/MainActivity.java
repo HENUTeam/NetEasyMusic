@@ -18,14 +18,15 @@ import android.widget.TextView;
 import t3.henu.left_library.Services.PlayService;
 
 public class MainActivity extends AppCompatActivity {
-    public static enum play_status{IS_PLAY,STOP};//已经成功了，再次测试
+
     private FrameLayout mContentContainer;
     public static View mFloatView;
     protected Context mContext;
     public static ImageButton btn_play;
     public static TextView t_songname,t_singer;
     public static PlayService.playBinder playBinder;
-   // final RelativeLayout choose = (RelativeLayout) LayoutInflater.from(getBaseContext()).inflate(R.layout.flowplaymusic, null);
+
+    //服务连接
     public static ServiceConnection con=new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
@@ -81,10 +82,7 @@ public class MainActivity extends AppCompatActivity {
         super.onBackPressed();
     }
 
-    /**
-     * ��������activityʱû�ж���
-     * @param intent
-     */
+
     @Override
     public void startActivity(Intent intent) {
        // intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
