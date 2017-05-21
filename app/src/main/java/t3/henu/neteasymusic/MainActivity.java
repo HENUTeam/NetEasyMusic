@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     Fragment fragment_appmain_left = null;
     List<RecyclerViewData>lists=new ArrayList<RecyclerViewData>();
+    public static TextView text_singer,text_song;
+    public static ImageButton btn_play;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         initDrawerlayout();
         solvePermisson();
         drawerLayout = (DrawerLayout) findViewById(R.id.id_appmain_drawelayout);
-
+        initflow();
     }
 
 
@@ -278,6 +280,24 @@ public class MainActivity extends AppCompatActivity {
 
     private void toast(String s) {
         Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
+    }
+
+    private void initflow() {
+        text_singer= (TextView) findViewById(R.id.id_textview_songsinger);
+        text_song= (TextView) findViewById(R.id.id_textview_songName);
+        btn_play= (ImageButton) findViewById(R.id.id_flow_play);
+        btn_play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(PlayService.play_list.size()>0){
+                    t3.henu.left_library.MainActivity.playBinder.setIsPlay();
+                }else{
+                    toast("播放列表为空！！！");
+                }
+
+                // toast("播放");
+            }
+        });
     }
 
     @Override
