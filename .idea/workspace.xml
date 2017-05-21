@@ -133,6 +133,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="杨皓强 &lt;602125621@qq.com&gt;" />
         <option value="枯瑜 &lt;1468165899@qq.com&gt;" />
         <option value="枯榆 &lt;1468165899@qq.com&gt;" />
       </list>
@@ -3788,13 +3789,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491104747859</updated>
     </task>
-    <task id="LOCAL-00011" summary="2017/4/2 13:47">
-      <created>1491131604745</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1491131604745</updated>
-    </task>
     <task id="LOCAL-00012" summary="2017/4/2 19:32">
       <created>1491132754960</created>
       <option name="number" value="00012" />
@@ -4131,7 +4125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1495364293230</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="2017/5/21 榜单（未将榜单加入到fragment 未在手机上测试）">
+      <created>1495364424861</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1495364424861</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TodoView">
