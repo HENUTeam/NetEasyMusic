@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
+import t3.henu.left_library.MainActivity;
 import t3.henu.neteasymusic.BlankFragment;
 import t3.henu.neteasymusic.R;
 
@@ -65,7 +66,9 @@ public class TabLayout_Mid extends Fragment {
             fragments.add(new BlankFragment("第一个"));
             fragments.add(new BlankFragment("第二个"));
             fragments.add(new BlankFragment("第三个"));
-            fragments.add(new BlankFragment("第四个"));
+            fragments.add(new BlankFragment("第四个"));////替换掉第四个fragment。。。。ok？ 写到left？还是app？left
+            //new t3.henu.left_library.你的fragment路径   你加的都在那个包里把 ok
+
         }
         MyViewPagerAdapter myAdapter=new MyViewPagerAdapter(getActivity().getSupportFragmentManager(),fragments);
         viewPager.setAdapter(myAdapter);

@@ -148,7 +148,7 @@ public class PlayService extends Service {
         in.putExtra("play_status",isplay);
         if(play_list.size()>0){
             Bundle bund=new Bundle();
-            bund.putSerializable("songinfo",play_list.get(current));
+            //bund.putSerializable("songinfo",play_list.get(current));
             in.putExtra("Bunde",bund);
         }
         in.setAction(RECiEVE1);
