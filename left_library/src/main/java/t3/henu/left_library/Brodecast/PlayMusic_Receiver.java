@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
-import t3.henu.left_library.Activities.*;
+import t3.henu.left_library.Activities.SongInfo;
 import t3.henu.left_library.MainActivity;
 import t3.henu.left_library.R;
 
@@ -28,6 +28,6 @@ public class PlayMusic_Receiver extends BroadcastReceiver {
             }
         }
 
-       // Toast.makeText(context,"收到广播："+(status),Toast.LENGTH_LONG).show();
+        //Toast.makeText(context,"收到广播："+(status),Toast.LENGTH_SHORT).show();
     }
 }

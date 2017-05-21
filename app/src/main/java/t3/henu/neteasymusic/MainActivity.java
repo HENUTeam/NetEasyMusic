@@ -79,8 +79,13 @@ public class MainActivity extends AppCompatActivity {
         btn_play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                t3.henu.left_library.MainActivity.playBinder.setIsPlay();
-                toast("播放");
+                if(PlayService.play_list.size()>0){
+                    t3.henu.left_library.MainActivity.playBinder.setIsPlay();
+                }else{
+                    toast("播放列表为空！！！");
+                }
+
+               // toast("播放");
             }
         });
     }

@@ -8,10 +8,10 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.widget.Toast;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
-import t3.henu.left_library.Activities.MusicUtils;
 import t3.henu.left_library.Activities.SongInfo;
 
 public class PlayService extends Service {
@@ -67,13 +67,13 @@ public class PlayService extends Service {
                 while (true){
                     try {
                         sendBroad();
-                        Thread.sleep(500);
+                        Thread.sleep(100);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                 }
             }
-        });
+        }).start();
     }
 
     public PlayService() {
@@ -83,17 +83,30 @@ public class PlayService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         init();
+
         return super.onStartCommand(intent, flags, startId);
     }
 
     private void init() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (true){
+                    try {
+                        sendBroad();
+                        Thread.sleep(500);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
         if(mediaPlayer==null){
             mediaPlayer=new MediaPlayer();
         }
-        play_list= MusicUtils.getMp3Infos(getBaseContext());
+        play_list=new LinkedList<>();
         current=0;
         hasTime=0;
-        allTime=play_list.get(current).getDuration();
         mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
@@ -116,7 +129,8 @@ public class PlayService extends Service {
     private void play(int currentTime) {
         try {
             isplay=true;
-           // sendBroad();
+            allTime=play_list.get(current).getDuration();
+           //sendBroad();
             mediaPlayer.reset();// 把各项参数恢复到初始状态
             mediaPlayer.setDataSource(play_list.get(current).getPath());
             mediaPlayer.prepare(); // 进行缓冲
@@ -144,15 +158,18 @@ public class PlayService extends Service {
     }
 
     public  void sendBroad() {
-        Intent in=new Intent();
-        in.putExtra("play_status",isplay);
         if(play_list.size()>0){
-            Bundle bund=new Bundle();
-            bund.putSerializable("songinfo",play_list.get(current));
-            in.putExtra("Bunde",bund);
+            Intent in=new Intent();
+            in.putExtra("play_status",isplay);
+            if(play_list.size()>0){
+                Bundle bund=new Bundle();
+                bund.putSerializable("songinfo",play_list.get(current));
+                in.putExtra("Bunde",bund);
+            }
+            in.setAction(RECiEVE1);
+            sendBroadcast(in);
         }
-        in.setAction(RECiEVE1);
-        sendBroadcast(in);
+
     }
 
     private void resume() {
