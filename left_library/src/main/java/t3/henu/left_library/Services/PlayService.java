@@ -151,7 +151,7 @@ public class PlayService extends Service {
             //bund.putSerializable("songinfo",play_list.get(current));
             in.putExtra("Bunde",bund);
         }
-        in.setAction(RECiEVE1);
+        in.setAction(RECiEVE1);//
         sendBroadcast(in);
     }
 
