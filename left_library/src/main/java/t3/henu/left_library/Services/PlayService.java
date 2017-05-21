@@ -45,11 +45,35 @@ public class PlayService extends Service {
             current = curr;
             play(0);
         }
+        public void next(){
+            current=(current+1)%play_list.size();
+            play(0);
+        }
+        public void pre(){
+            current=(current-1);
+            if(current<0){
+                current=play_list.size()-1;
+            }
+            play(0);
+        }
     }
 
     @Override
     public void onCreate() {
         init();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (true){
+                    try {
+                        sendBroad();
+                        Thread.sleep(500);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
     }
 
     public PlayService() {
@@ -75,9 +99,9 @@ public class PlayService extends Service {
             public void onCompletion(MediaPlayer mp) {
                 if(status==3){
                     mediaPlayer.start();
-                }else if(status==2){
+                }else if(status==1){
                     current=(current+1)%play_list.size();
-                }else if(status==3){
+                }else if(status==2){
                     current=(int)new Random().nextInt(play_list.size());
                 }
             }
@@ -91,7 +115,8 @@ public class PlayService extends Service {
      */
     private void play(int currentTime) {
         try {
-            isplay=true; sendBroad();
+            isplay=true;
+           // sendBroad();
             mediaPlayer.reset();// 把各项参数恢复到初始状态
             mediaPlayer.setDataSource(play_list.get(current).getPath());
             mediaPlayer.prepare(); // 进行缓冲
@@ -135,26 +160,10 @@ public class PlayService extends Service {
           //  MainActivity.btn_play.setImageResource(R.drawable.icon_pause);
             isplay = true; sendBroad();
             mediaPlayer.start();
-
             //play(0);
         }
     }
 
-    /**
-     * 上一首
-     */
-    private void previous() {
-
-        play(0);
-    }
-
-    /**
-     * 下一首
-     */
-    private void next() {
-
-        play(0);
-    }
 
     /**
      * 停止音乐
