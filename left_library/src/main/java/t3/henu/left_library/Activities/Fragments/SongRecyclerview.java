@@ -2,7 +2,6 @@ package t3.henu.left_library.Activities.Fragments;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -14,6 +13,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -37,8 +37,9 @@ public class SongRecyclerview extends Fragment {
     private View rootView;
     private RecyclerView recyclerView;
     private List<SongInfo> listsong = new ArrayList<SongInfo>();
-    MediaPlayer player = null;
-    boolean isPlay = false;
+    SongRecyclerviewAdapter adapter;
+
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -90,16 +91,21 @@ public class SongRecyclerview extends Fragment {
             listsong = MusicUtils.getMp3Infos(getContext());
         }
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        SongRecyclerviewAdapter adapter = new SongRecyclerviewAdapter(listsong, getContext());
+        adapter = new SongRecyclerviewAdapter(listsong, getContext());
         adapter.openLoadAnimation(BaseQuickAdapter.SLIDEIN_LEFT);
+        recyclerView.setAdapter(adapter);
         adapter.setOnRecyclerViewItemClickListener(new BaseQuickAdapter.OnRecyclerViewItemClickListener() {
             @Override
             public void onItemClick(View view, int i) {
                 //toast(listsong.get(i).getSong() + ",路径：" + listsong.get(i).path);
+                adapter.notifyDataSetChanged();
                 MainActivity.playBinder.setPlayList(listsong);
                 MainActivity.playBinder.setCurrent(i);
+                ImageView imageView= (ImageView) view.findViewById(R.id.id_songinfo_isplay);
+                imageView.setVisibility(View.VISIBLE);
             }
         });
+
         adapter.setOnRecyclerViewItemChildClickListener(new BaseQuickAdapter.OnRecyclerViewItemChildClickListener() {
             @Override
             public void onItemChildClick(BaseQuickAdapter baseQuickAdapter, View view, int i) {
@@ -113,10 +119,6 @@ public class SongRecyclerview extends Fragment {
 
             }
         });
-        recyclerView.setAdapter(adapter);
-    }
-
-    private void playMusic(SongInfo songInfo, boolean cnt) {
 
     }
 

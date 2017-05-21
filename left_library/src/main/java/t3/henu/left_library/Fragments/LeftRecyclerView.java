@@ -16,6 +16,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
+import t3.henu.left_library.Activities.MusicUtils;
 import t3.henu.left_library.Activities.MyMusic;
 import t3.henu.left_library.R;
 
@@ -51,6 +52,9 @@ public class LeftRecyclerView extends Fragment {
             for(int i=0;i<texts.length;i++){
                 RecyclerData recyclerData;
                 recyclerData=new RecyclerData(images[i],texts[i],numbers[i]);
+                if(i==0){
+                    recyclerData.setNum(MusicUtils.getMp3Infos(getContext()).size()+"");
+                }
                 mDatas.add(recyclerData);
             }
             int image=R.drawable.icon_next_right;

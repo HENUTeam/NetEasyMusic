@@ -11,16 +11,26 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.*;
+import android.widget.FrameLayout;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import t3.henu.left_library.Services.PlayService;
 
+
+
 public class MainActivity extends AppCompatActivity {
-    public static enum play_status{IS_PLAY,STOP};
     private FrameLayout mContentContainer;
     private View mFloatView;
     protected Context mContext;
-    private ImageButton btn_play;
+
+
+
+    public static ImageButton btn_play;
+    public static ImageView imageView;
+    public static TextView t_songname,t_singer;
+
     public static PlayService.playBinder playBinder;
     public static ServiceConnection con=new ServiceConnection() {
         @Override
@@ -35,12 +45,24 @@ public class MainActivity extends AppCompatActivity {
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        
+
         super.onCreate(savedInstanceState);
         mContext = this;
         ViewGroup mDecorView = (ViewGroup) getWindow().getDecorView();
         mContentContainer = (FrameLayout) ((ViewGroup) mDecorView.getChildAt(0)).getChildAt(1);
         mFloatView =  LayoutInflater.from(getBaseContext()).inflate(R.layout.flowplaymusic, null);
+
+        btn_play = (ImageButton) mFloatView.findViewById(R.id.id_flow_play);
+        t_singer= (TextView) mFloatView.findViewById(R.id.id_textview_songsinger);
+        t_songname=(TextView) mFloatView.findViewById(R.id.id_textview_songName);
+        imageView= (ImageView) findViewById(R.id.id_imageview_album);
+        btn_play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(getBaseContext(),"播放",Toast.LENGTH_LONG).show();
+                MainActivity.playBinder.setIsPlay();
+            }
+        });
 
     }
 
@@ -69,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
      */
     @Override
     public void startActivity(Intent intent) {
-       // intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        // intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         super.startActivity(intent);
     }
 

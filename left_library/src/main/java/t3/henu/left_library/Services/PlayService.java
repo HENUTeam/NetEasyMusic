@@ -110,13 +110,17 @@ public class PlayService extends Service {
         mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
-                if(status==3){
-                    mediaPlayer.start();
-                }else if(status==1){
-                    current=(current+1)%play_list.size();
-                }else if(status==2){
-                    current=(int)new Random().nextInt(play_list.size());
+                if(play_list.size()>0){
+                    if(status==3){
+                        mediaPlayer.start();
+                    }else if(status==1){
+                        current=(current+1)%play_list.size();
+                    }else if(status==2){
+                        current=(int)new Random().nextInt(play_list.size());
+                    }
+                    play(0);
                 }
+
             }
         });
     }
@@ -127,18 +131,22 @@ public class PlayService extends Service {
      * @param
      */
     private void play(int currentTime) {
-        try {
-            isplay=true;
-            allTime=play_list.get(current).getDuration();
-           //sendBroad();
-            mediaPlayer.reset();// 把各项参数恢复到初始状态
-            mediaPlayer.setDataSource(play_list.get(current).getPath());
-            mediaPlayer.prepare(); // 进行缓冲
-            mediaPlayer.setOnPreparedListener(new PreparedListener(currentTime));// 注册一个监听器
-           // toast(current+":"+play_list.get(current).path);
-        } catch (Exception e) {
-            e.printStackTrace();
+        if(play_list.size()>0){
+            try {
+                isplay=true;
+                 SongInfo songInfo=play_list.get(current);
+                 allTime=songInfo.getDuration();
+                //sendBroad();
+                mediaPlayer.reset();// 把各项参数恢复到初始状态
+                mediaPlayer.setDataSource(songInfo.getPath());
+                mediaPlayer.prepare(); // 进行缓冲
+                mediaPlayer.setOnPreparedListener(new PreparedListener(currentTime));// 注册一个监听器
+                // toast(current+":"+play_list.get(current).path);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
+
     }
 
     private void toast(String s) {

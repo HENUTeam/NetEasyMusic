@@ -18,6 +18,7 @@ public class PlayMusic_Receiver extends BroadcastReceiver {
         if(MainActivity.t_singer!=null){
             MainActivity.t_singer.setText(songInfo.getSinger());
             MainActivity.t_songname.setText(songInfo.getSong());
+            //MainActivity.imageView.setImageBitmap(songInfo.getAlbumUrl());
         }
         boolean status= (boolean) intent.getExtras().get("play_status");
         if( MainActivity.btn_play!=null){

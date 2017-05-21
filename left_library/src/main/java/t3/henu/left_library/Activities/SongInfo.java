@@ -1,5 +1,7 @@
 package t3.henu.left_library.Activities;
 
+import android.graphics.Bitmap;
+
 import java.io.Serializable;
 
 /**
@@ -7,8 +9,34 @@ import java.io.Serializable;
  */
 
 public class SongInfo implements Serializable {
-    private long Id,size,duration;
-    private String song,path,singer;
+    private long Id,size,duration,albumId;
+    private String song,path,singer,pucUrl;
+
+    public long getAlbumId() {
+        return albumId;
+    }
+
+    public void setAlbumId(long albumId) {
+        this.albumId = albumId;
+    }
+
+    private Bitmap albumUrl;
+
+    public Bitmap getAlbumUrl() {
+        return albumUrl;
+    }
+
+    public void setAlbumUrl(Bitmap albumUrl) {
+        this.albumUrl = albumUrl;
+    }
+
+    public String getPucUrl() {
+        return pucUrl;
+    }
+
+    public void setPucUrl(String pucUrl) {
+        this.pucUrl = pucUrl;
+    }
 
     public long getId() {
         return Id;
