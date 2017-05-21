@@ -11,22 +11,17 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
-import android.widget.ImageButton;
-import android.widget.TextView;
+import android.widget.*;
 
 import t3.henu.left_library.Services.PlayService;
 
 public class MainActivity extends AppCompatActivity {
-
+    public static enum play_status{IS_PLAY,STOP};
     private FrameLayout mContentContainer;
-    public static View mFloatView;
+    private View mFloatView;
     protected Context mContext;
-    public static ImageButton btn_play;
-    public static TextView t_songname,t_singer;
+    private ImageButton btn_play;
     public static PlayService.playBinder playBinder;
-
-    //服务连接
     public static ServiceConnection con=new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
@@ -46,21 +41,7 @@ public class MainActivity extends AppCompatActivity {
         ViewGroup mDecorView = (ViewGroup) getWindow().getDecorView();
         mContentContainer = (FrameLayout) ((ViewGroup) mDecorView.getChildAt(0)).getChildAt(1);
         mFloatView =  LayoutInflater.from(getBaseContext()).inflate(R.layout.flowplaymusic, null);
-        btn_play = (ImageButton) mFloatView.findViewById(R.id.id_flow_play);
-        if(PlayService.isplay==false){
-            btn_play.setImageResource(R.drawable.icon_play1);
-        }else{
-            btn_play.setImageResource(R.drawable.icon_pause);
-        }
-        btn_play.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Toast.makeText(getBaseContext(),"播放",Toast.LENGTH_LONG).show();
-                MainActivity.playBinder.setIsPlay();
-            }
-        });
-        t_singer= (TextView) mFloatView.findViewById(R.id.id_textview_songsinger);
-        t_songname=(TextView) mFloatView.findViewById(R.id.id_textview_songName);
+
     }
 
 
@@ -82,7 +63,10 @@ public class MainActivity extends AppCompatActivity {
         super.onBackPressed();
     }
 
-
+    /**
+     * ��������activityʱû�ж���
+     * @param intent
+     */
     @Override
     public void startActivity(Intent intent) {
        // intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);

@@ -48,8 +48,6 @@ public class MainActivity extends AppCompatActivity {
     private ConstraintLayout constraintLayout_left;
     private DrawerLayout drawerLayout;
     private RecyclerView recyclerView;
-    public static TextView text_singer,text_song;
-    public static ImageButton btn_play;
     Fragment fragment_appmain_left = null;
     List<RecyclerViewData>lists=new ArrayList<RecyclerViewData>();
     @Override
@@ -60,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
         Intent in=new Intent(this, PlayService.class);
         bindService(in, t3.henu.left_library.MainActivity.con,BIND_AUTO_CREATE);
 
-
     }
 
     private void initView() {
@@ -69,30 +66,13 @@ public class MainActivity extends AppCompatActivity {
         initDrawerlayout();
         solvePermisson();
         drawerLayout = (DrawerLayout) findViewById(R.id.id_appmain_drawelayout);
-        initflow();
-    }
 
-    private void initflow() {
-        text_singer= (TextView) findViewById(R.id.id_textview_songsinger);
-        text_song= (TextView) findViewById(R.id.id_textview_songName);
-        btn_play= (ImageButton) findViewById(R.id.id_flow_play);
-        btn_play.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(PlayService.play_list.size()>0){
-                    t3.henu.left_library.MainActivity.playBinder.setIsPlay();
-                }else{
-                    toast("播放列表为空！！！");
-                }
-
-               // toast("播放");
-            }
-        });
     }
 
 
     private void solvePermisson() {
         List<String> permissionsNeeded = new ArrayList<String>();
+
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_SMS)
                 != PackageManager.PERMISSION_GRANTED) {
             //申请WRITE_EXTERNAL_STORAGE权限
@@ -111,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
                     READ_EXTERNAL_STORAGE_REQUEST_CODE);
         }
+
         final List<String> permissionsList = new ArrayList<String>();
         if (!addPermission(permissionsList, Manifest.permission.ACCESS_FINE_LOCATION))
             permissionsNeeded.add("GPS");
