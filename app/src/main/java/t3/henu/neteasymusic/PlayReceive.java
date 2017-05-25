@@ -16,7 +16,7 @@ public class PlayReceive extends BroadcastReceiver {
         Bundle bun=intent.getBundleExtra("Bunde");
         SongInfo songInfo= (SongInfo) bun.getSerializable("songinfo");
        MainActivity.text_singer.setText(songInfo.getSinger());
-        MainActivity.text_singer.setText(songInfo.getSong());
+        MainActivity.text_song.setText(songInfo.getSong());
         boolean status= (boolean) intent.getExtras().get("play_status");
         if(status==false){
            MainActivity.btn_play.setImageResource(t3.henu.left_library.R.drawable.icon_play1);

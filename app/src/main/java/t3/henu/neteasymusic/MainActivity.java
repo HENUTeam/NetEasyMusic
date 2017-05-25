@@ -29,6 +29,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import t3.henu.left_library.Activities.NetWork.SearchActivity;
 import t3.henu.left_library.Fragments.LeftRecyclerView;
 import t3.henu.left_library.Services.PlayService;
 import t3.henu.neteasymusic.appMain.MyViewPagerAdapter;
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
     List<RecyclerViewData>lists=new ArrayList<RecyclerViewData>();
     public static TextView text_singer,text_song;
     public static ImageButton btn_play;
+    private Intent search_intent;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -227,6 +229,17 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void initToolbar() {
+        ImageButton button= (ImageButton) findViewById(R.id.id_btn_search);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(search_intent==null){
+                    search_intent=new Intent(MainActivity.this, SearchActivity.class);
+                }
+                startActivity(search_intent);
+            }
+        });
+
         tabLayout = (TabLayout) findViewById(R.id.id_appmain_toolbar_tabLayout);
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override

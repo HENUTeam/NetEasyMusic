@@ -4,10 +4,12 @@ dependencies {
     compile 'com.android.support:support-v4:25.+'
     compile 'com.android.support:recyclerview-v7:25.+'
     compile project(':left_library')
+    compile files('libs/BmobSDK_3.5.5_20170420.jar')
 }
 android {
     compileSdkVersion 25
     buildToolsVersion '25.0.0'
+    useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId "t3.henu.neteasymusic"
         minSdkVersion 19
@@ -48,10 +50,10 @@ android {
         testCompile 'junit:junit:4.12'
         compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:v2.9.16'
 
-        compile 'cn.bmob.android:bmob-sdk:3.5.3'
+
         compile 'com.android.support:recyclerview-v7:21.0.0'
         compile 'com.makeramen:roundedimageview:2.3.0'
-        compile 'cn.bmob.android:http-legacy:1.0'
+
 
     }
 

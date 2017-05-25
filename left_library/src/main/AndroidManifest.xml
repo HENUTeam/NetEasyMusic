@@ -46,7 +46,9 @@
         <service
             android:name=".Services.PlayService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
+
+        <activity android:name=".Activities.NetWork.SearchActivity"></activity>
     </application>
 
 </manifest>
