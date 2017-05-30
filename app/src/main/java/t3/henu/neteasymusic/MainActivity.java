@@ -4,6 +4,7 @@ package t3.henu.neteasymusic;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -68,12 +69,17 @@ public class MainActivity extends AppCompatActivity {
         initToolbar();
         initViewPager();
         initDrawerlayout();
-        solvePermisson();
+        if(isMarshmallow()){
+            solvePermisson();
+        }
+
         drawerLayout = (DrawerLayout) findViewById(R.id.id_appmain_drawelayout);
         initflow();
     }
 
-
+    private boolean isMarshmallow() {
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.M;
+    }
     private void solvePermisson() {
         List<String> permissionsNeeded = new ArrayList<String>();
 

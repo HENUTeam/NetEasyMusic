@@ -36,6 +36,7 @@ public class Artist implements Parcelable {
         this.picUrl = picUrl;
     }
 
+
     @Override
     public int describeContents() {
         return 0;
@@ -57,7 +58,7 @@ public class Artist implements Parcelable {
         this.picUrl = in.readString();
     }
 
-    public static final Creator<Artist> CREATOR = new Creator<Artist>() {
+    public static final Parcelable.Creator<Artist> CREATOR = new Parcelable.Creator<Artist>() {
         @Override
         public Artist createFromParcel(Parcel source) {
             return new Artist(source);

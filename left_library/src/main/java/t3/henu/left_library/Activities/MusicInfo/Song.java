@@ -57,6 +57,7 @@ public class Song implements Parcelable {
         this.artists = artists;
     }
 
+
     @Override
     public int describeContents() {
         return 0;
@@ -68,7 +69,7 @@ public class Song implements Parcelable {
         dest.writeString(this.name);
         dest.writeString(this.picUrl);
         dest.writeString(this.audio);
-        dest.writeList(this.artists);
+        dest.writeTypedList(this.artists);
     }
 
     public Song() {
@@ -79,11 +80,10 @@ public class Song implements Parcelable {
         this.name = in.readString();
         this.picUrl = in.readString();
         this.audio = in.readString();
-        this.artists = new ArrayList<Artist>();
-        in.readList(this.artists, Artist.class.getClassLoader());
+        this.artists = in.createTypedArrayList(Artist.CREATOR);
     }
 
-    public static final Creator<Song> CREATOR = new Creator<Song>() {
+    public static final Parcelable.Creator<Song> CREATOR = new Parcelable.Creator<Song>() {
         @Override
         public Song createFromParcel(Parcel source) {
             return new Song(source);

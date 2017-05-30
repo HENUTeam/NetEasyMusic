@@ -30,6 +30,7 @@ public class Result implements Parcelable {
         this.songs = songs;
     }
 
+
     @Override
     public int describeContents() {
         return 0;
@@ -38,7 +39,7 @@ public class Result implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(this.songCount);
-        dest.writeList(this.songs);
+        dest.writeTypedList(this.songs);
     }
 
     public Result() {
@@ -46,11 +47,10 @@ public class Result implements Parcelable {
 
     protected Result(Parcel in) {
         this.songCount = in.readInt();
-        this.songs = new ArrayList<Song>();
-        in.readList(this.songs, Song.class.getClassLoader());
+        this.songs = in.createTypedArrayList(Song.CREATOR);
     }
 
-    public static final Creator<Result> CREATOR = new Creator<Result>() {
+    public static final Parcelable.Creator<Result> CREATOR = new Parcelable.Creator<Result>() {
         @Override
         public Result createFromParcel(Parcel source) {
             return new Result(source);

@@ -28,6 +28,7 @@
             android:id="@+id/et_search_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:singleLine="true"
             android:hint="请输入关键词"
             android:textColorHint="@color/colorWhite"/>
 

@@ -51,26 +51,7 @@ public class SongRecyclerview extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_music_info, container, false);
         recyclerView = (RecyclerView) rootView.findViewById(R.id.id_recyclerview_songs);
-        if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.READ_SMS)
-                != PackageManager.PERMISSION_GRANTED) {
-            //申请WRITE_EXTERNAL_STORAGE权限
-            ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.READ_SMS},
-                    READ_SMS_REQUEST_CODE);
-        }
-        if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) {
-            //申请WRITE_EXTERNAL_STORAGE权限
-            ActivityCompat.requestPermissions(getActivity(), new String[]{
-                            Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                            Manifest.permission.READ_SMS,
-                            Manifest.permission.READ_EXTERNAL_STORAGE},
-                    WRITE_EXTERNAL_STORAGE_REQUEST_CODE);
-        } else if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.READ_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) {
-            //申请WRITE_EXTERNAL_STORAGE权限
-            ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                    READ_EXTERNAL_STORAGE_REQUEST_CODE);
-        }
+
         new Handler().post(new Runnable() {
             @Override
             public void run() {
@@ -81,10 +62,6 @@ public class SongRecyclerview extends Fragment {
         return rootView;
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-    }
 
     private void initView() {
         if (listsong.size() <= 0) {
@@ -93,6 +70,8 @@ public class SongRecyclerview extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         adapter = new SongRecyclerviewAdapter(listsong, getContext());
         adapter.openLoadAnimation(BaseQuickAdapter.SLIDEIN_LEFT);
+        View header=LayoutInflater.from(getContext()).inflate(R.layout.music_song_item_header,null,false);
+        adapter.addHeaderView(header);
         recyclerView.setAdapter(adapter);
         adapter.setOnRecyclerViewItemClickListener(new BaseQuickAdapter.OnRecyclerViewItemClickListener() {
             @Override

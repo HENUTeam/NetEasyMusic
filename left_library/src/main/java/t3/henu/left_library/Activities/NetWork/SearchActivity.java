@@ -5,16 +5,21 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.ViewStub;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+
+import java.util.ArrayList;
+import java.util.List;
+
+import t3.henu.left_library.Activities.MusicInfo.Result;
 import t3.henu.left_library.R;
 
 
@@ -42,6 +47,29 @@ public class SearchActivity extends AppCompatActivity {
     };
 
     private void SearchSong() {
+        String text = etSearchContent.getText().toString();
+        if (TextUtils.isEmpty(text)) {
+            return;
+        }
+        MusicNetWork.SearchMusic(this,text,10,1,0, new MusicNetWork.VolleyCallback() {
+            @Override
+            public void onSuccess(String result) {
+                ParaseResult(result);
+            }
+        });
+
+    }
+
+    private void ParaseResult(String result) {
+        Gson gson=new Gson();
+        Result re=gson.fromJson(result,Result.class);
+        List<String> list=new ArrayList<String>();
+        for(int i=0;i<re.getSongs().size();i++){
+            list.add(re.getSongs().get(i).getName());
+        }
+        ArrayAdapter adapter=new ArrayAdapter(SearchActivity.this,android.R.layout.simple_list_item_1,
+        android.R.id.text1,list);
+        mListViewResult.setAdapter(adapter);
     }
 
     @Override
@@ -126,6 +154,6 @@ public class SearchActivity extends AppCompatActivity {
 
 
     public void retuen(View v){
-        finish();
+        this.finish();
     }
 }

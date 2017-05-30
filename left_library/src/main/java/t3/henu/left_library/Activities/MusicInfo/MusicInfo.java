@@ -20,6 +20,7 @@ public class MusicInfo implements Parcelable {
         this.songs = songs;
     }
 
+
     @Override
     public int describeContents() {
         return 0;
@@ -37,7 +38,7 @@ public class MusicInfo implements Parcelable {
         this.songs = in.createTypedArrayList(Song.CREATOR);
     }
 
-    public static final Creator<MusicInfo> CREATOR = new Creator<MusicInfo>() {
+    public static final Parcelable.Creator<MusicInfo> CREATOR = new Parcelable.Creator<MusicInfo>() {
         @Override
         public MusicInfo createFromParcel(Parcel source) {
             return new MusicInfo(source);

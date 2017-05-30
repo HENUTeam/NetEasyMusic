@@ -27,6 +27,7 @@ public class MusicResponse implements Parcelable {
         this.code = code;
     }
 
+
     @Override
     public int describeContents() {
         return 0;
@@ -34,7 +35,7 @@ public class MusicResponse implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeParcelable((Parcelable) this.result, flags);
+        dest.writeParcelable(this.result, flags);
         dest.writeInt(this.code);
     }
 
@@ -46,7 +47,7 @@ public class MusicResponse implements Parcelable {
         this.code = in.readInt();
     }
 
-    public static final Creator<MusicResponse> CREATOR = new Creator<MusicResponse>() {
+    public static final Parcelable.Creator<MusicResponse> CREATOR = new Parcelable.Creator<MusicResponse>() {
         @Override
         public MusicResponse createFromParcel(Parcel source) {
             return new MusicResponse(source);

@@ -4,7 +4,7 @@ dependencies {
     compile 'com.android.support:support-v4:25.+'
     compile 'com.android.support:recyclerview-v7:25.+'
     compile project(':left_library')
-    compile files('libs/BmobSDK_3.5.5_20170420.jar')
+    compile files('libs/BmobSDK_3.5.3_20161116.jar')
 }
 android {
     compileSdkVersion 25
@@ -53,7 +53,7 @@ android {
 
         compile 'com.android.support:recyclerview-v7:21.0.0'
         compile 'com.makeramen:roundedimageview:2.3.0'
-
+        compile 'cn.bmob.android:bmob-sdk:3.5.5'
 
     }
 
