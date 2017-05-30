@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         initToolbar();
         initViewPager();
         initDrawerlayout();
-        solvePermisson();
+        //solvePermisson();
         drawerLayout = (DrawerLayout) findViewById(R.id.id_appmain_drawelayout);
         initflow();
     }

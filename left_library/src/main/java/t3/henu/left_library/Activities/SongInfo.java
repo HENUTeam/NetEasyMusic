@@ -8,6 +8,26 @@ public class SongInfo {
     public long Id,size,duration;
     public String song,path,singer;
 
+    public void setSong(String song) {
+        this.song = song;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public String getSinger() {
+        return singer;
+    }
+
+    public void setSinger(String singer) {
+        this.singer = singer;
+    }
+
     public long getId() {
         return Id;
     }

@@ -17,7 +17,7 @@ import t3.henu.neteasymusic.BlankFragment;
 import t3.henu.neteasymusic.R;
 
 /**
- * Created by 高逸博 on 2017/4/1.
+ * Created by 高逸博 on 2017/4/1.///
  */
 
 public class TabLayout_Mid extends Fragment {
@@ -66,7 +66,7 @@ public class TabLayout_Mid extends Fragment {
             fragments.add(new BlankFragment("第一个"));
             fragments.add(new BlankFragment("第二个"));
             fragments.add(new BlankFragment("第三个"));
-            fragments.add(new BlankFragment("第四个"));////替换掉第四个fragment。。。。ok？ 写到left？还是app？left
+            fragments.add(new t3.henu.left_library.YHQ_solve.BillboardFragment());////替换掉第四个fragment。。。。ok？ 写到left？还是app？left
             //new t3.henu.left_library.你的fragment路径   你加的都在那个包里把 ok
 
         }

@@ -41,6 +41,7 @@
         <activity android:name=".appMain_drawerlayout_start.RegistActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name="t3.henu.left_library.MainActivity" />
+        <activity android:name="t3.henu.left_library.YHQ_solve.clickBillboard.OnlineMusicActivity"/>
 
         <receiver
             android:name=".PlayReceive"

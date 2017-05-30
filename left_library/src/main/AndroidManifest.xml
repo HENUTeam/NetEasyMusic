@@ -34,7 +34,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
         <activity android:name=".Activities.MyMusic" />
-
+        <activity android:name=".YHQ_solve.clickBillboard.OnlineMusicActivity"/>
         <receiver
             android:name=".Brodecast.PlayMusic_Receiver"
             android:enabled="true"
