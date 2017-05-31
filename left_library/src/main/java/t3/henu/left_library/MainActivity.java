@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         btn_play = (ImageButton) mFloatView.findViewById(R.id.id_flow_play);
         t_singer= (TextView) mFloatView.findViewById(R.id.id_textview_songsinger);
         t_songname=(TextView) mFloatView.findViewById(R.id.id_textview_songName);
-        imageView= (ImageView) findViewById(R.id.id_imageview_album);
+        imageView= (ImageView) mFloatView.findViewById(R.id.id_imageview_album);
         btn_play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

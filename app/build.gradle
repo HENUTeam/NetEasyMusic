@@ -49,11 +49,10 @@ android {
         compile 'com.android.support.constraint:constraint-layout:1.0.2'
         testCompile 'junit:junit:4.12'
         compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:v2.9.16'
-
-
         compile 'com.android.support:recyclerview-v7:21.0.0'
         compile 'com.makeramen:roundedimageview:2.3.0'
-        compile 'cn.bmob.android:bmob-sdk:3.5.5'
+
+
 
     }
 

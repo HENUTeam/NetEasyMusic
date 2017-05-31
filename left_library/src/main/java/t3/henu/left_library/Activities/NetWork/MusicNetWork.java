@@ -3,6 +3,7 @@ package t3.henu.left_library.Activities.NetWork;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -54,22 +55,9 @@ public class MusicNetWork {
 	 * 注意废数字才用‘’符号，要不不能用，否则出错！！
 	 */
 
-	public static ImageLoader getImageLoader(Context context){
-		ImageLoader imageloader=new ImageLoader(getmRequestqueue(context), new ImageLoader.ImageCache() {
-			@Override
-			public Bitmap getBitmap(String s) {
-				return null;
-			}
 
-			@Override
-			public void putBitmap(String s, Bitmap bitmap) {
 
-			}
-		});
-		return imageloader;
-	}
-
-	public static void SearchMusic(Context context,String s,int limit,int type,int offset,final VolleyCallback callback){
+	public static void SearchMusic(final Context context, String s, int limit, int type, int offset, final VolleyCallback callback){
 
 		String url = UrlConstants.CLOUD_MUSIC_API_SEARCH + "type="+type+"&s='" + s + "'&limit="+limit+"&offset="+offset;
 		RequestQueue requestQueue = getmRequestqueue(context);
@@ -83,10 +71,15 @@ public class MusicNetWork {
 			@Override
 			public void onErrorResponse(VolleyError volleyError){
 				Log.i("onResponse: ",volleyError.toString(),volleyError);
+				toast(context,"获取失败，或无网络连接");
 			}
 		});
 		requestQueue.add(jsonRequest);
 
+	}
+
+	private static void toast(Context c,String s) {
+		Toast.makeText(c,s,Toast.LENGTH_SHORT).show();
 	}
 
 	/**
@@ -96,7 +89,7 @@ public class MusicNetWork {
 	 * @param ids 用[]包裹起来的歌曲id 写法%5B %5D
 	 * @return
 	 */
-	public static void Cloud_Music_MusicInfoAPI(Context context,String id,String ids,final VolleyCallback call)
+	public static void Cloud_Music_MusicInfoAPI(final Context context, String id, String ids, final VolleyCallback call)
 	{
 		String url = UrlConstants.CLOUD_MUSIC_API_MUSICINGO + "id="+id+"&ids=%5B"+ids+"%5D";
 		RequestQueue requestQueue = getmRequestqueue(context);
@@ -115,6 +108,7 @@ public class MusicNetWork {
 			@Override
 			public void onErrorResponse(VolleyError volleyError){
 				Log.i("onResponse: ",volleyError.toString());
+				toast(context,"获取失败，或无网络连接");
 			}
 		});
 		requestQueue.add(straingRequest);
@@ -139,7 +133,7 @@ public class MusicNetWork {
 	 * @param os
 	 * @param id
 	 */
-	public static void Cloud_Muisc_getLrcAPI(Context context,String os,String id,final VolleyCallback callback)
+	public static void Cloud_Muisc_getLrcAPI(final Context context, String os, String id, final VolleyCallback callback)
 	{
 		String url = UrlConstants.CLOUD_MUSIC_API_MUSICLRC + "os="+os+"&id="+id+"&lv=-1&kv=-1&tv=-1";
 		RequestQueue requestQueue = getmRequestqueue(context);
@@ -158,6 +152,7 @@ public class MusicNetWork {
 			@Override
 			public void onErrorResponse(VolleyError volleyError){
 				Log.i("onResponse: ",volleyError.toString());
+				toast(context,"获取失败，或无网络连接");
 			}
 		});
 		requestQueue.add(straingRequest);
@@ -167,7 +162,7 @@ public class MusicNetWork {
 
 
 	public static JSONObject json = null;
-	public static JSONObject getInfoFromUrl_Volley(String url,Context context)
+	public static JSONObject getInfoFromUrl_Volley(String url, final Context context)
 	{
 		json = null;
 		RequestQueue requestQueue = getmRequestqueue(context);
@@ -185,6 +180,7 @@ public class MusicNetWork {
 			@Override
 			public void onErrorResponse(VolleyError volleyError){
 				Log.i("onResponse: ",volleyError.toString());
+				toast(context,"获取失败，或无网络连接");
 			}
 		});
 		requestQueue.add(straingRequest);

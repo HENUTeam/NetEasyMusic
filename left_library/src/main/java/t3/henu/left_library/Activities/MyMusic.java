@@ -12,6 +12,7 @@ import java.util.List;
 
 import t3.henu.left_library.Activities.Fragments.*;
 import t3.henu.left_library.*;
+import t3.henu.left_library.Activities.NetWork.SearchActivity;
 
 /**
  * Created by 高逸博 on 2017/4/14.
@@ -21,12 +22,21 @@ public class MyMusic extends MainActivity {
 
     private ViewPager viewPager;
     private TabLayout tabLayout;
+    private All_View all_view=null;
     private List<Fragment> fragments=new ArrayList<Fragment>();
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bendiyinyue);
         initView();
+        all_view=new All_View(MyMusic.t_singer,MyMusic.t_songname,MyMusic.imageView);
+        Collect.addView(all_view);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Collect.removeView(all_view);
     }
 
     private void initView() {

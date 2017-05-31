@@ -65,7 +65,7 @@ public class TabLayout_Mid extends Fragment {
             fragments.add(new BlankFragment("第一个"));
             fragments.add(new BlankFragment("第二个"));
             fragments.add(new BlankFragment("第三个"));
-            fragments.add(new BlankFragment("第四个"));
+            fragments.add(new t3.henu.left_library.YHQ_solve.BillboardFragment());
         }
         MyViewPagerAdapter myAdapter=new MyViewPagerAdapter(getActivity().getSupportFragmentManager(),fragments);
         viewPager.setAdapter(myAdapter);

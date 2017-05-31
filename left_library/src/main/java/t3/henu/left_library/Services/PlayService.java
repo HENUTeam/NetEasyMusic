@@ -43,10 +43,12 @@ public class PlayService extends Service {
 
         public void setCurrent(int curr) {
             current = curr;
+            sendChange_pic();
             play(0);
         }
         public void next(){
             current=(current+1)%play_list.size();
+            sendChange_pic();
             play(0);
         }
         public void pre(){
@@ -54,6 +56,7 @@ public class PlayService extends Service {
             if(current<0){
                 current=play_list.size()-1;
             }
+            sendChange_pic();
             play(0);
         }
     }
@@ -67,7 +70,7 @@ public class PlayService extends Service {
                 while (true){
                     try {
                         sendBroad();
-                        Thread.sleep(100);
+                        Thread.sleep(500);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -118,11 +121,26 @@ public class PlayService extends Service {
                     }else if(status==2){
                         current=(int)new Random().nextInt(play_list.size());
                     }
+                    sendChange_pic();
                     play(0);
                 }
 
             }
         });
+    }
+
+    private void sendChange_pic() {
+        if(play_list.size()>0){
+            Intent in=new Intent();
+            in.putExtra("play_status",isplay);
+            if(play_list.size()>0){
+                Bundle bund=new Bundle();
+                bund.putParcelable("songinfo",play_list.get(current));
+                in.putExtra("Bunde",bund);
+            }
+            in.setAction("gyb.ne.play_music.change_pic");
+            sendBroadcast(in);
+        }
     }
 
     /**
@@ -171,7 +189,7 @@ public class PlayService extends Service {
             in.putExtra("play_status",isplay);
             if(play_list.size()>0){
                 Bundle bund=new Bundle();
-                bund.putSerializable("songinfo",play_list.get(current));
+                bund.putParcelable("songinfo",play_list.get(current));
                 in.putExtra("Bunde",bund);
             }
             in.setAction(RECiEVE1);

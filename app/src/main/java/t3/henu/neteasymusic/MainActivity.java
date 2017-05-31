@@ -19,6 +19,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,6 +32,7 @@ import java.util.List;
 import java.util.Map;
 
 import t3.henu.left_library.Activities.NetWork.SearchActivity;
+import t3.henu.left_library.Collect;
 import t3.henu.left_library.Fragments.LeftRecyclerView;
 import t3.henu.left_library.Services.PlayService;
 import t3.henu.neteasymusic.appMain.MyViewPagerAdapter;
@@ -54,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
     List<RecyclerViewData>lists=new ArrayList<RecyclerViewData>();
     public static TextView text_singer,text_song;
     public static ImageButton btn_play;
+    public static ImageView play_imageView;
     private Intent search_intent;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -305,6 +308,7 @@ public class MainActivity extends AppCompatActivity {
         text_singer= (TextView) findViewById(R.id.id_textview_songsinger);
         text_song= (TextView) findViewById(R.id.id_textview_songName);
         btn_play= (ImageButton) findViewById(R.id.id_flow_play);
+        play_imageView= (ImageView) findViewById(R.id.id_imageview_album);
         btn_play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -322,5 +326,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         unbindService(t3.henu.left_library.MainActivity.con);
+        Collect.removeAll();
     }
 }

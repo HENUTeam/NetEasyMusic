@@ -1,5 +1,6 @@
 package t3.henu.left_library.Activities.NetWork;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -7,23 +8,32 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewStub;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import t3.henu.left_library.Activities.MusicInfo.MusicResponse;
 import t3.henu.left_library.Activities.MusicInfo.Result;
+import t3.henu.left_library.Activities.MusicInfo.Song;
+import t3.henu.left_library.All_View;
+import t3.henu.left_library.Collect;
+import t3.henu.left_library.MainActivity;
 import t3.henu.left_library.R;
 
 
-public class SearchActivity extends AppCompatActivity {
+public class SearchActivity extends MainActivity {
 
     private EditText etSearchContent;
     private TextView tvSearch;
@@ -32,11 +42,8 @@ public class SearchActivity extends AppCompatActivity {
     private ArrayAdapter<String> historyAdapter;
     private LinearLayout llHistory;
     private LinearLayout llResult;
-    //	private String mUrl = GlobalConstants.GET_SEARCH_RESULT;
-//	private ArrayList<SearchResult.ListCourse> searchResultInfo;
-    private ViewStub vsNetError;
-    private ViewStub vsBlankContent;
-
+    private All_View all_view=null;
+    private static final String TAG  = "SearchActivity";
 
     private static final int DO_SEARCH = 1;
     private Handler mHandler = new Handler(){
@@ -51,7 +58,7 @@ public class SearchActivity extends AppCompatActivity {
         if (TextUtils.isEmpty(text)) {
             return;
         }
-        MusicNetWork.SearchMusic(this,text,10,1,0, new MusicNetWork.VolleyCallback() {
+        MusicNetWork.SearchMusic(this,text,100,1,0, new MusicNetWork.VolleyCallback() {
             @Override
             public void onSuccess(String result) {
                 ParaseResult(result);
@@ -62,14 +69,38 @@ public class SearchActivity extends AppCompatActivity {
 
     private void ParaseResult(String result) {
         Gson gson=new Gson();
-        Result re=gson.fromJson(result,Result.class);
-        List<String> list=new ArrayList<String>();
-        for(int i=0;i<re.getSongs().size();i++){
-            list.add(re.getSongs().get(i).getName());
+        MusicResponse music_res=gson.fromJson(result,MusicResponse.class);
+        Result re=music_res.getResult();
+        if(re==null){
+            Toast.makeText(getBaseContext(),"没有找到记录",Toast.LENGTH_SHORT).show();
+            return;
         }
-        ArrayAdapter adapter=new ArrayAdapter(SearchActivity.this,android.R.layout.simple_list_item_1,
-        android.R.id.text1,list);
-        mListViewResult.setAdapter(adapter);
+        final List<String> list=new ArrayList<String>();
+        final List<Song> list_song=re.getSongs();
+        if(list_song!=null&&list_song.size()>0){
+            for(int i=0;i<list_song.size();i++){
+                list.add(list_song.get(i).getName());
+            }
+            ArrayAdapter adapter=new ArrayAdapter(SearchActivity.this,android.R.layout.simple_list_item_1,
+                    list);
+            mListViewResult.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Intent intent=new Intent(SearchActivity.this,SearchResult.class);
+                    intent.putExtra("music_name",list.get(position));
+                    intent.putExtra("music_id",list_song.get(position).getId());
+                    startActivity(intent);
+                }
+            });
+            mListViewResult.setAdapter(adapter);
+        }else{
+            Toast.makeText(getBaseContext(),"没有找到记录",Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    private void toast(String s) {
+        Toast.makeText(getBaseContext(),s,Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -77,8 +108,15 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
         initViews();
+        all_view=new All_View(SearchActivity.t_singer,SearchActivity.t_songname,SearchActivity.imageView);
+        Collect.addView(all_view);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Collect.removeView(all_view);
+    }
 
     public void initViews() {
 //		vsNetError = (ViewStub) findViewById(R.id.vs_net_error);
@@ -104,6 +142,7 @@ public class SearchActivity extends AppCompatActivity {
                 } else {//相关课程listview显示 搜索历史隐藏
                     if (llHistory.getVisibility() == View.VISIBLE) {
                         llHistory.setVisibility(View.GONE);
+                        llResult.setVisibility(View.VISIBLE);
                     }
 
                 }

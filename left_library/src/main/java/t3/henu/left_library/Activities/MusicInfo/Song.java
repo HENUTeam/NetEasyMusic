@@ -16,6 +16,16 @@ public class Song implements Parcelable {
     private String picUrl;
     private String audio;
     private List<Artist> artists;
+    private Album album;
+
+
+    public Album getAlbum() {
+        return album;
+    }
+
+    public void setAlbum(Album album) {
+        this.album = album;
+    }
 
     public String getId() {
         return id;
@@ -58,6 +68,9 @@ public class Song implements Parcelable {
     }
 
 
+    public Song() {
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -70,9 +83,7 @@ public class Song implements Parcelable {
         dest.writeString(this.picUrl);
         dest.writeString(this.audio);
         dest.writeTypedList(this.artists);
-    }
-
-    public Song() {
+        dest.writeParcelable( this.album, flags);
     }
 
     protected Song(Parcel in) {
@@ -81,6 +92,7 @@ public class Song implements Parcelable {
         this.picUrl = in.readString();
         this.audio = in.readString();
         this.artists = in.createTypedArrayList(Artist.CREATOR);
+        this.album = in.readParcelable(Album.class.getClassLoader());
     }
 
     public static final Parcelable.Creator<Song> CREATOR = new Parcelable.Creator<Song>() {
