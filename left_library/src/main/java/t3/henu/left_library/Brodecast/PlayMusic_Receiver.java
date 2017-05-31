@@ -35,7 +35,13 @@ public class PlayMusic_Receiver extends BroadcastReceiver {
             if(all_view.getSinger()!=null){
                 all_view.getSinger().setText(songInfo.getSinger());
                 all_view.getSong().setText(songInfo.getSong());
-
+                boolean status= (boolean) intent.getExtras().get("play_status");
+                //Toast.makeText(context,"收到广播："+(status),Toast.LENGTH_SHORT).show();
+                if(status==false){
+                    all_view.getImageButton().setImageResource(t3.henu.left_library.R.drawable.icon_play1);
+                }else{
+                    all_view.getImageButton().setImageResource(t3.henu.left_library.R.drawable.icon_pause);
+                }
 
                 //Toast.makeText(context,(t3.henu.left_library.MainActivity.imageView==null)+"::"+songInfo.getPucUrl(),Toast.LENGTH_SHORT).show();
                 ImageRequest imageRequest=new ImageRequest(songInfo.getPucUrl(), new Response.Listener<Bitmap>() {
@@ -56,12 +62,6 @@ public class PlayMusic_Receiver extends BroadcastReceiver {
         }
 
 
-        boolean status= (boolean) intent.getExtras().get("play_status");
-        //Toast.makeText(context,"收到广播："+(status),Toast.LENGTH_SHORT).show();
-        if(status==false){
-            MainActivity.btn_play.setImageResource(t3.henu.left_library.R.drawable.icon_play1);
-        }else{
-            MainActivity.btn_play.setImageResource(t3.henu.left_library.R.drawable.icon_pause);
-        }
+
     }
 }

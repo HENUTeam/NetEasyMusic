@@ -108,7 +108,8 @@ public class SearchActivity extends MainActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
         initViews();
-        all_view=new All_View(SearchActivity.t_singer,SearchActivity.t_songname,SearchActivity.imageView);
+        all_view=new All_View(SearchActivity.t_singer,SearchActivity.t_songname,
+                SearchActivity.imageView,SearchActivity.btn_play);
         Collect.addView(all_view);
     }
 

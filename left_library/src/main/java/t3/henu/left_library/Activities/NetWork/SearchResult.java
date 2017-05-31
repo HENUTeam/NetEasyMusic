@@ -42,7 +42,8 @@ public class SearchResult extends MainActivity {
         music_name=intent.getStringExtra("music_name");
         music_id=intent.getStringExtra("music_id");
         initView();
-        all_view=new All_View(SearchResult.t_singer,SearchResult.t_songname,SearchResult.imageView);
+        all_view=new All_View(SearchResult.t_singer,SearchResult.t_songname,
+                SearchResult.imageView,SearchResult.btn_play);
         Collect.addView(all_view);
     }
 

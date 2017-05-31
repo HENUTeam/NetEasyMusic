@@ -29,7 +29,8 @@ public class MyMusic extends MainActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bendiyinyue);
         initView();
-        all_view=new All_View(MyMusic.t_singer,MyMusic.t_songname,MyMusic.imageView);
+        all_view=new All_View(MyMusic.t_singer,MyMusic.t_songname,MyMusic.imageView
+        ,MyMusic.btn_play);
         Collect.addView(all_view);
     }
 
