@@ -36,16 +36,13 @@ public class PlayReceive extends BroadcastReceiver {
         ImageRequest imageRequest=new ImageRequest(songInfo.getPucUrl(), new Response.Listener<Bitmap>() {
             @Override
             public void onResponse(Bitmap bitmap) {
-                if( t3.henu.left_library.MainActivity.imageView!=null){
-                    t3.henu.left_library.MainActivity.imageView.setImageBitmap(bitmap);
-                }
+
 
                 MainActivity.play_imageView.setImageBitmap(bitmap);
             }
         }, 0, 0, Bitmap.Config.RGB_565, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                t3.henu.left_library.MainActivity.imageView.setImageResource(R.drawable.icon_touxiang);
                 MainActivity.play_imageView.setImageResource(R.drawable.icon_touxiang);
             }
         });mQueue.add(imageRequest);

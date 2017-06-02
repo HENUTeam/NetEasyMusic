@@ -92,6 +92,7 @@ public class OnlineMusicAdapter extends RecyclerView.Adapter<OnlineMusicAdapter.
         songInfo.setId(Long.parseLong(onlineMusic.getSong_id()));//歌id
         songInfo.setSinger(artist);//歌手以及专辑
         songInfo.setLrc(onlineMusic.getLrclink());//歌词
+        songInfo.setPucUrl(onlineMusic.getPic_big());
         songInfo.setPic_big(onlineMusic.getPic_big());//大图片
         songInfo.setPic_small(onlineMusic.getPic_small());//小图片
         // 获取歌曲播放链接

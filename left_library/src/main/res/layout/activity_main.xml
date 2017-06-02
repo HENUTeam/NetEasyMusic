@@ -1,13 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout   xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" tools:context="t3.henu.left_library.MainActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_blackground"
+    android:fitsSystemWindows="true"
+    >
 
-    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="Hello World!" app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:title="思念是一种病"
+        android:subtitle="张震岳"
+        app:subtitleTextAppearance="@style/netease_toolbar_subtitle"
+        app:titleTextAppearance="@style/netease_toolbar_title"
+        />
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolBar">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+
+            android:background="#33ffffff"
+            android:id="@+id/view" />
+
+        <ImageView
+            android:id="@+id/disc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/play_album"
+
+            android:layout_centerHorizontal="true" />
+        <ImageView
+            android:id="@+id/needle"
+            android:layout_width="70dp"
+            android:layout_height="130dp"
+            android:src="@drawable/play_needle"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/rlMusicTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llPlayOption"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tvCurrentTime"
+            style="@style/neteasa_music_time_text_sytle"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            tools:text="01:34"/>
+
+        <SeekBar
+            android:id="@+id/musicSeekBar"
+            style="@style/neteasa_music_time_seek_bar_sytle"
+            android:layout_centerInParent="true"
+            android:layout_toEndOf="@id/tvCurrentTime"
+            android:layout_toStartOf="@+id/tvTotalTime"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp"
+            />
+
+        <TextView
+            android:id="@+id/tvTotalTime"
+            style="@style/neteasa_music_time_text_sytle"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            tools:text="05:34"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llPlayOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        >
+
+        <ImageView
+            android:id="@+id/playing_pre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_last"/>
+
+        <ImageView
+            android:id="@+id/playing_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/playing_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_next"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -24,7 +24,7 @@
             android:layout_height="wrap_content">
             <ImageView
                 android:id="@+id/id_imageview_album"
-                android:src="@drawable/huge"
+                android:src="@drawable/default_album"
                 android:layout_marginLeft="10dp"
                 android:scaleType="centerCrop"
                 android:layout_width="50dp"
@@ -57,14 +57,15 @@
         </LinearLayout>
 
         <ImageButton
-            android:src="@drawable/icon_play1"
             android:background="@drawable/touch_bg"
             android:id="@+id/id_flow_play"
             android:scaleType="centerCrop"
             android:layout_marginRight="10dp"
+            android:src="@drawable/icon_play1"
             android:layout_width="50dp"
             android:layout_height="50dp" />
         <ImageButton
+            android:id="@+id/id_btn_liebiao"
             android:src="@drawable/icon_liebiao1"
             android:background="@drawable/touch_bg"
             android:scaleType="centerCrop"

@@ -19,7 +19,7 @@ import org.json.JSONObject;
 
 /**
  * 音乐网络类
- * Created by SmileSB101 on 2016/11/1 0001.
+
  */
 
 public class MusicNetWork {

@@ -20,6 +20,9 @@ import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListene
 import java.util.ArrayList;
 import java.util.List;
 
+import t3.henu.left_library.Activities.NetWork.SearchActivity;
+import t3.henu.left_library.All_View;
+import t3.henu.left_library.Collect;
 import t3.henu.left_library.MainActivity;
 import t3.henu.left_library.R;
 import t3.henu.left_library.YHQ_solve.BillboardListInfo;
@@ -44,6 +47,7 @@ public class OnlineMusicActivity extends MainActivity {
     private List<OnlineMusic> mMusicList = new ArrayList<>();
     private int mOffset = 0;
     private OnlineMusicAdapter mAdapter = new OnlineMusicAdapter(mMusicList);
+    private  All_View all_view;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -71,6 +75,15 @@ public class OnlineMusicActivity extends MainActivity {
                 }
             }
         });
+       all_view = new All_View(SearchActivity.t_singer, SearchActivity.t_songname,
+                SearchActivity.imageView, SearchActivity.btn_play);
+        Collect.addView(all_view);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Collect.removeView(all_view);
     }
 
     private void onLoad() {

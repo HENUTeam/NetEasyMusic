@@ -43,22 +43,29 @@ public class PlayService extends Service {
 
         public void setCurrent(int curr) {
             current = curr;
-            sendChange_pic();
             play(0);
         }
         public void next(){
-            current=(current+1)%play_list.size();
-            sendChange_pic();
-            play(0);
+           next_song();
         }
         public void pre(){
-            current=(current-1);
-            if(current<0){
-                current=play_list.size()-1;
-            }
-            sendChange_pic();
-            play(0);
+            pre_song();
         }
+    }
+
+    private void pre_song() {
+        if(play_list.size()>0){
+            if(status==1||status==3){
+                current-=1;
+                if(current<0){
+                    current=play_list.size()-1;
+                }
+            }
+            }else if(status==2){
+                current=(int)new Random().nextInt(play_list.size());
+            }
+
+            play(0);
     }
 
     @Override
@@ -113,33 +120,22 @@ public class PlayService extends Service {
         mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
-                if(play_list.size()>0){
-                    if(status==3){
-                        mediaPlayer.start();
-                    }else if(status==1){
-                        current=(current+1)%play_list.size();
-                    }else if(status==2){
-                        current=(int)new Random().nextInt(play_list.size());
-                    }
-                    sendChange_pic();
-                    play(0);
-                }
-
+                next_song();
             }
         });
     }
 
-    private void sendChange_pic() {
+    private void next_song() {
         if(play_list.size()>0){
-            Intent in=new Intent();
-            in.putExtra("play_status",isplay);
-            if(play_list.size()>0){
-                Bundle bund=new Bundle();
-                bund.putParcelable("songinfo",play_list.get(current));
-                in.putExtra("Bunde",bund);
+            if(status==3){
+                mediaPlayer.start();
+            }else if(status==1){
+                current=(current+1)%play_list.size();
+            }else if(status==2){
+                current=(int)new Random().nextInt(play_list.size());
             }
-            in.setAction("gyb.ne.play_music.change_pic");
-            sendBroadcast(in);
+
+            play(0);
         }
     }
 
@@ -149,7 +145,7 @@ public class PlayService extends Service {
      * @param
      */
     private void play(int currentTime) {
-        if(play_list.size()>0){
+        if(play_list!=null&&play_list.size()>0){
             try {
                 isplay=true;
                  SongInfo songInfo=play_list.get(current);
@@ -163,6 +159,8 @@ public class PlayService extends Service {
             } catch (Exception e) {
                 e.printStackTrace();
             }
+        }else{
+            toast("播放列表为空");
         }
 
     }

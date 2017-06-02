@@ -25,6 +25,7 @@ import static t3.henu.left_library.YHQ_solve.AppCache.getContext;
 public class SearchResult extends MainActivity {
     String music_name;
     private String music_id;
+    private  int offset=0;
     private RecyclerView recyclerView;
     private static final int MUSIC_LIST_SIZE = 20;
     List<Song> get_songs;
@@ -53,13 +54,13 @@ public class SearchResult extends MainActivity {
         Collect.removeView(all_view);
     }
 
-    private void onLoad(final int Offset) {
-        MusicNetWork.SearchMusic(getContext(), music_name, MUSIC_LIST_SIZE, 1, 0, new MusicNetWork.VolleyCallback() {
+    private void onLoad( int Offset) {
+        MusicNetWork.SearchMusic(getContext(), music_name, MUSIC_LIST_SIZE, 1, Offset, new MusicNetWork.VolleyCallback() {
             @Override
             public void onSuccess(String result) {
                 Gson gson=new Gson();
                 music=gson.fromJson(result,MusicResponse.class);
-                if(music.getResult().getSongCount()<=0){
+                if(music.getResult()==null||music.getResult().getSongCount()<=0){
                     return;
                 }
                  get_songs=music.getResult().getSongs();
@@ -119,6 +120,7 @@ public class SearchResult extends MainActivity {
                 if(newState == RecyclerView.SCROLL_STATE_IDLE){
                     int lastVisiblePosition = manager.findLastVisibleItemPosition();
                     if(lastVisiblePosition >= manager.getItemCount() - 1){
+                        //offset+=MUSIC_LIST_SIZE;
                         onLoad(mOffset);
                     }
                 }

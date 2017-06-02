@@ -34,6 +34,7 @@ import java.util.Map;
 import t3.henu.left_library.Activities.NetWork.SearchActivity;
 import t3.henu.left_library.Collect;
 import t3.henu.left_library.Fragments.LeftRecyclerView;
+import t3.henu.left_library.PlayActivity;
 import t3.henu.left_library.Services.PlayService;
 import t3.henu.neteasymusic.appMain.MyViewPagerAdapter;
 import t3.henu.neteasymusic.appMain.TabLayout_Mid;
@@ -54,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     Fragment fragment_appmain_left = null;
     List<RecyclerViewData>lists=new ArrayList<RecyclerViewData>();
+    private RelativeLayout play_layout;
+
+
     public static TextView text_singer,text_song;
     public static ImageButton btn_play;
     public static ImageView play_imageView;
@@ -65,7 +69,13 @@ public class MainActivity extends AppCompatActivity {
         initView();
         Intent in=new Intent(this, PlayService.class);
         bindService(in, t3.henu.left_library.MainActivity.con,BIND_AUTO_CREATE);
-
+        play_layout= (RelativeLayout) findViewById(R.id.id_base_play);
+        play_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, PlayActivity.class));
+            }
+        });
     }
 
     private void initView() {
@@ -86,12 +96,6 @@ public class MainActivity extends AppCompatActivity {
     private void solvePermisson() {
         List<String> permissionsNeeded = new ArrayList<String>();
 
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_SMS)
-                != PackageManager.PERMISSION_GRANTED) {
-            //申请WRITE_EXTERNAL_STORAGE权限
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_SMS},
-                    READ_SMS_REQUES_CODE);
-        }
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED) {
             //申请WRITE_EXTERNAL_STORAGE权限
@@ -106,8 +110,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         final List<String> permissionsList = new ArrayList<String>();
-        if (!addPermission(permissionsList, Manifest.permission.ACCESS_FINE_LOCATION))
-            permissionsNeeded.add("GPS");
         if (!addPermission(permissionsList, Manifest.permission.READ_CONTACTS))
             permissionsNeeded.add("Read Contacts");
         if (!addPermission(permissionsList, Manifest.permission.WRITE_CONTACTS))
