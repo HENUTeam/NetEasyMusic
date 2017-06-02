@@ -65,7 +65,7 @@ public class PlayActivity extends AppCompatActivity implements View.OnClickListe
         playingPre = (ImageButton) findViewById(R.id.playing_pre);
         playingPlay = (ImageButton) findViewById(R.id.playing_play);
         playingNext = (ImageButton) findViewById(R.id.playing_next);
-        album_imageview= (RoundedImageView) findViewById(R.id.id_imageview_album);
+        album_imageview= (RoundedImageView) findViewById(R.id.imageView_roundedImageView);
         text_song_name= (TextView) findViewById(R.id.text_play_song);
         text_song_singer=(TextView)findViewById(R.id.text_play_singer);
         playStatus= (ImageButton) findViewById(R.id.id_btn_change_status);

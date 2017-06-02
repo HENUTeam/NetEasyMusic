@@ -2,6 +2,7 @@ package t3.henu.left_library.Fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -45,7 +46,16 @@ public class LeftRecyclerView extends Fragment {
         rootView=inflater.inflate(R.layout.fragment_recyclerview,container,false);
         recyclerView= (RecyclerView) rootView.findViewById(R.id.id_recycler_Allmusic);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        new Handler().post(new Runnable() {
+            @Override
+            public void run() {
+                initView();
+            }
+        }) ;
+        return rootView;
+    }
 
+    private void initView() {
         if(mDatas.size()<=0){
             texts=getResources().getStringArray(R.array.strs_music_liebiao);
             numbers=getResources().getStringArray(R.array.strs_music_number);
@@ -57,15 +67,8 @@ public class LeftRecyclerView extends Fragment {
                 }
                 mDatas.add(recyclerData);
             }
-            int image=R.drawable.icon_next_right;
-            String text[]={"创建的歌单","收藏的歌单"};
-            String nu[]={"6","25"};
-            for(int i=0;i<nu.length;i++){
-                RecyclerData recyclerData=new RecyclerData(image,text[i],nu[i]);
-                mDatas.add(recyclerData);
-            }
         }
-       RecyclerAdapter adapter=new RecyclerAdapter(mDatas);
+        RecyclerAdapter adapter=new RecyclerAdapter(mDatas);
         recyclerView.setAdapter(adapter);
         adapter.setOnRecyclerViewItemClickListener(new BaseQuickAdapter.OnRecyclerViewItemClickListener() {
             @Override
@@ -82,7 +85,6 @@ public class LeftRecyclerView extends Fragment {
 
             }
         });
-        return rootView;
     }
 
     private void toast(String text) {

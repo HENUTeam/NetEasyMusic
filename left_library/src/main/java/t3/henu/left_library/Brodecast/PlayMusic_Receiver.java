@@ -49,7 +49,8 @@ public class PlayMusic_Receiver extends BroadcastReceiver {
                 PlayActivity.seecbar.setProgress((int) current);
             }
             PlayActivity.playingPlay.setImageResource(status?R.drawable.ic_pause:R.drawable.ic_play);
-        }if(PlayActivity.album_imageview!=null){
+        }
+        if(PlayActivity.album_imageview!=null){
             if(songInfo.getAlbum_bitmap()!=null){
                 PlayActivity.album_imageview.setImageBitmap(songInfo.getAlbum_bitmap());
             }else if(songInfo.getPucUrl()!=null){
@@ -65,7 +66,7 @@ public class PlayMusic_Receiver extends BroadcastReceiver {
                         }, 0, 0, Bitmap.Config.RGB_565, new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {
-                                PlayActivity.album_imageview.setImageResource(R.drawable.default_album);
+                                PlayActivity.album_imageview.setImageResource(R.drawable.huge);
 
                             }
                         });mQueue.add(imageRequest);
@@ -90,21 +91,25 @@ public class PlayMusic_Receiver extends BroadcastReceiver {
                 new Handler().post(new Runnable() {
                     @Override
                     public void run() {
-
-                        ImageRequest imageRequest=new ImageRequest(songInfo.getPucUrl(), new Response.Listener<Bitmap>() {
-                            @Override
-                            public void onResponse(Bitmap bitmap) {
-                                if(  all_view.getImageView()!=null){
-                                    all_view.getImageView().setImageBitmap(bitmap);
+                        if(songInfo.getAlbum_bitmap()!=null){
+                            all_view.getImageView().setImageBitmap(songInfo.getAlbum_bitmap());
+                        }else{
+                            ImageRequest imageRequest=new ImageRequest(songInfo.getPucUrl(), new Response.Listener<Bitmap>() {
+                                @Override
+                                public void onResponse(Bitmap bitmap) {
+                                    if(  all_view.getImageView()!=null){
+                                        all_view.getImageView().setImageBitmap(bitmap);
+                                    }
                                 }
-                            }
-                        }, 0, 0, Bitmap.Config.RGB_565, new Response.ErrorListener() {
-                            @Override
-                            public void onErrorResponse(VolleyError error) {
-                                all_view.getImageView().setImageResource(R.drawable.default_album);
+                            }, 0, 0, Bitmap.Config.RGB_565, new Response.ErrorListener() {
+                                @Override
+                                public void onErrorResponse(VolleyError error) {
+                                    all_view.getImageView().setImageResource(R.drawable.default_album);
 
-                            }
-                        });mQueue.add(imageRequest);
+                                }
+                            });mQueue.add(imageRequest);
+                        }
+
                     }
                 });
                 //Toast.makeText(context,(t3.henu.left_library.MainActivity.imageView==null)+"::"+songInfo.getPucUrl(),Toast.LENGTH_SHORT).show();
