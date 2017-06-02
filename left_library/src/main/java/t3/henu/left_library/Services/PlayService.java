@@ -21,8 +21,6 @@ public class PlayService extends Service {
     public static int status=1;//1代表顺序循环，2代表随机循环，3代表单曲循环
     public int current=0;//当前播放的歌曲序号
     public static boolean isplay=false;//是否播放
-    public long hasTime=0;//已经播放的歌曲时间
-    public long allTime;//歌曲总时间
 
     private playBinder binder=new playBinder();
     public class playBinder extends Binder{
@@ -115,8 +113,6 @@ public class PlayService extends Service {
             mediaPlayer=new MediaPlayer();
         }
         play_list=new LinkedList<>();
-        current=0;
-        hasTime=0;
         mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
@@ -149,7 +145,6 @@ public class PlayService extends Service {
             try {
                 isplay=true;
                  SongInfo songInfo=play_list.get(current);
-                 allTime=songInfo.getDuration();
                 //sendBroad();
                 mediaPlayer.reset();// 把各项参数恢复到初始状态
                 mediaPlayer.setDataSource(songInfo.getPath());
@@ -190,6 +185,7 @@ public class PlayService extends Service {
                 bund.putParcelable("songinfo",play_list.get(current));
                 in.putExtra("Bunde",bund);
             }
+
             in.setAction(RECiEVE1);
             sendBroadcast(in);
         }

@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 
@@ -20,6 +21,7 @@ import t3.henu.left_library.All_View;
 import t3.henu.left_library.Collect;
 import t3.henu.left_library.PlayActivity;
 import t3.henu.left_library.R;
+import t3.henu.left_library.Services.PlayService;
 
 public class PlayMusic_Receiver extends BroadcastReceiver {
 
@@ -33,9 +35,45 @@ public class PlayMusic_Receiver extends BroadcastReceiver {
             PlayActivity.text_song_singer.setText(songInfo.getSinger()+"--"+songInfo.getAlbum());
             PlayActivity.text_song_name.setText(songInfo.getSong());
         }
+        MediaPlayer media= PlayService.mediaPlayer;
+
         if(PlayActivity.playingPlay!=null){
+            if(media.isPlaying()&&!PlayActivity.is_use){
+                long current=media.getCurrentPosition();
+                long total=media.getDuration();
+                String s1=getTime(current);
+                String s2=getTime(total);
+                PlayActivity.cp_time.setText(s1);
+                PlayActivity.total_time.setText(s2);
+                PlayActivity.seecbar.setMax((int) total);
+                PlayActivity.seecbar.setProgress((int) current);
+            }
             PlayActivity.playingPlay.setImageResource(status?R.drawable.ic_pause:R.drawable.ic_play);
+        }if(PlayActivity.album_imageview!=null){
+            if(songInfo.getAlbum_bitmap()!=null){
+                PlayActivity.album_imageview.setImageBitmap(songInfo.getAlbum_bitmap());
+            }else if(songInfo.getPucUrl()!=null){
+                new Handler().post(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        ImageRequest imageRequest=new ImageRequest(songInfo.getPucUrl(), new Response.Listener<Bitmap>() {
+                            @Override
+                            public void onResponse(Bitmap bitmap) {
+                                PlayActivity.album_imageview.setImageBitmap(bitmap);
+                            }
+                        }, 0, 0, Bitmap.Config.RGB_565, new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                PlayActivity.album_imageview.setImageResource(R.drawable.default_album);
+
+                            }
+                        });mQueue.add(imageRequest);
+                    }
+                });
+            }
         }
+
         List<All_View> list= Collect.all_view_list;
         for(int i=0;i<list.size();i++){
             final All_View all_view=list.get(i);
@@ -76,5 +114,20 @@ public class PlayMusic_Receiver extends BroadcastReceiver {
 
 
 
+    }
+
+    private String getTime(long current) {
+        String s1="",s2="";
+        long min=current/1000/60;
+        long second=current/1000%60;
+        if(min<10){
+            s1="0";
+        }
+        s1+=min;
+        if(second<10){
+            s2="0";
+        }
+        s2+=second;
+        return s1+":"+s2;
     }
 }

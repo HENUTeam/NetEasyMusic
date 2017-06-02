@@ -13,6 +13,15 @@ import java.io.Serializable;
 public class SongInfo implements Parcelable {
     private long Id,size,duration,albumId;
     private String song,path,singer,pucUrl,lrc,pic_big,pic_small,album;
+    private Bitmap album_bitmap;
+
+    public Bitmap getAlbum_bitmap() {
+        return album_bitmap;
+    }
+
+    public void setAlbum_bitmap(Bitmap album_bitmap) {
+        this.album_bitmap = album_bitmap;
+    }
 
     public String getLrc() {
         return lrc;

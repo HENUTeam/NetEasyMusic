@@ -13,8 +13,11 @@ import android.view.WindowManager;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.makeramen.roundedimageview.RoundedImageView;
 
 import t3.henu.left_library.Services.PlayService;
 
@@ -23,12 +26,19 @@ import t3.henu.left_library.Services.PlayService;
  */
 
 public class PlayActivity extends AppCompatActivity implements View.OnClickListener {
-    public static  ImageButton playingPre,playingPlay,playingNext;
+    public static boolean is_use=false;
+    public static  ImageButton playingPre,playingPlay,playingNext,playStatus;
+    public static TextView cp_time,total_time;
+    public static RoundedImageView album_imageview;
+    public static SeekBar seecbar;
     public ImageView disc,needle;
     public static TextView text_song_name,text_song_singer;
     private ObjectAnimator discAnimation,needleAnimation;
     private boolean isPlaying = true;
     private ImageButton imageButton;
+    private int []images={R.drawable.play_icn_loop_prs,R.drawable.play_icn_shuffle,
+            R.drawable.play_icn_one_prs};
+    private String []texts={"顺序播放","随机播放","单曲循环"};
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,12 +65,34 @@ public class PlayActivity extends AppCompatActivity implements View.OnClickListe
         playingPre = (ImageButton) findViewById(R.id.playing_pre);
         playingPlay = (ImageButton) findViewById(R.id.playing_play);
         playingNext = (ImageButton) findViewById(R.id.playing_next);
-
+        album_imageview= (RoundedImageView) findViewById(R.id.id_imageview_album);
         text_song_name= (TextView) findViewById(R.id.text_play_song);
         text_song_singer=(TextView)findViewById(R.id.text_play_singer);
+        playStatus= (ImageButton) findViewById(R.id.id_btn_change_status);
         playingPre.setOnClickListener(this);
         playingPlay.setOnClickListener(this);
         playingNext.setOnClickListener(this);
+        seecbar= (SeekBar) findViewById(R.id.musicSeekBar);
+        seecbar.setMax(100);
+        seecbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                long curent=progress;
+                cp_time.setText(getTime(curent));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+                PlayService.mediaPlayer.seekTo(seekBar.getProgress());
+            }
+        });
+        int st= PlayService.status;
+        playStatus.setImageResource(images[st]);
         imageButton= (ImageButton) findViewById(R.id.id_play_back);
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +100,22 @@ public class PlayActivity extends AppCompatActivity implements View.OnClickListe
                 finish();
             }
         });
+        cp_time= (TextView) findViewById(R.id.id_tv_cp_time);
+        total_time= (TextView) findViewById(R.id.id_tv_total_time);
+        playStatus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int st= PlayService.status;
+                st=(st+1)%images.length;
+                playStatus.setImageResource(images[st]);
+                MainActivity.playBinder.setPlayStatus(st);
+                toast(texts[st]);
+            }
+        });
+    }
+
+    private void toast(String text) {
+        Toast.makeText(PlayActivity.this,text,Toast.LENGTH_SHORT).show();
     }
 
     //动画设置
@@ -100,6 +148,19 @@ public class PlayActivity extends AppCompatActivity implements View.OnClickListe
         } else {
         }
     }
-
+    private String getTime(long current) {
+        String s1="",s2="";
+        long min=current/1000/60;
+        long second=current/1000%60;
+        if(min<10){
+            s1="0";
+        }
+        s1+=min;
+        if(second<10){
+            s2="0";
+        }
+        s2+=second;
+        return s1+":"+s2;
+    }
 
 }
