@@ -35,14 +35,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65a8eb9a-248b-4fb0-85f9-182c8f27e875" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/SettingActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_setting.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/left.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/left.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/arrays.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/arrays.xml" />
     </list>
     <ignored path="NetEasyMusic.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -102,14 +96,14 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="361" column="29" selection-start-line="361" selection-start-column="29" selection-end-line="361" selection-end-column="29" />
+            <state relative-caret-position="176">
+              <caret line="352" column="59" selection-start-line="352" selection-start-column="59" selection-end-line="352" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#8114#8277#0" expanded="true" />
-                <element signature="e#8276#8277#0" expanded="true" />
-                <element signature="e#8826#8974#0" expanded="true" />
-                <element signature="e#8973#8974#0" expanded="true" />
+                <element signature="e#8154#8317#0" expanded="true" />
+                <element signature="e#8316#8317#0" expanded="true" />
+                <element signature="e#8867#9015#0" expanded="true" />
+                <element signature="e#9014#9015#0" expanded="true" />
                 <element signature="method#initNavigationView#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#initToolbar#0;class#MainActivity#0" expanded="false" />
                 <element signature="method#initViewPager#0;class#MainActivity#0" expanded="false" />
@@ -3718,13 +3712,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491104747859</updated>
     </task>
-    <task id="LOCAL-00018" summary="2017/4/2 19:32">
-      <created>1491134734832</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1491134734832</updated>
-    </task>
     <task id="LOCAL-00019" summary="2017/4/2 19:32">
       <created>1491135562938</created>
       <option name="number" value="00019" />
@@ -4061,7 +4048,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496457169719</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="2017/6/3  17:07新增设置界面，退出按钮实现，双击返回桌面">
+      <created>1496480903106</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1496480903106</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TodoView">
@@ -4185,7 +4179,10 @@
     <MESSAGE value="2017/6/2   加入音乐播放界面 ，功能待补充&#10;先把代码push一下" />
     <MESSAGE value="2017/6/2   18:40 添加seekbar拖动音乐&#10;先把代码push一下" />
     <MESSAGE value="2017/6/3    完善上一首，播放顺序控制bug&#10;先把代码push一下" />
-    <option name="LAST_COMMIT_MESSAGE" value="2017/6/3    完善上一首，播放顺序控制bug&#10;先把代码push一下" />
+    <MESSAGE value="2017/6/3  17:07新增设置界面，退出按钮实现，双击返回桌面" />
+    <option name="LAST_COMMIT_MESSAGE" value="2017/6/3  17:07新增设置界面，退出按钮实现，双击返回桌面" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -4630,14 +4627,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="361" column="29" selection-start-line="361" selection-start-column="29" selection-end-line="361" selection-end-column="29" />
+        <state relative-caret-position="176">
+          <caret line="352" column="59" selection-start-line="352" selection-start-column="59" selection-end-line="352" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8114#8277#0" expanded="true" />
-            <element signature="e#8276#8277#0" expanded="true" />
-            <element signature="e#8826#8974#0" expanded="true" />
-            <element signature="e#8973#8974#0" expanded="true" />
+            <element signature="e#8154#8317#0" expanded="true" />
+            <element signature="e#8316#8317#0" expanded="true" />
+            <element signature="e#8867#9015#0" expanded="true" />
+            <element signature="e#9014#9015#0" expanded="true" />
             <element signature="method#initNavigationView#0;class#MainActivity#0" expanded="false" />
             <element signature="method#initToolbar#0;class#MainActivity#0" expanded="false" />
             <element signature="method#initViewPager#0;class#MainActivity#0" expanded="false" />
