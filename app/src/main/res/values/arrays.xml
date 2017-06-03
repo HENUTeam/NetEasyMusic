@@ -25,4 +25,15 @@
 
     </string-array>
 
+    <string-array name="spingarr">
+        <item>自动</item>
+        <item>标准</item>
+        <item>较高</item>
+        <item>极高</item>
+    </string-array>
+
+    <string-array name="spingarr2">
+        <item>云音乐锁屏</item>
+        <item>系统锁屏</item>
+    </string-array>
 </resources>

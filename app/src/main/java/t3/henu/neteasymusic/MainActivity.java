@@ -17,7 +17,9 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.KeyEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -43,25 +45,27 @@ import t3.henu.neteasymusic.appMain_drawerlayout_start.RecyclerViewData;
 import t3.henu.neteasymusic.appMain_drawerlayout_start.RecyclerviewAdapter;
 
 public class MainActivity extends AppCompatActivity {
+    public static TextView text_singer, text_song;
+    public static ImageButton btn_play;
+    public static ImageView play_imageView;
     final private int REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS = 124;
     final private int WRITE_EXTERNAL_STORAGE_REQUEST_CODE = 122;
     final private int READ_SMS_REQUES_CODE = 122;
     final private int READ_EXTERNAL_STORAGE_REQUEST_CODE = 123;
+    Fragment fragment_appmain_left = null;
+    List<RecyclerViewData> lists = new ArrayList<RecyclerViewData>();
+    Intent intent_setting;
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private List<Fragment> fragments = new ArrayList<Fragment>();
     private ConstraintLayout constraintLayout_left;
     private DrawerLayout drawerLayout;
     private RecyclerView recyclerView;
-    Fragment fragment_appmain_left = null;
-    List<RecyclerViewData>lists=new ArrayList<RecyclerViewData>();
     private RelativeLayout play_layout;
-
-
-    public static TextView text_singer,text_song;
-    public static ImageButton btn_play;
-    public static ImageView play_imageView;
+    private Button btn_finish, btn_setting;
     private Intent search_intent;
+    private long exitTime = 0;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, PlayActivity.class));
             }
         });
+        intent_setting = new Intent(MainActivity.this, SettingActivity.class);
     }
 
     private void initView() {
@@ -93,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean isMarshmallow() {
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.M;
     }
+
     private void solvePermisson() {
         List<String> permissionsNeeded = new ArrayList<String>();
 
@@ -180,6 +186,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        btn_setting = (Button) findViewById(R.id.id_setting);
+        btn_setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intent_setting);
+            }
+        });
+        btn_finish = (Button) findViewById(R.id.id_finish);
         /*Toolbar toolbar= (Toolbar) findViewById(R.id.id_appmain_toobar);
         setSupportActionBar(toolbar);
         ActionBar actionBar=getSupportActionBar();
@@ -189,7 +203,12 @@ public class MainActivity extends AppCompatActivity {
         }*/
         final RelativeLayout relativeLayout=(RelativeLayout)findViewById(R.id.id_base_play);
         initNavigationView();
-
+        btn_finish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.exit(0);
+            }
+        });
     }
 
     private void initNavigationView() {
@@ -237,7 +256,6 @@ public class MainActivity extends AppCompatActivity {
         });
         recyclerView.setAdapter(adapter);
     }
-
 
     private void initToolbar() {
         ImageButton button= (ImageButton) findViewById(R.id.id_btn_search);
@@ -329,5 +347,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         unbindService(t3.henu.left_library.MainActivity.con);
         Collect.removeAll();
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK
+                && event.getAction() == KeyEvent.ACTION_DOWN) {
+            if ((System.currentTimeMillis() - exitTime) > 2000) {
+                //弹出提示，可以有多种方式
+                Toast.makeText(getApplicationContext(), "再按一次退出程序", Toast.LENGTH_SHORT).show();
+                exitTime = System.currentTimeMillis();
+            } else {
+                System.exit(0);
+            }
+            return true;
+        }
+
+        return super.onKeyDown(keyCode, event);
     }
 }
