@@ -31,8 +31,8 @@ public class PlayActivity extends AppCompatActivity implements View.OnClickListe
     public static TextView cp_time,total_time;
     public static RoundedImageView album_imageview;
     public static SeekBar seecbar;
-    public ImageView disc,needle;
     public static TextView text_song_name,text_song_singer;
+    public ImageView disc, needle;
     private ObjectAnimator discAnimation,needleAnimation;
     private boolean isPlaying = true;
     private ImageButton imageButton;
@@ -92,7 +92,7 @@ public class PlayActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
         int st= PlayService.status;
-        playStatus.setImageResource(images[st]);
+        playStatus.setImageResource(images[st - 1]);
         imageButton= (ImageButton) findViewById(R.id.id_play_back);
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override

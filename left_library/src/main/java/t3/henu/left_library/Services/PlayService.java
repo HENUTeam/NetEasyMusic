@@ -20,50 +20,25 @@ public class PlayService extends Service {
     public static MediaPlayer mediaPlayer;
     public static List<SongInfo>play_list;//当前播放的列表
     public static int status=1;//1代表顺序循环，2代表随机循环，3代表单曲循环
-    public int current=0;//当前播放的歌曲序号
     public static boolean isplay=false;//是否播放
-
+    public int current = 0;//当前播放的歌曲序号
     private playBinder binder=new playBinder();
-    public class playBinder extends Binder{
-        public void setPlayStatus(int s){
-            status=s;
-        }
-        public void setPlayList(List<SongInfo> list){
-            play_list=list;
-        }
-        public void setIsPlay(){
-           if(isplay==true){
-               //toast("停止");
-               pause();
-           }else{ //toast("开始");
-               resume();
-           }
-        }
 
-        public void setCurrent(int curr) {
-            current = curr;
-            play(0);
-        }
-        public void next(){
-           next_song();
-        }
-        public void pre(){
-            pre_song();
-        }
+    public PlayService() {
     }
 
     private void pre_song() {
         if(play_list.size()>0){
             if(status==1||status==3){
-                current-=1;
+                current = current - 1;
                 if(current<0){
                     current=play_list.size()-1;
                 }
-            }
-            }else if(status==2){
+            } else if (status == 2) {
                 current=(int)new Random().nextInt(play_list.size());
             }
             play(0);
+        }
     }
 
     @Override
@@ -83,10 +58,6 @@ public class PlayService extends Service {
             }
         }).start();
     }
-
-    public PlayService() {
-    }
-
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
@@ -206,7 +177,6 @@ public class PlayService extends Service {
         }
     }
 
-
     /**
      * 停止音乐
      */
@@ -218,6 +188,52 @@ public class PlayService extends Service {
             } catch (Exception e) {
                 e.printStackTrace();
             }
+        }
+    }
+
+    @Override
+    public IBinder onBind(Intent intent) {
+        return binder;
+    }
+
+    @Override
+    public void onDestroy() {
+        if (mediaPlayer != null) {
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+    }
+
+    public class playBinder extends Binder {
+        public void setPlayStatus(int s) {
+            status = s;
+        }
+
+        public void setPlayList(List<SongInfo> list) {
+            play_list = list;
+        }
+
+        public void setIsPlay() {
+            if (isplay == true) {
+                //toast("停止");
+                pause();
+            } else { //toast("开始");
+                resume();
+            }
+        }
+
+        public void setCurrent(int curr) {
+            current = curr;
+            play(0);
+        }
+
+        public void next() {
+            next_song();
+        }
+
+        public void pre() {
+            pre_song();
         }
     }
 
@@ -235,19 +251,6 @@ public class PlayService extends Service {
                 mediaPlayer.seekTo(currentTime);
             }
 
-        }
-    }
-    @Override
-    public IBinder onBind(Intent intent) {
-        return binder;
-    }
-
-    @Override
-    public void onDestroy() {
-        if (mediaPlayer != null) {
-            mediaPlayer.stop();
-            mediaPlayer.release();
-            mediaPlayer = null;
         }
     }
 }
