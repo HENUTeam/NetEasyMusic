@@ -55,7 +55,7 @@ public class SearchResult extends MainActivity {
     }
 
     private void onLoad( int Offset) {
-        MusicNetWork.SearchMusic(getContext(), music_name, MUSIC_LIST_SIZE, 1, Offset, new MusicNetWork.VolleyCallback() {
+        MusicNetWork.SearchMusic(getContext(), music_name, MUSIC_LIST_SIZE, 1, mOffset, new MusicNetWork.VolleyCallback() {
             @Override
             public void onSuccess(String result) {
                 Gson gson=new Gson();

@@ -108,7 +108,7 @@ public class PlayActivity extends AppCompatActivity implements View.OnClickListe
                 int st= PlayService.status;
                 st=(st+1)%images.length;
                 playStatus.setImageResource(images[st]);
-                MainActivity.playBinder.setPlayStatus(st);
+                MainActivity.playBinder.setPlayStatus(st+1);
                 toast(texts[st]);
             }
         });

@@ -1,9 +1,8 @@
 package t3.henu.left_library.Activities.NetWork;
 
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
+import android.os.Handler;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,26 +10,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.chad.library.adapter.base.BaseViewHolder;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
-import java.io.BufferedInputStream;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
 
 import t3.henu.left_library.Activities.SongInfo;
 import t3.henu.left_library.MainActivity;
 import t3.henu.left_library.R;
-import t3.henu.left_library.YHQ_solve.OnlineMusic;
-import t3.henu.left_library.YHQ_solve.clickBillboard.DownloadInfo;
-import t3.henu.left_library.YHQ_solve.clickBillboard.OnlineMusicAdapter;
-import t3.henu.left_library.YHQ_solve.http.HttpCallback;
-import t3.henu.left_library.YHQ_solve.http.HttpClient;
 import t3.henu.left_library.YHQ_solve.utils.FileUtils;
 import t3.henu.left_library.YHQ_solve.utils.ImageUtils;
 
@@ -39,7 +26,8 @@ import t3.henu.left_library.YHQ_solve.utils.ImageUtils;
  */
 
 class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder> {
-    private List<SongInfo>mSongList=new ArrayList<>();//就他
+    private List<SongInfo>mSongList=new ArrayList<>();
+    private final String TAG="ResultAdapter";
     boolean isplaying=false;
     static class ViewHolder extends RecyclerView.ViewHolder{
         ImageView online_cover,online_more;
@@ -67,13 +55,25 @@ class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.ViewHolder> {
         holder.musicView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int position=holder.getAdapterPosition();
+                final int position=holder.getAdapterPosition();
                // SongInfo songInfo=mSongList.get(position);//点击事件好
                 //Toast.makeText(v.getContext(),songInfo.getPucUrl(),Toast.LENGTH_LONG).show();
                 //Toast.makeText(parent.getContext(),position+songInfo.getSong()+songInfo.getSinger(),Toast.LENGTH_SHORT).show();
                 if(mSongList!=null&&mSongList.size()>0){
-                    MainActivity.playBinder.setPlayList(mSongList);
-                    MainActivity.playBinder.setCurrent(position);
+                    if(mSongList.get(position).getPath()!=null){
+                        new Handler().post(new Runnable() {
+                            @Override
+                            public void run() {
+                                MainActivity.playBinder.setPlayList(mSongList);
+                                MainActivity.playBinder.setCurrent(position);
+                                Log.d(TAG, "run: "+mSongList.get(position).getPath());
+                            }
+                        });
+
+                    }else{
+                        Toast.makeText(v.getContext(),"无法播放此歌曲！！",Toast.LENGTH_LONG).show();
+                    }
+
                 }else{
                     Toast.makeText(v.getContext(),"播放列表为空！！",Toast.LENGTH_LONG).show();
                 }

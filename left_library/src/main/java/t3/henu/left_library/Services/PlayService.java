@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Binder;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.IBinder;
 import android.widget.Toast;
 
@@ -62,7 +63,6 @@ public class PlayService extends Service {
             }else if(status==2){
                 current=(int)new Random().nextInt(play_list.size());
             }
-
             play(0);
     }
 
@@ -123,12 +123,10 @@ public class PlayService extends Service {
 
     private void next_song() {
         if(play_list.size()>0){
-            if(status==3){
-                mediaPlayer.start();
-            }else if(status==1){
+          if(status==1||status==3){
                 current=(current+1)%play_list.size();
             }else if(status==2){
-                current=(int)new Random().nextInt(play_list.size());
+                current=new Random().nextInt(play_list.size());
             }
 
             play(0);
@@ -140,23 +138,30 @@ public class PlayService extends Service {
      *
      * @param
      */
-    private void play(int currentTime) {
-        if(play_list!=null&&play_list.size()>0){
-            try {
-                isplay=true;
-                 SongInfo songInfo=play_list.get(current);
-                //sendBroad();
-                mediaPlayer.reset();// 把各项参数恢复到初始状态
-                mediaPlayer.setDataSource(songInfo.getPath());
-                mediaPlayer.prepare(); // 进行缓冲
-                mediaPlayer.setOnPreparedListener(new PreparedListener(currentTime));// 注册一个监听器
-                // toast(current+":"+play_list.get(current).path);
-            } catch (Exception e) {
-                e.printStackTrace();
+    private void play(final int currentTime) {
+
+        new Handler().post(new Runnable() {
+            @Override
+            public void run() {
+                if(play_list!=null&&play_list.size()>0){
+                    try {
+                        isplay=true;
+                        SongInfo songInfo=play_list.get(current);
+                        //sendBroad();
+                        mediaPlayer.reset();// 把各项参数恢复到初始状态
+                        mediaPlayer.setDataSource(songInfo.getPath());
+                        mediaPlayer.prepare(); // 进行缓冲
+                        mediaPlayer.setOnPreparedListener(new PreparedListener(currentTime));// 注册一个监听器
+                        // toast(current+":"+play_list.get(current).path);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }else{
+                    toast("播放列表为空");
+                }
             }
-        }else{
-            toast("播放列表为空");
-        }
+        });
+
 
     }
 
