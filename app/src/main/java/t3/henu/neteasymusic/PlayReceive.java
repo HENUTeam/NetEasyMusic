@@ -10,11 +10,9 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageRequest;
-import com.nostra13.universalimageloader.core.ImageLoader;
 
-import t3.henu.left_library.Activities.NetWork.MusicNetWork;
-import t3.henu.left_library.Activities.SongInfo;
-import t3.henu.left_library.YHQ_solve.utils.ImageUtils;
+import t3.henu.left_library.GYB_solve.Activities.NetWork.MusicNetWork;
+import t3.henu.left_library.GYB_solve.Activities.SongInfo;
 
 public class PlayReceive extends BroadcastReceiver {
 
@@ -26,13 +24,13 @@ public class PlayReceive extends BroadcastReceiver {
         SongInfo songInfo= (SongInfo) bun.getParcelable("songinfo");
        MainActivity.text_singer.setText(songInfo.getSinger());
         MainActivity.text_song.setText(songInfo.getSong());
-        if(t3.henu.left_library.MainActivity.t_singer!=null){
-            t3.henu.left_library.MainActivity.t_singer.setText(songInfo.getSinger());
-            t3.henu.left_library.MainActivity.t_songname.setText(songInfo.getSong());
+        if (t3.henu.left_library.GYB_solve.MainActivity.t_singer != null) {
+            t3.henu.left_library.GYB_solve.MainActivity.t_singer.setText(songInfo.getSinger());
+            t3.henu.left_library.GYB_solve.MainActivity.t_songname.setText(songInfo.getSong());
         }
         boolean status= (boolean) intent.getExtras().get("play_status");
         RequestQueue mQueue = MusicNetWork.getmRequestqueue(context);
-        //Toast.makeText(context,(t3.henu.left_library.MainActivity.imageView==null)+"::"+songInfo.getPucUrl(),Toast.LENGTH_SHORT).show();
+        //Toast.makeText(context,(t3.henu.left_library.GYB_solve.MainActivity.imageView==null)+"::"+songInfo.getPucUrl(),Toast.LENGTH_SHORT).show();
         ImageRequest imageRequest=new ImageRequest(songInfo.getPucUrl(), new Response.Listener<Bitmap>() {
             @Override
             public void onResponse(Bitmap bitmap) {

@@ -33,7 +33,7 @@
         <activity android:name=".appMain_drawerlayout_start.LogInactivity" />
         <activity android:name=".appMain_drawerlayout_start.RegistActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name="t3.henu.left_library.MainActivity" />
+        <activity android:name="t3.henu.left_library.GYB_solve.MainActivity" />
 
         <receiver
             android:name=".PlayReceive"

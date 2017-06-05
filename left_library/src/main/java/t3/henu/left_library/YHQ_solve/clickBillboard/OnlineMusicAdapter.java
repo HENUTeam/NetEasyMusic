@@ -14,10 +14,9 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import java.util.ArrayList;
 import java.util.List;
 
-import t3.henu.left_library.Activities.SongInfo;
-import t3.henu.left_library.MainActivity;
+import t3.henu.left_library.GYB_solve.Activities.SongInfo;
+import t3.henu.left_library.GYB_solve.MainActivity;
 import t3.henu.left_library.R;
-import t3.henu.left_library.Services.PlayService;
 import t3.henu.left_library.YHQ_solve.OnlineMusic;
 import t3.henu.left_library.YHQ_solve.http.HttpCallback;
 import t3.henu.left_library.YHQ_solve.http.HttpClient;
@@ -30,28 +29,14 @@ import t3.henu.left_library.YHQ_solve.utils.ImageUtils;
  */
 
 public class OnlineMusicAdapter extends RecyclerView.Adapter<OnlineMusicAdapter.ViewHolder> {
+    boolean isplaying = false;
     private List<OnlineMusic> mMusicList = new ArrayList<>();
     private List<SongInfo>mSongList=new ArrayList<>();//就他
-    boolean isplaying=false;
-    static class ViewHolder extends RecyclerView.ViewHolder{
-        ImageView online_cover,online_more;
-        View online_divider;
-        TextView online_title,online_artist;
-        View musicView;
-        public ViewHolder(View view) {
-            super(view);
-            online_cover= (ImageView) view.findViewById(R.id.yhq_online_cover);
-            online_more= (ImageView) view.findViewById(R.id.yhq_online_more);
-            online_divider=view.findViewById(R.id.yhq_online_divider);
-            online_title= (TextView) view.findViewById(R.id.yhq_online_title);
-            online_artist= (TextView) view.findViewById(R.id.yhq_online_artist);
-            musicView=view;
-        }
-    }
     public OnlineMusicAdapter(List<OnlineMusic> mMusicList)
     {
         this.mMusicList=mMusicList;
     }
+
     @Override
     public ViewHolder onCreateViewHolder(final ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.yhq_view_holder_music,parent,false);
@@ -112,6 +97,7 @@ public class OnlineMusicAdapter extends RecyclerView.Adapter<OnlineMusicAdapter.
         });
         mSongList.add(songInfo);
     }
+
     private boolean isShowDivider(int position) {
         return position != mMusicList.size() - 1;
     }
@@ -119,5 +105,22 @@ public class OnlineMusicAdapter extends RecyclerView.Adapter<OnlineMusicAdapter.
     @Override
     public int getItemCount() {
         return mMusicList.size();
+    }
+
+    static class ViewHolder extends RecyclerView.ViewHolder {
+        ImageView online_cover, online_more;
+        View online_divider;
+        TextView online_title, online_artist;
+        View musicView;
+
+        public ViewHolder(View view) {
+            super(view);
+            online_cover = (ImageView) view.findViewById(R.id.yhq_online_cover);
+            online_more = (ImageView) view.findViewById(R.id.yhq_online_more);
+            online_divider = view.findViewById(R.id.yhq_online_divider);
+            online_title = (TextView) view.findViewById(R.id.yhq_online_title);
+            online_artist = (TextView) view.findViewById(R.id.yhq_online_artist);
+            musicView = view;
+        }
     }
 }

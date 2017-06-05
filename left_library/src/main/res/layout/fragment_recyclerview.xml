@@ -15,4 +15,17 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
+    <ExpandableListView
+        android:id="@+id/id_ExpandableListView"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_recycler_Allmusic">
+
+    </ExpandableListView>
+
 </android.support.constraint.ConstraintLayout>

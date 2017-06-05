@@ -25,11 +25,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Activities.MyMusic" />
+        <activity android:name=".GYB_solve.MainActivity" />
+        <activity android:name=".GYB_solve.Activities.MyMusic" />
         <activity android:name=".YHQ_solve.clickBillboard.OnlineMusicActivity" />
         <receiver
-            android:name=".Brodecast.PlayMusic_Receiver"
+            android:name=".GYB_solve.Brodecast.PlayMusic_Receiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -38,12 +38,13 @@
         </receiver>
 
         <service
-            android:name=".Services.PlayService"
+            android:name=".GYB_solve.Services.PlayService"
             android:enabled="true"
             android:exported="true" />
-        <activity android:name=".Activities.NetWork.SearchActivity" />
-        <activity android:name=".Activities.NetWork.SearchResult"></activity>
-        <activity android:name=".PlayActivity"/>
+
+        <activity android:name=".GYB_solve.Activities.NetWork.SearchActivity" />
+        <activity android:name=".GYB_solve.Activities.NetWork.SearchResult"></activity>
+        <activity android:name=".GYB_solve.PlayActivity" />
     </application>
 
 </manifest>

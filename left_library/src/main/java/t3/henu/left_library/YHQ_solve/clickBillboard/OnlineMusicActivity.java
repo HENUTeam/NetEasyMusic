@@ -3,7 +3,6 @@ package t3.henu.left_library.YHQ_solve.clickBillboard;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -20,10 +19,10 @@ import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListene
 import java.util.ArrayList;
 import java.util.List;
 
-import t3.henu.left_library.Activities.NetWork.SearchActivity;
-import t3.henu.left_library.All_View;
-import t3.henu.left_library.Collect;
-import t3.henu.left_library.MainActivity;
+import t3.henu.left_library.GYB_solve.Activities.NetWork.SearchActivity;
+import t3.henu.left_library.GYB_solve.All_View;
+import t3.henu.left_library.GYB_solve.Collect;
+import t3.henu.left_library.GYB_solve.MainActivity;
 import t3.henu.left_library.R;
 import t3.henu.left_library.YHQ_solve.BillboardListInfo;
 import t3.henu.left_library.YHQ_solve.OnlineMusic;

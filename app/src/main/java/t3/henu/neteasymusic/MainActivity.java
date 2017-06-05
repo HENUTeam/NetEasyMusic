@@ -33,11 +33,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import t3.henu.left_library.Activities.NetWork.SearchActivity;
-import t3.henu.left_library.Collect;
-import t3.henu.left_library.Fragments.LeftRecyclerView;
-import t3.henu.left_library.PlayActivity;
-import t3.henu.left_library.Services.PlayService;
+import t3.henu.left_library.GYB_solve.Activities.NetWork.SearchActivity;
+import t3.henu.left_library.GYB_solve.Collect;
+import t3.henu.left_library.GYB_solve.Fragments.LeftRecyclerView;
+import t3.henu.left_library.GYB_solve.PlayActivity;
+import t3.henu.left_library.GYB_solve.Services.PlayService;
 import t3.henu.neteasymusic.appMain.MyViewPagerAdapter;
 import t3.henu.neteasymusic.appMain.TabLayout_Mid;
 import t3.henu.neteasymusic.appMain_drawerlayout_start.LogInactivity;
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_drawerlayout);
         initView();
         Intent in=new Intent(this, PlayService.class);
-        bindService(in, t3.henu.left_library.MainActivity.con,BIND_AUTO_CREATE);
+        bindService(in, t3.henu.left_library.GYB_solve.MainActivity.con, BIND_AUTO_CREATE);
         play_layout= (RelativeLayout) findViewById(R.id.id_base_play);
         play_layout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -206,6 +206,7 @@ public class MainActivity extends AppCompatActivity {
         btn_finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                finish();
                 System.exit(0);
             }
         });
@@ -333,7 +334,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(PlayService.play_list.size()>0){
-                    t3.henu.left_library.MainActivity.playBinder.setIsPlay();
+                    t3.henu.left_library.GYB_solve.MainActivity.playBinder.setIsPlay();
                 }else{
                     toast("播放列表为空！！！");
                 }
@@ -345,7 +346,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
-        unbindService(t3.henu.left_library.MainActivity.con);
+        unbindService(t3.henu.left_library.GYB_solve.MainActivity.con);
         Collect.removeAll();
     }
 
