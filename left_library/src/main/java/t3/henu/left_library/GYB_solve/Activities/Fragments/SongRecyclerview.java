@@ -1,5 +1,6 @@
 package t3.henu.left_library.GYB_solve.Activities.Fragments;
 
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import t3.henu.left_library.GYB_solve.Activities.MusicUtils;
+import t3.henu.left_library.GYB_solve.Activities.MyMusic;
 import t3.henu.left_library.GYB_solve.Activities.SongInfo;
 import t3.henu.left_library.GYB_solve.MainActivity;
 import t3.henu.left_library.R;
@@ -69,13 +71,26 @@ public class SongRecyclerview extends Fragment {
         recyclerView.setAdapter(adapter);
         adapter.setOnRecyclerViewItemClickListener(new BaseQuickAdapter.OnRecyclerViewItemClickListener() {
             @Override
-            public void onItemClick(View view, int i) {
+            public void onItemClick(final View view, int i) {
                 //toast(listsong.get(i).getSong() + ",路径：" + listsong.get(i).path);
+                SongInfo song = MusicUtils.list.get(i);
+                if (song.getAlbum_bitmap() == null) {
+                    Bitmap bitmap = SongInfo.getBitMap(getContext(), (int) song.getAlbumId());
+                    listsong.get(i).setAlbum_bitmap(bitmap);
+                    toast(String.valueOf(bitmap == null));
+                }
+
                 adapter.notifyDataSetChanged();
                 MainActivity.playBinder.setPlayList(listsong);
                 MainActivity.playBinder.setCurrent(i);
-                ImageView imageView= (ImageView) view.findViewById(R.id.id_songinfo_isplay);
-                imageView.setVisibility(View.VISIBLE);
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        ImageView imageView = (ImageView) view.findViewById(R.id.id_songinfo_isplay);
+                        imageView.setVisibility(View.VISIBLE);
+                    }
+                }, 1000);
+
             }
         });
 

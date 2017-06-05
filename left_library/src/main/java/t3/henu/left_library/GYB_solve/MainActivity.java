@@ -18,9 +18,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import t3.henu.left_library.R;
 import t3.henu.left_library.GYB_solve.Services.PlayService;
-
+import t3.henu.left_library.R;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -56,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+
         mContext = this;
         ViewGroup mDecorView = (ViewGroup) getWindow().getDecorView();
         mContentContainer = (FrameLayout) ((ViewGroup) mDecorView.getChildAt(0)).getChildAt(1);
@@ -117,6 +117,11 @@ public class MainActivity extends AppCompatActivity {
     public void startActivity(Intent intent) {
         // intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         super.startActivity(intent);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 
     @Override

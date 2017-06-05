@@ -17,6 +17,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
@@ -27,6 +28,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.makeramen.roundedimageview.RoundedImageView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -48,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
     public static TextView text_singer, text_song;
     public static ImageButton btn_play;
     public static ImageView play_imageView;
+    public static RoundedImageView user_image;
+    public static boolean is_log = false;
     final private int REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS = 124;
     final private int WRITE_EXTERNAL_STORAGE_REQUEST_CODE = 122;
     final private int READ_SMS_REQUES_CODE = 122;
@@ -62,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private RecyclerView recyclerView;
     private RelativeLayout play_layout;
-    private Button btn_finish, btn_setting;
+    private Button btn_finish, btn_setting, log_btn;
     private Intent search_intent;
     private long exitTime = 0;
 
@@ -176,6 +180,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initDrawerlayout() {
+        user_image = (RoundedImageView) findViewById(R.id.id_user_roundedImageView);
         constraintLayout_left = (ConstraintLayout) findViewById(R.id.id_appmain_drawelayout_left);
         ImageButton btn = (ImageButton) findViewById(R.id.id_appmain_btn_showleft);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -227,6 +232,7 @@ public class MainActivity extends AppCompatActivity {
                 lists.add(r);
             }
         }
+        log_btn = (Button) findViewById(R.id.id_appmain_drawelayout_left_btn_signin);
         RecyclerviewAdapter adapter=new RecyclerviewAdapter(lists);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter.setOnRecyclerViewItemClickListener(new BaseQuickAdapter.OnRecyclerViewItemClickListener() {
@@ -249,8 +255,11 @@ public class MainActivity extends AppCompatActivity {
             public void onItemChildClick(BaseQuickAdapter baseQuickAdapter, View view, int i) {
                 switch (view.getId()){
                     case R.id.id_appmain_drawelayout_left_btn_signin:
-                        Intent in=new Intent(MainActivity.this, LogInactivity.class);
-                        startActivity(in);
+                        if (!is_log) {
+                            Intent in = new Intent(MainActivity.this, LogInactivity.class);
+                            startActivity(in);
+                        }
+
                         break;
                 }
             }
@@ -369,4 +378,6 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onKeyDown(keyCode, event);
     }
+
+
 }

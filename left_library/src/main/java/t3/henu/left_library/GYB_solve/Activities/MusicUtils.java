@@ -26,7 +26,7 @@ import t3.henu.left_library.R;
 
 public class MusicUtils {
     private static final Uri albumArtUri = Uri.parse("content://media/external/audio/albumart");
-    static List<SongInfo> list;
+    public static List<SongInfo> list;
     public static List<SongInfo> getMp3Infos(Context context) {
         if(list==null){
             list= new LinkedList<SongInfo>();

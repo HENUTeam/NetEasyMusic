@@ -1,6 +1,11 @@
 package t3.henu.left_library.GYB_solve.Activities;
 
+import android.content.Context;
+import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -42,6 +47,32 @@ public class SongInfo implements Parcelable {
         this.pic_small = in.readString();
         this.album = in.readString();
         this.albumUrl = in.readParcelable(Bitmap.class.getClassLoader());
+    }
+
+    public static String getAlbumArt(Context context, int album_id) {
+        String mUriAlbums = "content://media/external/audio/albums";
+        String[] projection = new String[]{"album_art"};
+        Cursor cur = context.getContentResolver().query(
+                Uri.parse(mUriAlbums + "/" + Integer.toString(album_id)),
+                projection, null, null, null);
+        String album_art = null;
+        if (cur.getCount() > 0 && cur.getColumnCount() > 0) {
+            cur.moveToNext();
+            album_art = cur.getString(0);
+        }
+        cur.close();
+        return album_art;
+    }
+
+    public static Bitmap getBitMap(Context context, int album_id) {
+        Bitmap bm = null;
+        String albumArt = getAlbumArt(context, album_id);
+        if (albumArt != null) {
+            bm = BitmapFactory.decodeFile(albumArt);
+            BitmapDrawable bmpDraw = new BitmapDrawable(bm);
+            return bm;
+        }
+        return null;
     }
 
     public Bitmap getAlbum_bitmap() {

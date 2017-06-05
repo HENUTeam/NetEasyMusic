@@ -2,6 +2,7 @@ package t3.henu.neteasymusic.appMain_drawerlayout_start;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
+import t3.henu.neteasymusic.MainActivity;
 import t3.henu.neteasymusic.R;
 
 /**
@@ -19,9 +21,10 @@ import t3.henu.neteasymusic.R;
 
 public class LogInactivity extends AppCompatActivity implements View.OnClickListener {
 
+    Intent intent = null;
     private EditText edit_userName,edit_passWord;
     private Button btn_denglu,btn_forget,btn_newUser;
-    Intent intent=null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,6 +83,17 @@ public class LogInactivity extends AppCompatActivity implements View.OnClickList
             public void done(UserPerson userPerson, BmobException e) {
                 if(e==null){
                     toast("登录成功");
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            //MainActivity1.is_log=true;
+                            //Intent intent = new Intent();
+                            //intent.putExtra("user",edit_userName.getText().toString());
+                            // setResult(2, intent);
+                            finish();
+                        }
+                    }, 1000);
+
                 }else{
                     toast("登录失败！！\n"+e.getMessage());
                 }

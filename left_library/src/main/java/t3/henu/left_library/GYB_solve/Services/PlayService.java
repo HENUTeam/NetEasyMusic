@@ -146,7 +146,7 @@ public class PlayService extends Service {
     private void pause() {
         if (mediaPlayer != null && mediaPlayer.isPlaying()) {
             mediaPlayer.pause();
-            //MainActivity.btn_play.setImageResource(R.drawable.icon_play1);
+            //MainActivity1.btn_play.setImageResource(R.drawable.icon_play1);
             isplay = false;
             sendBroad();
         }
@@ -170,7 +170,7 @@ public class PlayService extends Service {
 
     private void resume() {
         if (!isplay) {
-          //  MainActivity.btn_play.setImageResource(R.drawable.icon_pause);
+            //  MainActivity1.btn_play.setImageResource(R.drawable.icon_pause);
             isplay = true; sendBroad();
             mediaPlayer.start();
             //play(0);

@@ -16,6 +16,9 @@ import t3.henu.left_library.GYB_solve.All_View;
 import t3.henu.left_library.GYB_solve.BlankFragment;
 import t3.henu.left_library.GYB_solve.Collect;
 import t3.henu.left_library.GYB_solve.MainActivity;
+import t3.henu.left_library.GYB_solve.RobotFragment.ChatFragment;
+import t3.henu.left_library.YYN_solve.AlbumFragment;
+import t3.henu.left_library.YYN_solve.SingerFragment;
 
 /**
  * Created by 高逸博 on 2017/4/14.
@@ -73,9 +76,9 @@ public class MyMusic extends MainActivity {
         viewPager= (ViewPager) findViewById(R.id.id_mymusic_viewpager);
         if(fragments.size()<=0){
             fragments.add(new SongRecyclerview());
-            fragments.add(new BlankFragment("歌手"));
-            fragments.add(new BlankFragment("专辑"));
-            fragments.add(new BlankFragment("文件夹"));
+            fragments.add(new SingerFragment());
+            fragments.add(new AlbumFragment());
+            fragments.add(new ChatFragment());
             viewPager.setAdapter(new MyViewPagerAdapter(getSupportFragmentManager(),fragments));
         }
 
