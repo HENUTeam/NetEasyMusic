@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main_drawerlayout);
         initView();
         Intent in=new Intent(this, PlayService.class);
@@ -90,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initView() {
+
         initToolbar();
         initViewPager();
         initDrawerlayout();
@@ -234,7 +236,8 @@ public class MainActivity extends AppCompatActivity {
                 lists.add(r);
             }
         }
-        log_btn = (Button) findViewById(R.id.id_appmain_drawelayout_left_btn_signin);
+
+
         RecyclerviewAdapter adapter=new RecyclerviewAdapter(lists);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapter.setOnRecyclerViewItemClickListener(new BaseQuickAdapter.OnRecyclerViewItemClickListener() {
@@ -258,6 +261,7 @@ public class MainActivity extends AppCompatActivity {
                 switch (view.getId()){
                     case R.id.id_appmain_drawelayout_left_btn_signin:
                         if (!is_log) {
+                            log_btn = (Button) view;
                             Intent in = new Intent(MainActivity.this, LogInactivity.class);
                             startActivity(in);
                         }

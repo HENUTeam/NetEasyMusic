@@ -91,6 +91,7 @@ public class LogInactivity extends AppCompatActivity implements View.OnClickList
                             //intent.putExtra("user",edit_userName.getText().toString());
                             // setResult(2, intent);
                             MainActivity.log_btn.setText(user.getUsername());
+                            MainActivity.is_log = true;
                             finish();
                         }
                     }, 1000);
