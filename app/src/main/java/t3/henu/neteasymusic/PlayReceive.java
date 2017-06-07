@@ -31,9 +31,9 @@ public class PlayReceive extends BroadcastReceiver {
         boolean status= (boolean) intent.getExtras().get("play_status");
         RequestQueue mQueue = MusicNetWork.getmRequestqueue(context);
         //Toast.makeText(context,(t3.henu.left_library.GYB_solve.MainActivity1.imageView==null)+"::"+songInfo.getPucUrl(),Toast.LENGTH_SHORT).show();
-
-        if (songInfo.getAlbum_bitmap() != null) {
-            MainActivity.play_imageView.setImageBitmap(songInfo.getAlbum_bitmap());
+        Bitmap bitmap = SongInfo.getBitMap(context, (int) songInfo.getAlbumId());
+        if (bitmap != null) {
+            MainActivity.play_imageView.setImageBitmap(bitmap);
         } else {
 
             ImageRequest imageRequest = new ImageRequest(songInfo.getPucUrl(), new Response.Listener<Bitmap>() {

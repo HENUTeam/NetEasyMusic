@@ -19,7 +19,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import t3.henu.left_library.GYB_solve.Activities.MusicUtils;
-import t3.henu.left_library.GYB_solve.Activities.MyMusic;
 import t3.henu.left_library.GYB_solve.Activities.SongInfo;
 import t3.henu.left_library.GYB_solve.MainActivity;
 import t3.henu.left_library.R;
@@ -45,7 +44,7 @@ public class SongRecyclerview extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.fragment_music_info, container, false);
+        rootView = inflater.inflate(R.layout.gyb_fragment_music_info, container, false);
         recyclerView = (RecyclerView) rootView.findViewById(R.id.id_recyclerview_songs);
 
         new Handler().post(new Runnable() {
@@ -66,7 +65,7 @@ public class SongRecyclerview extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         adapter = new SongRecyclerviewAdapter(listsong, getContext());
         adapter.openLoadAnimation(BaseQuickAdapter.SLIDEIN_LEFT);
-        View header=LayoutInflater.from(getContext()).inflate(R.layout.music_song_item_header,null,false);
+        View header = LayoutInflater.from(getContext()).inflate(R.layout.gyb_music_song_item_header, null, false);
         adapter.addHeaderView(header);
         recyclerView.setAdapter(adapter);
         adapter.setOnRecyclerViewItemClickListener(new BaseQuickAdapter.OnRecyclerViewItemClickListener() {

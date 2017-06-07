@@ -66,12 +66,12 @@ public class ChatMessageAdapter extends BaseAdapter {
 
         if (convertView == null) {
             if (getItemViewType(position) == 0) {
-                convertView = mlayoutinflater.inflate(R.layout.com_message, parent, false);
+                convertView = mlayoutinflater.inflate(R.layout.gyb_com_message, parent, false);
                 viewHolder = new ViewHolder();
                 viewHolder.mDate = (TextView) convertView.findViewById(R.id.id_textView_in_time);
                 viewHolder.mMessage = (TextView) convertView.findViewById(R.id.id_textView_inmessage);
             } else {
-                convertView = mlayoutinflater.inflate(R.layout.out_message, parent, false);
+                convertView = mlayoutinflater.inflate(R.layout.gyb_out_message, parent, false);
                 viewHolder = new ViewHolder();
                 viewHolder.mDate = (TextView) convertView.findViewById(R.id.id_textView_out_time);
                 viewHolder.mMessage = (TextView) convertView.findViewById(R.id.id_textView_out_message);

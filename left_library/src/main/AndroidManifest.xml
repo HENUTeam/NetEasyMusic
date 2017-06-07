@@ -42,6 +42,7 @@
             android:enabled="true"
             android:exported="true" />
 
+        <activity android:name=".YYN_solve.NewSongActivity" />
         <activity android:name=".GYB_solve.Activities.NetWork.SearchActivity" />
         <activity android:name=".GYB_solve.Activities.NetWork.SearchResult"></activity>
         <activity android:name=".GYB_solve.PlayActivity" />

@@ -43,7 +43,7 @@ public class LeftRecyclerView extends Fragment {
     @Nullable
     @Override
     public View onCreateView(final LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        rootView=inflater.inflate(R.layout.fragment_recyclerview,container,false);
+        rootView = inflater.inflate(R.layout.gyb_fragment_recyclerview, container, false);
         recyclerView= (RecyclerView) rootView.findViewById(R.id.id_recycler_Allmusic);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         new Handler().post(new Runnable() {

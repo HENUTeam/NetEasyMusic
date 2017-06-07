@@ -38,7 +38,7 @@ public class SearchResult extends MainActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search_result);
+        setContentView(R.layout.gyb_activity_search_result);
         Intent intent=getIntent();
         music_name=intent.getStringExtra("music_name");
         music_id=intent.getStringExtra("music_id");

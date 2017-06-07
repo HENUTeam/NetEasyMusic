@@ -43,7 +43,7 @@ public class PlayActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_play);
+        setContentView(R.layout.gyb_activity_play);
         initViews();
     }
 

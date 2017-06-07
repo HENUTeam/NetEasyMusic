@@ -5,7 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_chat">
 
 
     <RelativeLayout
@@ -54,7 +55,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/id_relative"
-        android:background="@drawable/back"
         android:divider="@null"
         android:dividerHeight="3dp" />
 

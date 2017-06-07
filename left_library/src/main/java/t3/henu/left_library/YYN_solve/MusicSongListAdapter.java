@@ -53,7 +53,7 @@ public class MusicSongListAdapter extends BaseAdapter {
         if (convertView == null) {
             vc = new ViewContainer();
             convertView = LayoutInflater.from(context).
-                    inflate(R.layout.music_song_item, null);
+                    inflate(R.layout.gyb_music_song_item, null);
             vc.song_title = (TextView) convertView.findViewById(R.id.id_textView_song_name);
             vc.song_artist = (TextView) convertView.findViewById(R.id.id_textView_song_artist);
 

@@ -18,7 +18,7 @@ import t3.henu.left_library.R;
 public class SongRecyclerviewAdapter extends BaseQuickAdapter<SongInfo> {
     private  Context context;
     public SongRecyclerviewAdapter(List<SongInfo> data ,Context context) {
-        super(R.layout.music_song_item,data);
+        super(R.layout.gyb_music_song_item, data);
         this.context=context;
     }
 

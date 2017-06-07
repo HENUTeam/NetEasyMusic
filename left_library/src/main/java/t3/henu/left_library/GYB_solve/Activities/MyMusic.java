@@ -13,7 +13,6 @@ import java.util.List;
 import t3.henu.left_library.GYB_solve.Activities.Fragments.*;
 import t3.henu.left_library.*;
 import t3.henu.left_library.GYB_solve.All_View;
-import t3.henu.left_library.GYB_solve.BlankFragment;
 import t3.henu.left_library.GYB_solve.Collect;
 import t3.henu.left_library.GYB_solve.MainActivity;
 import t3.henu.left_library.GYB_solve.RobotFragment.ChatFragment;
@@ -33,7 +32,7 @@ public class MyMusic extends MainActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bendiyinyue);
+        setContentView(R.layout.gyb_activity_bendiyinyue);
         initView();
         all_view=new All_View(MyMusic.t_singer,MyMusic.t_songname,MyMusic.imageView
         ,MyMusic.btn_play);

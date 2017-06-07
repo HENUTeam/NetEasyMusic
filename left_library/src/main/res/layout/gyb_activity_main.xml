@@ -15,8 +15,8 @@
         android:layout_height="?attr/actionBarSize"
         android:layout_alignParentTop="true"
         android:background="@android:color/transparent"
-        android:title="思念是一种病"
         android:subtitle="张震岳"
+        android:title="思念是一种病"
         app:subtitleTextAppearance="@style/netease_toolbar_subtitle"
         app:titleTextAppearance="@style/netease_toolbar_title"
         />
@@ -26,27 +26,27 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/toolBar">
         <View
+            android:id="@+id/view"
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
 
-            android:background="#33ffffff"
-            android:id="@+id/view" />
+            android:layout_height="0.5dp"
+            android:background="#33ffffff" />
 
         <ImageView
             android:id="@+id/disc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/play_album"
+            android:layout_centerHorizontal="true"
 
-            android:layout_centerHorizontal="true" />
+            android:src="@drawable/play_album" />
         <ImageView
             android:id="@+id/needle"
             android:layout_width="70dp"
             android:layout_height="130dp"
-            android:src="@drawable/play_needle"
-            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentTop="true"
+            android:src="@drawable/play_needle" />
     </RelativeLayout>
 
 
@@ -110,15 +110,15 @@
             android:id="@+id/playing_play"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_play"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:src="@drawable/ic_play" />
 
         <ImageView
             android:id="@+id/playing_next"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_next"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:src="@drawable/ic_next" />
     </LinearLayout>
 
 

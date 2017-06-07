@@ -54,7 +54,7 @@ public class ChatFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.robotchat, container, false);
+        rootView = inflater.inflate(R.layout.gyb_robotchat, container, false);
         initView();
         initDatas();
         return rootView;

@@ -22,7 +22,7 @@ public class PopWindowMenu extends PopupWindow {
         super(context);
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        mMenuView = inflater.inflate(R.layout.fragment_recyclerview, null);
+        mMenuView = inflater.inflate(R.layout.gyb_fragment_recyclerview, null);
 
 
         //设置按钮监听

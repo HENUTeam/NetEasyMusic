@@ -102,7 +102,7 @@ public class SearchActivity extends MainActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search);
+        setContentView(R.layout.gyb_activity_search);
         initViews();
         all_view=new All_View(SearchActivity.t_singer,SearchActivity.t_songname,
                 SearchActivity.imageView,SearchActivity.btn_play);

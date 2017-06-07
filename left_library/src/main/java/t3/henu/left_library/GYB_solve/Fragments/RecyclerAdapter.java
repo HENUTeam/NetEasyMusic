@@ -19,8 +19,8 @@ public class RecyclerAdapter extends BaseMultiItemQuickAdapter<RecyclerData> {
         super(data);
         this.datas=data;
         addItemType(RecyclerData.STYLE, R.layout.recyclerviewitem);
-        addItemType(RecyclerData.GEDAN,R.layout.recyclerview_gedan);
-        addItemType(RecyclerData.DIVIDER_CHILD,R.layout.recyclerview_gedan_item);
+        addItemType(RecyclerData.GEDAN, R.layout.gybrecyclerview_gedan);
+        addItemType(RecyclerData.DIVIDER_CHILD, R.layout.gyb_recyclerview_gedan_item);
     }
 
     @Override

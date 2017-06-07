@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         mContext = this;
         ViewGroup mDecorView = (ViewGroup) getWindow().getDecorView();
         mContentContainer = (FrameLayout) ((ViewGroup) mDecorView.getChildAt(0)).getChildAt(1);
-        mFloatView =  LayoutInflater.from(getBaseContext()).inflate(R.layout.flowplaymusic, null);
+        mFloatView = LayoutInflater.from(getBaseContext()).inflate(R.layout.gyb_flowplaymusic, null);
         btn_menu= (ImageButton) mFloatView.findViewById(R.id.id_btn_liebiao);
         btn_play = (ImageButton) mFloatView.findViewById(R.id.id_flow_play);
         t_singer= (TextView) mFloatView.findViewById(R.id.id_textview_songsinger);
