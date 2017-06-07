@@ -16,6 +16,7 @@ import t3.henu.left_library.CHY_solve.FragmentZhubo;
 import t3.henu.left_library.YHQ_solve.fz_fragment;
 import t3.henu.neteasymusic.BlankFragment;
 import t3.henu.neteasymusic.R;
+import t3.henu.neteasymusic.hkq_fragment1.hkq_fragment;
 
 /**
  * Created by 高逸博 on 2017/4/1.
@@ -64,7 +65,7 @@ public class TabLayout_Mid extends Fragment {
     private void initViewPager() {
         viewPager= (ViewPager) rootView.findViewById(R.id.id_appmain_toolbar_tabLayout_mid_viewPager);
         if(fragments.size()<=0){
-            fragments.add(new BlankFragment("第一个"));
+            fragments.add(new hkq_fragment());
             fragments.add(new fz_fragment());
             fragments.add(new FragmentZhubo());
             fragments.add(new t3.henu.left_library.YHQ_solve.BillboardFragment());

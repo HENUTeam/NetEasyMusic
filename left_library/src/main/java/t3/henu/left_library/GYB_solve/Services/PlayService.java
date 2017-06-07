@@ -21,7 +21,7 @@ public class PlayService extends Service {
     public static List<SongInfo>play_list;//当前播放的列表
     public static int status=1;//1代表顺序循环，2代表随机循环，3代表单曲循环
     public static boolean isplay=false;//是否播放
-    public int current = 0;//当前播放的歌曲序号
+    public static int current = 0;//当前播放的歌曲序号
     private playBinder binder=new playBinder();
 
     public PlayService() {
