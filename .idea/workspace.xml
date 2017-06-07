@@ -1,45 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AndroidConfiguredLogFilters">
-    <filters>
-      <filter>
-        <option name="logLevel" value="error" />
-        <option name="logMessagePattern" value="" />
-        <option name="logTagPattern" value="MainActivity" />
-        <option name="name" value="MainActivity" />
-        <option name="packageNamePattern" value="" />
-        <option name="pid" value="" />
-      </filter>
-    </filters>
-  </component>
   <component name="AndroidLayouts">
     <shared>
-      <config>
-        <devices>
-          <device id="Nexus 5" />
-          <device id="Nexus S" />
-          <device id="Nexus 4" />
-          <device id="Galaxy Nexus" />
-          <device id="Nexus One" />
-        </devices>
-        <target>android-25</target>
-      </config>
+      <config />
     </shared>
   </component>
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
-  </component>
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Activities/Fragments/SongRecyclerview.java" description="rootView=inflater.inflate(R.layout.fragment_music_..." line="47" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="65a8eb9a-248b-4fb0-85f9-182c8f27e875" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="5230ab75-c9af-4bc9-b594-7281438d3ada" name="Default" comment="Merge remote-tracking branch 'origin/dev_高逸博' into dev_杨皓强&#10;&#10;# Conflicts:&#10;#&#9;.idea/gradle.xml&#10;#&#9;.idea/libraries/BaseRecyclerViewAdapterHelper_v1_9_7.xml&#10;#&#9;.idea/libraries/animated_vector_drawable_25_3_1.xml&#10;#&#9;.idea/libraries/appcompat_v7_25_3_1.xml&#10;#&#9;.idea/libraries/bmob_sdk_3_5_3.xml&#10;#&#9;.idea/libraries/constraint_layout_1_0_2.xml&#10;#&#9;.idea/libraries/constraint_layout_solver_1_0_2.xml&#10;#&#9;.idea/libraries/design_25_3_1.xml&#10;#&#9;.idea/libraries/espresso_core_2_2_2.xml&#10;#&#9;.idea/libraries/espresso_idling_resource_2_2_2.xml&#10;#&#9;.idea/libraries/exposed_instrumentation_api_publish_0_5.xml&#10;#&#9;.idea/libraries/hamcrest_core_1_3.xml&#10;#&#9;.idea/libraries/hamcrest_integration_1_3.xml&#10;#&#9;.idea/libraries/hamcrest_library_1_3.xml&#10;#&#9;.idea/libraries/http_legacy_1_0.xml&#10;#&#9;.idea/libraries/javawriter_2_1_1.xml&#10;#&#9;.idea/libraries/javax_annotation_api_1_2.xml&#10;#&#9;.idea/libraries/javax_inject_1.xml&#10;#&#9;.idea/libraries/jsr305_2_0_1.xml&#10;#&#9;.idea/libraries/junit_4_12.xml&#10;#&#9;.idea/libraries/recyclerview_v7_25_3_1.xml&#10;#&#9;.idea/libraries/roundedimageview_2_3_0.xml&#10;#&#9;.idea/libraries/rules_0_5.xml&#10;#&#9;.idea/libraries/runner_0_5.xml&#10;#&#9;.idea/libraries/support_annotations_25_3_1.xml&#10;#&#9;.idea/libraries/support_compat_25_3_1.xml&#10;#&#9;.idea/libraries/support_core_ui_25_3_1.xml&#10;#&#9;.idea/libraries/support_core_utils_25_3_1.xml&#10;#&#9;.idea/libraries/support_fragment_25_3_1.xml&#10;#&#9;.idea/libraries/support_media_compat_25_3_1.xml&#10;#&#9;.idea/libraries/support_v4_25_3_1.xml&#10;#&#9;.idea/libraries/support_vector_drawable_25_3_1.xml&#10;#&#9;.idea/libraries/transition_25_3_1.xml&#10;#&#9;.idea/workspace.xml&#10;#&#9;left_library/src/main/java/t3/henu/left_library/Activities/SongInfo.java&#10;#&#9;left_library/src/main/java/t3/henu/left_library/Services/PlayService.java&#10;">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/BmobSDK_3_5_3_20161116.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/library_1_0_6.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/multidex_1_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/multidex_instrumentation_1_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/org_apache_http_legacy_android_25.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_25_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/animated_vector_drawable_25_3_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_25_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_25_3_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/design_25_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/design_25_3_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/espresso_core_2_2_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/espresso_core_2_2_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/espresso_idling_resource_2_2_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/espresso_idling_resource_2_2_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/exposed_instrumentation_api_publish_0_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/exposed_instrumentation_api_publish_0_5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/hamcrest_core_1_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/hamcrest_core_1_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/junit_4_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_12.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_25_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_25_3_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/rules_0_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/rules_0_5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/runner_0_5.xml" afterPath="$PROJECT_DIR$/.idea/libraries/runner_0_5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_25_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_25_3_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_compat_25_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_compat_25_3_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_core_ui_25_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_core_ui_25_3_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_core_utils_25_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_core_utils_25_3_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_fragment_25_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_fragment_25_3_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_media_compat_25_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_media_compat_25_3_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_vector_drawable_25_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_vector_drawable_25_3_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/transition_25_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/transition_25_3_1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="NetEasyMusic.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +46,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="D:\MyProject\Android\NetEasyMusic" />
+    <option name="PATCH_PATH" value="C:\Users\117\Desktop\NetEasyMusic" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="ExternalProjectsData">
@@ -59,9 +57,7 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <projects_view>
-          <tree_state />
-        </projects_view>
+        <projects_view />
       </state>
     </system>
   </component>
@@ -69,69 +65,22 @@
     <favorites_list name="NetEasyMusic" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="hkq_fragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/hkq_fragment1/hkq_fragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="60" column="53" selection-start-line="60" selection-start-column="53" selection-end-line="60" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fragment_blank.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_blank.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-594">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="valueResourceFile" />
-        <option value="layoutResourceFile_vertical" />
-        <option value="resourceFile" />
-        <option value="layoutResourceFile" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Rebase.Settings">
-    <option name="ONTO" value="refs/heads/dev_高逸博" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="枯瑜 &lt;1468165899@qq.com&gt;" />
-        <option value="枯瑜" />
-        <option value="枯榆 &lt;1468165899@qq.com&gt;" />
+        <option value="杨皓强 &lt;602125621@qq.com&gt;" />
+        <option value="杨浩强" />
       </list>
     </option>
-    <option name="UPDATE_TYPE" value="REBASE" />
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="dev_高逸博" />
       </map>
     </option>
-    <push-targets>
-      <push-target-info repo="$PROJECT_DIR$" source="master" target-remote="origin" target-branch="dev_高逸博" />
-    </push-targets>
-  </component>
-  <component name="GithubProjectSettings">
-    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="master" />
-    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="HENUTeam" />
-    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="NetEasyMusic" />
   </component>
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
@@ -523,11 +472,6 @@
                 <option name="name" value="testDebugUnitTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.android.support:multidex:1.0.1" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComAndroidSupportMultidex101Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="jarDebugClasses" />
               </ExternalTaskPojo>
@@ -624,15 +568,6 @@
                 <option name="description" value="Assembles all Release builds." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="assembleRelease" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare com.android.support:multidex-instrumentation:1.0.1" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComAndroidSupportMultidexInstrumentation101Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="transformClassesWithJarMergingForDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -902,10 +837,6 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="compileDebugNdk" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="transformClassesWithMultidexlistForDebugAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -1573,11 +1504,6 @@
                 <option name="name" value="connectedAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.android.support:multidex:1.0.1" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComAndroidSupportMultidex101Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="jarDebugClasses" />
               </ExternalTaskPojo>
@@ -1802,11 +1728,6 @@
                 <option name="description" value="Prepare com.android.support.constraint:constraint-layout:1.0.2" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/left_library" />
                 <option name="name" value="prepareComAndroidSupportConstraintConstraintLayout102Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare com.makeramen:roundedimageview:2.3.0" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/left_library" />
-                <option name="name" value="prepareComMakeramenRoundedimageview230Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/left_library" />
@@ -2344,10 +2265,6 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/left_library" />
-                <option name="name" value="transformClassesWithMultidexlistForDebugAndroidTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/left_library" />
                 <option name="name" value="generateDebugResValues" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -2373,11 +2290,6 @@
                 <option name="description" value="Installs and runs instrumentation tests for all flavors on connected devices." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/left_library" />
                 <option name="name" value="connectedAndroidTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare com.android.support:multidex:1.0.1" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/left_library" />
-                <option name="name" value="prepareComAndroidSupportMultidex101Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Prepare com.android.support:animated-vector-drawable:25.3.1" />
@@ -2479,11 +2391,6 @@
                 <option name="name" value="prepareDebugUnitTestDependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare cn.bmob.android:bmob-sdk:3.5.3" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/left_library" />
-                <option name="name" value="prepareCnBmobAndroidBmobSdk353Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Prepare com.android.support.test:exposed-instrumentation-api-publish:0.5" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/left_library" />
                 <option name="name" value="prepareComAndroidSupportTestExposedInstrumentationApiPublish05Library" />
@@ -2529,11 +2436,6 @@
                 <option name="name" value="assembleRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.android.support:multidex-instrumentation:1.0.1" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/left_library" />
-                <option name="name" value="prepareComAndroidSupportMultidexInstrumentation101Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Prepare com.android.support.test.espresso:espresso-core:2.2.2" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/left_library" />
                 <option name="name" value="prepareComAndroidSupportTestEspressoEspressoCore222Library" />
@@ -2556,10 +2458,6 @@
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/left_library" />
-                <option name="name" value="transformClassesWithJarMergingForDebugAndroidTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/left_library" />
                 <option name="name" value="generateReleaseResValues" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
@@ -2574,10 +2472,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="5974943096932" />
-        <entry key="C:\Users\117\Desktop\NetEasyMusic" value="5986387102027" />
-        <entry key="D:\MyProject\Android\NetEasyMusic" value="4473484710536" />
-        <entry key="D:\Program\Git  hub\NetEasyMusic" value="5985621918080" />
+        <entry key="C:\Users\117\Desktop\NetEasyMusic" value="5981441633219" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -2950,57 +2845,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/left_library/src/main/res/layout/activity_play.xml" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/Fragments/LeftRecyclerView.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/Activities/NetWork/SearchResult.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/Services/PlayService.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/Activities/NetWork/ResultAdapter.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/res/layout/activity_search.xml" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/PlayActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/left.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/linearlayout.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_setting.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/arrays.xml" />
-        <option value="$PROJECT_DIR$/left_library/src/main/res/layout/fragment_recyclerview.xml" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/Brodecast/PlayMusic_Receiver.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/Activities/MusicUtils.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/PopWindowMenu.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/DBAdapter.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/res/layout/layout_song.xml" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/MainActivity.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/res/layout/activity_mainyyn.xml" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/MainActivity1.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/MainActivity.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/RobotFragment/ChatMessageAdapter.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/RobotFragment/tools/HttpUties.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/Song.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/SingerFragment.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/AlbumFragment.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/MusicAlbumListAdapter.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Activities/SongInfo.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Activities/MusicUtils.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/MusicSingerListAdapter.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/NewSongActivity.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/RobotFragment/ChatFragment.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Activities/Fragments/SongRecyclerview.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Brodecast/PlayMusic_Receiver.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/PlayReceive.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/left_library/src/main/res/layout/robotchat.xml" />
-        <option value="$PROJECT_DIR$/left_library/src/main/res/layout/gyb_robotchat.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main_drawerlayout.xml" />
-        <option value="$PROJECT_DIR$/left_library/build/intermediates/bundles/default/res/layout/gyb_activity_play.xml" />
-        <option value="$PROJECT_DIR$/left_library/src/main/res/layout/gyb_activity_play.xml" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/MusicSongListAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/appMain/TabLayout_Mid.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/res/layout/chy_fragment_zhubo.xml" />
-        <option value="$PROJECT_DIR$/left_library/src/main/res/layout/gyb_flowplaymusic.xml" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Activities/MyMusic.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/res/layout/fragment_file.xml" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Activities/Fragments/FragmentFile.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main_drawerlayout_left_header.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/appMain_drawerlayout_start/LogInactivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/BlankFragment.java" />
+        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/Activities/Fragments/SongRecyclerviewAdapter.java" />
+        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/Activities/SongInfo.java" />
       </list>
     </option>
   </component>
@@ -3010,43 +2857,15 @@
     <option name="width" value="1616" />
     <option name="height" value="876" />
   </component>
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-          <State>
-            <id>Android</id>
-          </State>
-          <State>
-            <id>Code maturity issuesJava</id>
-          </State>
-          <State>
-            <id>Java</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>ResourceType</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
-  </component>
-  <component name="ProjectReloadState">
-    <option name="STATE" value="1" />
   </component>
   <component name="ProjectView">
     <navigator currentView="AndroidView" proportions="" version="1">
@@ -3063,9 +2882,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches">
-        <subPane />
-      </pane>
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -3116,144 +2932,20 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NetEasyMusic" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="neteasymusic" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hkq_fragment1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="NetEasyMusic">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="NetEasyMusic">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Default">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="NetEasyMusic">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="NetEasyMusic">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT=".idea">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="android.sdk.path" value="$USER_HOME$/Android/SDK/android-sdk" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Robot" />
-    <property name="android.project.structure.last.selected" value="Ads" />
-    <property name="android.project.structure.proportion" value="0.15" />
-    <property name="device.picker.selection" value="MYVDU15710015839" />
-    <property name="ChangesBrowser.SHOW_FLATTEN" value="true" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/left_library/src/main/res/drawable" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="Json&#9;FILE&#9;jar://D:/Program/Android/Android Studio/androd studio/gradle/gradle-3.4.1/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/bbb63ca253b483da8ee53a50374593923e3de2e2/gson-2.7-sources.jar!/com/google/gson/JsonSerializer.java&#10;JsonSe&#9;PSI&#9;JAVA://com.google.gson.JsonSerializer&#10;JsonSerializer.class&#9;FILE&#9;jar://C:/Users/高逸博/.android/build-cache/5319c0e8f8ad8f7a52c0d45a48efe0dbea3f9f98/output/jars/libs/gson-2.6.2.jar!/com/google/gson/JsonSerializer.class" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Program\Git  hub\NetEasyMusic\left_library\src\main\res\drawable" />
-      <recent name="D:\Program\Git  hub\NetEasyMusic\left_library\src\main\java\t3\henu\left_library\YYN_solve" />
-      <recent name="D:\Program\Git  hub\NetEasyMusic\left_library\src\main\res\drawable-v21" />
-      <recent name="D:\Program\Git  hub\NetEasyMusic\left_library\src\main\res\layout" />
-      <recent name="D:\Program\Git  hub\NetEasyMusic\left_library\src\main\java\t3\henu\left_library\GYB_solve\RobotFragment" />
-    </key>
-    <key name="android.template.packageName">
-      <recent name="t3.henu.neteasymusic" />
-      <recent name="t3.henu.left_library.Activities.NetWork" />
-      <recent name="t3.henu.left_library" />
-      <recent name="t3.henu.neteasymusic.appMainFirrst" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Program\Git  hub\NetEasyMusic\app" />
-      <recent name="D:\Program\Git  hub\NetEasyMusic\left_library\src\main\res\drawable" />
-      <recent name="D:\Program\Git  hub\NetEasyMusic\left_library\src\main\res\layout" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="t3.henu.left_library" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="t3.henu.left_library.Activities.widget" />
-      <recent name="t3.henu.left_library.Activities.NetWork" />
-      <recent name="t3.henu.neteasymusic" />
-      <recent name="t3.henu.left_library.Activities" />
-      <recent name="t3.henu.left_library" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="t3.henu.left_library.Activities.widget" />
-      <recent name="t3.henu.neteasymusic" />
-      <recent name="t3.henu.left_library.Activities.MusicInfo" />
-      <recent name="t3.henu.left_library.Activities.NetWork" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+    <property name="android.project.structure.last.selected" value="NetEasyMusic" />
+    <property name="android.project.structure.proportion" value="0.15" />
+    <property name="device.picker.selection" value="A10ACN39RLNK" />
   </component>
   <component name="RunManager" selected="Android App.app">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -3493,57 +3185,8 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="false" name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+    <configuration default="false" name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="app" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="true" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
-      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
-      <option name="DEBUGGER_TYPE" value="Auto" />
-      <Auto>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Auto>
-      <Hybrid>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Hybrid>
-      <Java />
-      <Native>
-        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
-        <option name="SHOW_STATIC_VARS" value="true" />
-        <option name="WORKING_DIR" value="" />
-        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
-        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
-      </Native>
-      <Profilers>
-        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-        <option name="SUPPORT_LIB_ENABLED" value="true" />
-        <option name="INSTRUMENTATION_ENABLED" value="true" />
-      </Profilers>
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <method />
-    </configuration>
-    <configuration default="false" name="left_library" type="AndroidRunConfigurationType" factoryName="Android App">
-      <module name="left_library" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
       <option name="PM_INSTALL_OPTIONS" value="" />
@@ -3591,9 +3234,8 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Android App.app" />
-      <item index="1" class="java.lang.String" itemvalue="Android App.left_library" />
     </list>
     <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
       <option name="MAIN_CLASS_NAME" />
@@ -3611,409 +3253,80 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="65a8eb9a-248b-4fb0-85f9-182c8f27e875" name="Default" comment="" />
-      <created>1491104747859</created>
+      <changelist id="5230ab75-c9af-4bc9-b594-7281438d3ada" name="Default" comment="" />
+      <created>1495179921046</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1491104747859</updated>
+      <updated>1495179921046</updated>
     </task>
-    <task id="LOCAL-00025" summary="2017/4/2 19:32">
-      <created>1491137038359</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
+    <task id="LOCAL-00001" summary="测试链接&#10;&#10;无&#10;">
+      <created>1495180282337</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1491137038359</updated>
+      <updated>1495180282337</updated>
     </task>
-    <task id="LOCAL-00026" summary="2017/4/2 19:32">
-      <created>1491137343073</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
+    <task id="LOCAL-00002" summary="测试链接&#10;&#10;无&#10;">
+      <created>1495180318055</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1491137343073</updated>
+      <updated>1495180318055</updated>
     </task>
-    <task id="LOCAL-00027" summary="2017/4/2 19:32">
-      <created>1491138490192</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
+    <task id="LOCAL-00003" summary="冯震&#10;">
+      <created>1495182265945</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1491138490192</updated>
+      <updated>1495182265945</updated>
     </task>
-    <task id="LOCAL-00028" summary="2017/4/2 19:32">
-      <created>1491138603373</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
+    <task id="LOCAL-00004" summary="Merge remote-tracking branch 'origin/dev_高逸博' into dev_杨皓强&#10;&#10;# Conflicts:&#10;#&#9;.idea/gradle.xml&#10;#&#9;.idea/libraries/BaseRecyclerViewAdapterHelper_v1_9_7.xml&#10;#&#9;.idea/libraries/animated_vector_drawable_25_3_1.xml&#10;#&#9;.idea/libraries/appcompat_v7_25_3_1.xml&#10;#&#9;.idea/libraries/bmob_sdk_3_5_3.xml&#10;#&#9;.idea/libraries/constraint_layout_1_0_2.xml&#10;#&#9;.idea/libraries/constraint_layout_solver_1_0_2.xml&#10;#&#9;.idea/libraries/design_25_3_1.xml&#10;#&#9;.idea/libraries/espresso_core_2_2_2.xml&#10;#&#9;.idea/libraries/espresso_idling_resource_2_2_2.xml&#10;#&#9;.idea/libraries/exposed_instrumentation_api_publish_0_5.xml&#10;#&#9;.idea/libraries/hamcrest_core_1_3.xml&#10;#&#9;.idea/libraries/hamcrest_integration_1_3.xml&#10;#&#9;.idea/libraries/hamcrest_library_1_3.xml&#10;#&#9;.idea/libraries/http_legacy_1_0.xml&#10;#&#9;.idea/libraries/javawriter_2_1_1.xml&#10;#&#9;.idea/libraries/javax_annotation_api_1_2.xml&#10;#&#9;.idea/libraries/javax_inject_1.xml&#10;#&#9;.idea/libraries/jsr305_2_0_1.xml&#10;#&#9;.idea/libraries/junit_4_12.xml&#10;#&#9;.idea/libraries/recyclerview_v7_25_3_1.xml&#10;#&#9;.idea/libraries/roundedimageview_2_3_0.xml&#10;#&#9;.idea/libraries/rules_0_5.xml&#10;#&#9;.idea/libraries/runner_0_5.xml&#10;#&#9;.idea/libraries/support_annotations_25_3_1.xml&#10;#&#9;.idea/libraries/support_compat_25_3_1.xml&#10;#&#9;.idea/libraries/support_core_ui_25_3_1.xml&#10;#&#9;.idea/libraries/support_core_utils_25_3_1.xml&#10;#&#9;.idea/libraries/support_fragment_25_3_1.xml&#10;#&#9;.idea/libraries/support_media_compat_25_3_1.xml&#10;#&#9;.idea/libraries/support_v4_25_3_1.xml&#10;#&#9;.idea/libraries/support_vector_drawable_25_3_1.xml&#10;#&#9;.idea/libraries/transition_25_3_1.xml&#10;#&#9;.idea/workspace.xml&#10;#&#9;left_library/src/main/java/t3/henu/left_library/Activities/SongInfo.java&#10;#&#9;left_library/src/main/java/t3/henu/left_library/Services/PlayService.java&#10;">
+      <created>1496144791646</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1491138603373</updated>
+      <updated>1496144791646</updated>
     </task>
-    <task id="LOCAL-00029" summary="2017/4/2 19:32">
-      <created>1491139312904</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1491139312904</updated>
-    </task>
-    <task id="LOCAL-00030" summary="2017/4/2 19:32">
-      <created>1491192964404</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1491192964404</updated>
-    </task>
-    <task id="LOCAL-00031" summary="2017/4/2 19:32">
-      <created>1491192975420</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1491192975420</updated>
-    </task>
-    <task id="LOCAL-00032" summary="2017/4/2 19:32">
-      <created>1491193130156</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1491193130156</updated>
-    </task>
-    <task id="LOCAL-00033" summary="2017/4/2 19:32">
-      <created>1491193383568</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1491193383568</updated>
-    </task>
-    <task id="LOCAL-00034" summary="2017/4/2 19:32">
-      <created>1491193422935</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1491193422935</updated>
-    </task>
-    <task id="LOCAL-00035" summary="2017/4/2 19:32">
-      <created>1491193479008</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1491193479008</updated>
-    </task>
-    <task id="LOCAL-00036" summary="2017/4/2 19:32">
-      <created>1491194131517</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1491194131517</updated>
-    </task>
-    <task id="LOCAL-00037" summary="2017/4/2 19:32">
-      <created>1491194172267</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1491194172267</updated>
-    </task>
-    <task id="LOCAL-00038" summary="2017/4/2 19:32">
-      <created>1491194546930</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1491194546930</updated>
-    </task>
-    <task id="LOCAL-00039" summary="2017/4/2 19:32">
-      <created>1491194630840</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1491194630840</updated>
-    </task>
-    <task id="LOCAL-00040" summary="2017/4/2 19:32">
-      <created>1491194644855</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1491194644855</updated>
-    </task>
-    <task id="LOCAL-00041" summary="2017/4/2 19:32">
-      <created>1491195192416</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1491195192416</updated>
-    </task>
-    <task id="LOCAL-00042" summary="2017/4/3 12:54">
-      <created>1491195273788</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1491195273788</updated>
-    </task>
-    <task id="LOCAL-00043" summary="2017/4/3 13:29">
-      <created>1491197350904</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1491197350904</updated>
-    </task>
-    <task id="LOCAL-00044" summary="2017/4/3 14:02">
-      <created>1491199353580</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1491199353580</updated>
-    </task>
-    <task id="LOCAL-00045" summary="2017/4/3 14:09">
-      <created>1491199792836</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1491199792836</updated>
-    </task>
-    <task id="LOCAL-00046" summary="2017/4/3 21:58 侧滑栏菜单的实现">
-      <created>1491227936592</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1491227936592</updated>
-    </task>
-    <task id="LOCAL-00047" summary="2017/4/3 21:58 侧滑栏菜单的实现">
-      <created>1491550451017</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1491550451017</updated>
-    </task>
-    <task id="LOCAL-00048" summary="2017/4/3 21:58 侧滑栏菜单的实现">
-      <created>1492005144652</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1492005144652</updated>
-    </task>
-    <task id="LOCAL-00049" summary="2017/4/18 12:13">
-      <created>1492488822265</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1492488822265</updated>
-    </task>
-    <task id="LOCAL-00050" summary="2017/4/27 12:13">
-      <created>1493252648799</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1493252648800</updated>
-    </task>
-    <task id="LOCAL-00051" summary="2017/5/19 测试合并">
-      <created>1495182729496</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1495182729497</updated>
-    </task>
-    <task id="LOCAL-00052" summary="2017/5/19 测试合并">
-      <created>1495182827446</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1495182827447</updated>
-    </task>
-    <task id="LOCAL-00053" summary="2017/5/19 更新歌曲信息">
-      <created>1495188328449</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1495188328450</updated>
-    </task>
-    <task id="LOCAL-00054" summary="2017/5/19 第二次测试">
-      <created>1495188777559</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1495188777559</updated>
-    </task>
-    <task id="LOCAL-00055" summary="2017/5/19 第二次测试">
-      <created>1495189109317</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1495189109318</updated>
-    </task>
-    <task id="LOCAL-00056" summary="2017/5/19 第二次测试">
-      <created>1495189219436</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1495189219436</updated>
-    </task>
-    <task id="LOCAL-00057" summary="2017/5/20 第三次测试">
-      <created>1495278367948</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1495278367964</updated>
-    </task>
-    <task id="LOCAL-00058" summary="2017/5/21 更新错误">
-      <created>1495355859376</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1495355859379</updated>
-    </task>
-    <task id="LOCAL-00059" summary="2017/5/21 播放功能完善&#10;">
-      <created>1495356809932</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1495356809932</updated>
-    </task>
-    <task id="LOCAL-00060" summary="2017/5/21 20:34 播放功能完善&#10;">
-      <created>1495370062539</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1495370062539</updated>
-    </task>
-    <task id="LOCAL-00061" summary="2017/5/25      搜索功能待实现&#10;先把代码push一下">
-      <created>1495702418531</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1495702418531</updated>
-    </task>
-    <task id="LOCAL-00062" summary="2017/5/30      bug&#10;先把代码push一下">
-      <created>1496144471596</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1496144471597</updated>
-    </task>
-    <task id="LOCAL-00063" summary="2017/5/31 20:21  完善播放按钮改变问题&#10;先把代码push一下">
-      <created>1496233354663</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1496233354664</updated>
-    </task>
-    <task id="LOCAL-00064" summary="2017/6/2   加入音乐播放界面 ，功能待补充&#10;先把代码push一下">
-      <created>1496386255366</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1496386255367</updated>
-    </task>
-    <task id="LOCAL-00065" summary="2017/6/2   18:40 添加seekbar拖动音乐&#10;先把代码push一下">
-      <created>1496400072191</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1496400072191</updated>
-    </task>
-    <task id="LOCAL-00066" summary="2017/6/3    完善上一首，播放顺序控制bug&#10;先把代码push一下">
-      <created>1496457169719</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1496457169719</updated>
-    </task>
-    <task id="LOCAL-00067" summary="2017/6/3  17:07新增设置界面，退出按钮实现，双击返回桌面">
-      <created>1496480903106</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1496480903106</updated>
-    </task>
-    <task id="LOCAL-00068" summary="2017/6/3  17:07 更改双击退出程序为单击返回桌面">
-      <created>1496481117162</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1496481117162</updated>
-    </task>
-    <task id="LOCAL-00069" summary="2017/6/5 21:59 代码分工">
-      <created>1496671238137</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1496671238137</updated>
-    </task>
-    <task id="LOCAL-00070" summary="2017/6/6 0：12 实现歌手分类，专辑分类，图灵机器人聊天界面">
-      <created>1496679206909</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1496679206909</updated>
-    </task>
-    <task id="LOCAL-00071" summary="2017/6/7">
-      <created>1496812691997</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1496812691997</updated>
-    </task>
-    <task id="LOCAL-00072" summary="2017/6/7">
-      <created>1496816506120</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1496816506120</updated>
-    </task>
-    <task id="LOCAL-00073" summary="2017/6/7 完善一些界面">
-      <created>1496818934089</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1496818934089</updated>
-    </task>
-    <option name="localTasksCounter" value="74" />
+    <option name="localTasksCounter" value="5" />
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286385" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31338027" sideWeight="0.48497853" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24409871" sideWeight="0.21244131" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3243243" sideWeight="0.50965667" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7030516" sideWeight="0.49034336" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20886889" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32511738" sideWeight="0.49785408" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32681563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32629108" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2763496" sideWeight="0.7875587" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32832617" sideWeight="0.49530515" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19087404" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886267" sideWeight="0.5046948" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3967136" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3243243" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -4028,640 +3341,302 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_NEW_TODO" value="false" />
-    <ignored-roots>
-      <path value="$PROJECT_DIR$" />
-    </ignored-roots>
-    <MESSAGE value="2017/4/3 14:02" />
-    <MESSAGE value="2017/4/3 14:09" />
-    <MESSAGE value="2017/4/3 21:58 侧滑栏菜单的实现" />
-    <MESSAGE value="2017/4/18 12:13" />
-    <MESSAGE value="2017/4/27 12:13" />
-    <MESSAGE value="2017/5/17 实现音乐播放" />
-    <MESSAGE value="2017/5/19 测试合并" />
-    <MESSAGE value="2017/5/19 更新歌曲信息" />
-    <MESSAGE value="2017/5/19 第二次测试" />
-    <MESSAGE value="2017/5/20 第三次测试" />
-    <MESSAGE value="2017/5/21 更新错误" />
-    <MESSAGE value="2017/5/21 播放功能完善&#10;" />
-    <MESSAGE value="2017/5/21 20:34 播放功能完善&#10;" />
-    <MESSAGE value="2017/5/25      搜索功能待实现&#10;先把代码push一下" />
-    <MESSAGE value="2017/5/30      bug&#10;先把代码push一下" />
-    <MESSAGE value="2017/5/31 20:21  完善播放按钮改变问题&#10;先把代码push一下" />
-    <MESSAGE value="2017/6/2   加入音乐播放界面 ，功能待补充&#10;先把代码push一下" />
-    <MESSAGE value="2017/6/2   18:40 添加seekbar拖动音乐&#10;先把代码push一下" />
-    <MESSAGE value="2017/6/3    完善上一首，播放顺序控制bug&#10;先把代码push一下" />
-    <MESSAGE value="2017/6/3  17:07新增设置界面，退出按钮实现，双击返回桌面" />
-    <MESSAGE value="2017/6/3  17:07 更改双击退出程序为单击返回桌面" />
-    <MESSAGE value="2017/6/5 21:59 代码分工" />
-    <MESSAGE value="2017/6/6 0：12 实现歌手分类，专辑分类，图灵机器人聊天界面" />
-    <MESSAGE value="2017/6/7" />
-    <MESSAGE value="2017/6/7 完善一些界面" />
-    <option name="LAST_COMMIT_MESSAGE" value="2017/6/7 完善一些界面" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value=" 5/17 18:47&#10;&#10;无&#10;" />
+    <MESSAGE value="测试链接&#10;&#10;无&#10;" />
+    <MESSAGE value="冯震&#10;" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/dev_高逸博' into dev_杨皓强&#10;&#10;# Conflicts:&#10;#&#9;.idea/gradle.xml&#10;#&#9;.idea/libraries/BaseRecyclerViewAdapterHelper_v1_9_7.xml&#10;#&#9;.idea/libraries/animated_vector_drawable_25_3_1.xml&#10;#&#9;.idea/libraries/appcompat_v7_25_3_1.xml&#10;#&#9;.idea/libraries/bmob_sdk_3_5_3.xml&#10;#&#9;.idea/libraries/constraint_layout_1_0_2.xml&#10;#&#9;.idea/libraries/constraint_layout_solver_1_0_2.xml&#10;#&#9;.idea/libraries/design_25_3_1.xml&#10;#&#9;.idea/libraries/espresso_core_2_2_2.xml&#10;#&#9;.idea/libraries/espresso_idling_resource_2_2_2.xml&#10;#&#9;.idea/libraries/exposed_instrumentation_api_publish_0_5.xml&#10;#&#9;.idea/libraries/hamcrest_core_1_3.xml&#10;#&#9;.idea/libraries/hamcrest_integration_1_3.xml&#10;#&#9;.idea/libraries/hamcrest_library_1_3.xml&#10;#&#9;.idea/libraries/http_legacy_1_0.xml&#10;#&#9;.idea/libraries/javawriter_2_1_1.xml&#10;#&#9;.idea/libraries/javax_annotation_api_1_2.xml&#10;#&#9;.idea/libraries/javax_inject_1.xml&#10;#&#9;.idea/libraries/jsr305_2_0_1.xml&#10;#&#9;.idea/libraries/junit_4_12.xml&#10;#&#9;.idea/libraries/recyclerview_v7_25_3_1.xml&#10;#&#9;.idea/libraries/roundedimageview_2_3_0.xml&#10;#&#9;.idea/libraries/rules_0_5.xml&#10;#&#9;.idea/libraries/runner_0_5.xml&#10;#&#9;.idea/libraries/support_annotations_25_3_1.xml&#10;#&#9;.idea/libraries/support_compat_25_3_1.xml&#10;#&#9;.idea/libraries/support_core_ui_25_3_1.xml&#10;#&#9;.idea/libraries/support_core_utils_25_3_1.xml&#10;#&#9;.idea/libraries/support_fragment_25_3_1.xml&#10;#&#9;.idea/libraries/support_media_compat_25_3_1.xml&#10;#&#9;.idea/libraries/support_v4_25_3_1.xml&#10;#&#9;.idea/libraries/support_vector_drawable_25_3_1.xml&#10;#&#9;.idea/libraries/transition_25_3_1.xml&#10;#&#9;.idea/workspace.xml&#10;#&#9;left_library/src/main/java/t3/henu/left_library/Activities/SongInfo.java&#10;#&#9;left_library/src/main/java/t3/henu/left_library/Services/PlayService.java&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/dev_高逸博' into dev_杨皓强&#10;&#10;# Conflicts:&#10;#&#9;.idea/gradle.xml&#10;#&#9;.idea/libraries/BaseRecyclerViewAdapterHelper_v1_9_7.xml&#10;#&#9;.idea/libraries/animated_vector_drawable_25_3_1.xml&#10;#&#9;.idea/libraries/appcompat_v7_25_3_1.xml&#10;#&#9;.idea/libraries/bmob_sdk_3_5_3.xml&#10;#&#9;.idea/libraries/constraint_layout_1_0_2.xml&#10;#&#9;.idea/libraries/constraint_layout_solver_1_0_2.xml&#10;#&#9;.idea/libraries/design_25_3_1.xml&#10;#&#9;.idea/libraries/espresso_core_2_2_2.xml&#10;#&#9;.idea/libraries/espresso_idling_resource_2_2_2.xml&#10;#&#9;.idea/libraries/exposed_instrumentation_api_publish_0_5.xml&#10;#&#9;.idea/libraries/hamcrest_core_1_3.xml&#10;#&#9;.idea/libraries/hamcrest_integration_1_3.xml&#10;#&#9;.idea/libraries/hamcrest_library_1_3.xml&#10;#&#9;.idea/libraries/http_legacy_1_0.xml&#10;#&#9;.idea/libraries/javawriter_2_1_1.xml&#10;#&#9;.idea/libraries/javax_annotation_api_1_2.xml&#10;#&#9;.idea/libraries/javax_inject_1.xml&#10;#&#9;.idea/libraries/jsr305_2_0_1.xml&#10;#&#9;.idea/libraries/junit_4_12.xml&#10;#&#9;.idea/libraries/recyclerview_v7_25_3_1.xml&#10;#&#9;.idea/libraries/roundedimageview_2_3_0.xml&#10;#&#9;.idea/libraries/rules_0_5.xml&#10;#&#9;.idea/libraries/runner_0_5.xml&#10;#&#9;.idea/libraries/support_annotations_25_3_1.xml&#10;#&#9;.idea/libraries/support_compat_25_3_1.xml&#10;#&#9;.idea/libraries/support_core_ui_25_3_1.xml&#10;#&#9;.idea/libraries/support_core_utils_25_3_1.xml&#10;#&#9;.idea/libraries/support_fragment_25_3_1.xml&#10;#&#9;.idea/libraries/support_media_compat_25_3_1.xml&#10;#&#9;.idea/libraries/support_v4_25_3_1.xml&#10;#&#9;.idea/libraries/support_vector_drawable_25_3_1.xml&#10;#&#9;.idea/libraries/transition_25_3_1.xml&#10;#&#9;.idea/workspace.xml&#10;#&#9;left_library/src/main/java/t3/henu/left_library/Activities/SongInfo.java&#10;#&#9;left_library/src/main/java/t3/henu/left_library/Services/PlayService.java&#10;" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Activities/Fragments/SongRecyclerview.java</url>
-          <line>44</line>
-          <properties />
-          <option name="timeStamp" value="125" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/MainActivity.java</url>
-          <line>300</line>
-          <properties />
-          <option name="timeStamp" value="146" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Services/PlayService.java</url>
-          <line>235</line>
-          <properties />
-          <option name="timeStamp" value="167" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Services/PlayService.java</url>
-          <line>236</line>
-          <properties />
-          <option name="timeStamp" value="169" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Services/PlayService.java</url>
-          <line>139</line>
-          <properties />
-          <option name="timeStamp" value="172" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YHQ_solve/BillboardFragment.java</url>
-          <line>32</line>
-          <properties />
-          <option name="timeStamp" value="178" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Activities/NetWork/SearchResult.java</url>
-          <line>44</line>
-          <properties />
-          <option name="timeStamp" value="193" />
-        </line-breakpoint>
-      </breakpoints>
-      <breakpoints-dialog>
-        <breakpoints-dialog />
-      </breakpoints-dialog>
-      <option name="time" value="209" />
-    </breakpoint-manager>
+    <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/gyb_activity_search.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/BlankFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/gyb_com_message.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/gyb_fragment_recyclerview.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-420">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/gyb_fragment_music_info.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/gyb_fragment_blank.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/activity_mainyyn.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/gyb_activity_bendiyinyue.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="43" column="58" selection-start-line="43" selection-start-column="58" selection-end-line="43" selection-end-column="58" />
+        <state relative-caret-position="264">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/layout_album.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/Activities/Fragments/SongRecyclerview.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/layout_singer.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/gyb_recyclerview_gedan_item.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/gybrecyclerview_gedan.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/gyb_out_message.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/gyb_music_song_item.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/music_singer_item.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/music_album_item.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/layout_song.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/gyb_music_song_item_header.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/RobotFragment/ChatFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="64" column="49" selection-start-line="64" selection-start-column="49" selection-end-line="64" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/drawable-v21/ic_next.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/gyb_robotchat.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="2409">
+          <caret line="99" column="36" selection-start-line="99" selection-start-column="36" selection-end-line="99" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/gyb_activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
+    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1518">
+          <caret line="61" column="39" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="39" />
+          <folding />
+        </state>
       </provider>
-      <provider editor-type-id="text-editor">
+    </entry>
+    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YHQ_solve/BillboardFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/drawable/bg_chat.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/drawable-v21/ic_play.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/drawable-v21/ic_play1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/drawable/play_album.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/drawable/play_btn_next.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/drawable/play_btn_play.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/drawable/play_icn_love.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/build/intermediates/bundles/default/res/layout/gyb_activity_play.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="129" column="8" selection-start-line="129" selection-start-column="8" selection-end-line="129" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/gyb_activity_play.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/music_song_item_yyn.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main_drawerlayout.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/MusicSongListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="55" column="56" selection-start-line="55" selection-start-column="56" selection-end-line="55" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/AlbumFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/SingerFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/NewSongActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/drawable/qinggan.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/chy_fragment_zhubo.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1434">
-          <caret line="104" column="39" selection-start-line="104" selection-start-column="39" selection-end-line="104" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/CHY_solve/FragmentZhubo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/gyb_flowplaymusic.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="66" column="44" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/appMain/TabLayout_Mid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="68" column="45" selection-start-line="68" selection-start-column="45" selection-end-line="68" selection-end-column="45" />
+        <state relative-caret-position="1782">
+          <caret line="68" column="66" selection-start-line="68" selection-start-column="66" selection-end-line="68" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Activities/MyMusic.java">
+    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/Activities/Fragments/SongRecyclerviewAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="79" column="44" selection-start-line="79" selection-start-column="44" selection-end-line="79" selection-end-column="44" />
+        <state relative-caret-position="726">
+          <caret line="35" column="75" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="75" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/fragment_file.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/Activities/SongInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Activities/Fragments/FragmentFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="44" column="19" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
+        <state relative-caret-position="330">
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main_drawerlayout_left_header.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/appMain_drawerlayout_start/LogInactivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2763">
-          <caret line="108" column="5" selection-start-line="108" selection-start-column="5" selection-end-line="108" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="264" column="52" selection-start-line="264" selection-start-column="52" selection-end-line="264" selection-end-column="52" />
-          <folding>
-            <element signature="method#solvePermisson#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#initDrawerlayout#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#12279#12280#0" expanded="true" />
-            <element signature="method#initToolbar#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#initViewPager#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#initflow#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onKeyDown#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/hkq_fragment1/hkq_fragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="60" column="53" selection-start-line="60" selection-start-column="53" selection-end-line="60" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_blank.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-594">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Invalid</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>app</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>animated-vector-drawable-25.3.1</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/BlankFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/BlankFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/Activities/Fragments/SongRecyclerviewAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="35" column="75" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/Activities/SongInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/Activities/Fragments/SongRecyclerview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2409">
+          <caret line="99" column="36" selection-start-line="99" selection-start-column="36" selection-end-line="99" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1518">
+          <caret line="61" column="39" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-773">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+          <folding>
+            <marker date="1496824439225" expanded="true" signature="245978:245993" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YHQ_solve/BillboardFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-639">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/appMain/TabLayout_Mid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="69" column="47" selection-start-line="69" selection-start-column="47" selection-end-line="69" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/BlankFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/BlankFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/Activities/Fragments/SongRecyclerview.java" />
+    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/MainActivity.java" />
+    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YHQ_solve/BillboardFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/appMain/TabLayout_Mid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1782">
+          <caret line="68" column="66" selection-start-line="68" selection-start-column="66" selection-end-line="68" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/Activities/Fragments/SongRecyclerviewAdapter.java" />
+    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/Activities/SongInfo.java" />
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/BlankFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/BlankFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/BlankFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/Activities/Fragments/SongRecyclerviewAdapter.java" />
+    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/Activities/SongInfo.java" />
+    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/Activities/Fragments/SongRecyclerview.java" />
+    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/MainActivity.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/appMain/TabLayout_Mid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1782">
+          <caret line="68" column="66" selection-start-line="68" selection-start-column="66" selection-end-line="68" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YHQ_solve/BillboardFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
