@@ -35,46 +35,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="65a8eb9a-248b-4fb0-85f9-182c8f27e875" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/left_library/src/main/res/drawable/bg_chat.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Collect.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/BlankFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/BlankFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/PlayReceive.java" afterPath="$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/PlayReceive.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/left_library/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/left_library/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Activities/Fragments/SongRecyclerview.java" afterPath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Activities/Fragments/SongRecyclerview.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Activities/Fragments/SongRecyclerviewAdapter.java" afterPath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Activities/Fragments/SongRecyclerviewAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Activities/MyMusic.java" afterPath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Activities/MyMusic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Activities/NetWork/SearchActivity.java" afterPath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Activities/NetWork/SearchActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Activities/NetWork/SearchResult.java" afterPath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Activities/NetWork/SearchResult.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/BlankFragment.java" afterPath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/BlankFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Fragments/LeftRecyclerView.java" afterPath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Fragments/LeftRecyclerView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Fragments/RecyclerAdapter.java" afterPath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Fragments/RecyclerAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/MainActivity.java" afterPath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/PlayActivity.java" afterPath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/PlayActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/PopWindowMenu.java" afterPath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/PopWindowMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/RobotFragment/ChatFragment.java" afterPath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/RobotFragment/ChatFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/RobotFragment/ChatMessageAdapter.java" afterPath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/RobotFragment/ChatMessageAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/MusicSongListAdapter.java" afterPath="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/MusicSongListAdapter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/left_library/src/main/res/layout/activity_bendiyinyue.xml" afterPath="$PROJECT_DIR$/left_library/src/main/res/layout/gyb_activity_bendiyinyue.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/left_library/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/left_library/src/main/res/layout/gyb_activity_main.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/left_library/src/main/res/layout/activity_play.xml" afterPath="$PROJECT_DIR$/left_library/src/main/res/layout/gyb_activity_play.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/left_library/src/main/res/layout/activity_search.xml" afterPath="$PROJECT_DIR$/left_library/src/main/res/layout/gyb_activity_search.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/left_library/src/main/res/layout/activity_search_result.xml" afterPath="$PROJECT_DIR$/left_library/src/main/res/layout/gyb_activity_search_result.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/left_library/src/main/res/layout/com_message.xml" afterPath="$PROJECT_DIR$/left_library/src/main/res/layout/gyb_com_message.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/left_library/src/main/res/layout/flowplaymusic.xml" afterPath="$PROJECT_DIR$/left_library/src/main/res/layout/gyb_flowplaymusic.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/left_library/src/main/res/layout/fragment_blank.xml" afterPath="$PROJECT_DIR$/left_library/src/main/res/layout/gyb_fragment_blank.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/left_library/src/main/res/layout/fragment_chat.xml" afterPath="$PROJECT_DIR$/left_library/src/main/res/layout/gyb_fragment_chat.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/left_library/src/main/res/layout/fragment_music_info.xml" afterPath="$PROJECT_DIR$/left_library/src/main/res/layout/gyb_fragment_music_info.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/left_library/src/main/res/layout/fragment_recyclerview.xml" afterPath="$PROJECT_DIR$/left_library/src/main/res/layout/gyb_fragment_recyclerview.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/left_library/src/main/res/layout/music_song_item.xml" afterPath="$PROJECT_DIR$/left_library/src/main/res/layout/gyb_music_song_item.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/left_library/src/main/res/layout/music_song_item_header.xml" afterPath="$PROJECT_DIR$/left_library/src/main/res/layout/gyb_music_song_item_header.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/left_library/src/main/res/layout/out_message.xml" afterPath="$PROJECT_DIR$/left_library/src/main/res/layout/gyb_out_message.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/left_library/src/main/res/layout/recyclerview_gedan.xml" afterPath="$PROJECT_DIR$/left_library/src/main/res/layout/gybrecyclerview_gedan.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/left_library/src/main/res/layout/recyclerview_gedan_item.xml" afterPath="$PROJECT_DIR$/left_library/src/main/res/layout/gyb_recyclerview_gedan_item.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/left_library/src/main/res/layout/robotchat.xml" afterPath="$PROJECT_DIR$/left_library/src/main/res/layout/gyb_robotchat.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/left_library/src/main/res/layout/gyb_activity_play.xml" afterPath="$PROJECT_DIR$/left_library/src/main/res/layout/gyb_activity_play.xml" />
     </list>
     <ignored path="NetEasyMusic.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -107,106 +70,7 @@
     <favorites_list name="NetEasyMusic" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="NewSongActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/NewSongActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SingerFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/SingerFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="832">
-              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AlbumFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/AlbumFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
-              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MusicSongListAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/MusicSongListAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1536">
-              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1024">
-              <caret line="75" column="41" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
-              <folding>
-                <element signature="method#solvePermisson#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#initDrawerlayout#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#initToolbar#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#initViewPager#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#initflow#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-                <element signature="method#onKeyDown#0;class#MainActivity#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_main_drawerlayout.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main_drawerlayout.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gyb_flowplaymusic.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/gyb_flowplaymusic.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="53" column="50" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -225,6 +89,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="枯瑜" />
         <option value="枯瑜 &lt;1468165899@qq.com&gt;" />
         <option value="枯榆 &lt;1468165899@qq.com&gt;" />
       </list>
@@ -3061,7 +2926,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/left_library/src/main/res/layout/flowplaymusic.xml" />
         <option value="$PROJECT_DIR$/left_library/build.gradle" />
         <option value="$PROJECT_DIR$/left_library/build/intermediates/res/merged/release/layout/activity_play.xml" />
         <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/Activities/SongInfo.java" />
@@ -3100,7 +2964,6 @@
         <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Activities/SongInfo.java" />
         <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Activities/MusicUtils.java" />
         <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/MusicSingerListAdapter.java" />
-        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/MusicSongListAdapter.java" />
         <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/NewSongActivity.java" />
         <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/RobotFragment/ChatFragment.java" />
         <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/GYB_solve/Activities/Fragments/SongRecyclerview.java" />
@@ -3111,7 +2974,9 @@
         <option value="$PROJECT_DIR$/left_library/src/main/res/layout/gyb_robotchat.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main_drawerlayout.xml" />
         <option value="$PROJECT_DIR$/left_library/src/main/res/layout/gyb_flowplaymusic.xml" />
+        <option value="$PROJECT_DIR$/left_library/build/intermediates/bundles/default/res/layout/gyb_activity_play.xml" />
         <option value="$PROJECT_DIR$/left_library/src/main/res/layout/gyb_activity_play.xml" />
+        <option value="$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/MusicSongListAdapter.java" />
       </list>
     </option>
   </component>
@@ -3189,6 +3054,102 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="NetEasyMusic" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NetEasyMusic" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="left_library" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NetEasyMusic" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="left_library" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NetEasyMusic" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="left_library" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NetEasyMusic" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="left_library" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="left_library" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="YYN_solve" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NetEasyMusic" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="left_library" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="left_library" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NetEasyMusic" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="left_library" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -3694,13 +3655,6 @@
       <option name="presentableId" value="Default" />
       <updated>1491104747859</updated>
     </task>
-    <task id="LOCAL-00022" summary="2017/4/2 19:32">
-      <created>1491135991781</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1491135991781</updated>
-    </task>
     <task id="LOCAL-00023" summary="2017/4/2 19:32">
       <created>1491136136317</created>
       <option name="number" value="00023" />
@@ -4037,7 +3991,14 @@
       <option name="project" value="LOCAL" />
       <updated>1496679206909</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="2017/6/7">
+      <created>1496812691997</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1496812691997</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TodoView">
@@ -4051,7 +4012,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1932" height="1048" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286385" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31338027" sideWeight="0.48497853" order="13" side_tool="false" content_ui="tabs" />
@@ -4060,14 +4021,14 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3243243" sideWeight="0.50965667" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7038778" sideWeight="0.49034336" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2093649" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2093649" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32511738" sideWeight="0.49785408" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32629108" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10333692" sideWeight="0.7875587" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27664155" sideWeight="0.7875587" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32832617" sideWeight="0.49530515" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886267" sideWeight="0.5046948" order="3" side_tool="true" content_ui="tabs" />
@@ -4104,7 +4065,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="2017/4/3 12:54" />
     <MESSAGE value="2017/4/3 13:29" />
     <MESSAGE value="2017/4/3 14:02" />
     <MESSAGE value="2017/4/3 14:09" />
@@ -4129,7 +4089,8 @@
     <MESSAGE value="2017/6/3  17:07 更改双击退出程序为单击返回桌面" />
     <MESSAGE value="2017/6/5 21:59 代码分工" />
     <MESSAGE value="2017/6/6 0：12 实现歌手分类，专辑分类，图灵机器人聊天界面" />
-    <option name="LAST_COMMIT_MESSAGE" value="2017/6/6 0：12 实现歌手分类，专辑分类，图灵机器人聊天界面" />
+    <MESSAGE value="2017/6/7" />
+    <option name="LAST_COMMIT_MESSAGE" value="2017/6/7" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -4187,17 +4148,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/MusicAlbumListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="76" column="48" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/FindSongs.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-80">
           <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -4231,6 +4186,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-168">
           <caret line="79" column="45" selection-start-line="79" selection-start-column="45" selection-end-line="79" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -4238,6 +4194,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#formatTime#0;class#MusicUtils#0" expanded="false" />
+            <element signature="method#getDefaultArtwork#0;class#MusicUtils#0" expanded="false" />
+            <element signature="method#getAlbumArt#0;class#MusicUtils#0" expanded="false" />
+            <element signature="method#getArtworkFromFile#0;class#MusicUtils#0" expanded="false" />
+            <element signature="method#getArtwork#0;class#MusicUtils#0" expanded="false" />
+            <element signature="method#computeSampleSize#0;class#MusicUtils#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -4253,6 +4218,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1024">
           <caret line="53" column="85" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="85" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -4260,6 +4228,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -4286,6 +4255,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -4296,6 +4266,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -4306,6 +4277,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-420">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -4316,6 +4288,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -4326,6 +4299,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -4336,6 +4310,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -4346,6 +4321,7 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2">
@@ -4367,6 +4343,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -4377,6 +4354,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -4387,6 +4365,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -4397,6 +4376,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -4407,6 +4387,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -4417,6 +4398,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -4427,6 +4409,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -4437,6 +4420,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -4447,16 +4431,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/music_song_item_yyn.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -4467,6 +4442,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -4477,6 +4453,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
           <caret line="64" column="49" selection-start-line="64" selection-start-column="49" selection-end-line="64" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -4489,42 +4466,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/NewSongActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/SingerFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/AlbumFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/MusicSongListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1536">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
@@ -4538,27 +4484,11 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1024">
-          <caret line="75" column="41" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
-          <folding>
-            <element signature="method#solvePermisson#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#initDrawerlayout#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#initToolbar#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#initViewPager#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#initflow#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#onKeyDown#0;class#MainActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/gyb_activity_main.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2">
@@ -4570,29 +4500,8 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main_drawerlayout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/left_library/src/main/res/drawable-v21/ic_play.png">
       <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/gyb_activity_play.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="130" column="25" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
         <state />
       </provider>
     </entry>
@@ -4624,12 +4533,102 @@
     <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/gyb_flowplaymusic.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
-          <caret line="53" column="50" selection-start-line="53" selection-start-column="50" selection-end-line="53" selection-end-column="50" />
+          <caret line="56" column="37" selection-start-line="56" selection-start-column="37" selection-end-line="56" selection-end-column="37" />
           <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/left_library/build/intermediates/bundles/default/res/layout/gyb_activity_play.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="129" column="8" selection-start-line="129" selection-start-column="8" selection-end-line="129" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/gyb_activity_play.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/left_library/src/main/res/layout/music_song_item_yyn.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main_drawerlayout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/MusicSongListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="55" column="56" selection-start-line="55" selection-start-column="56" selection-end-line="55" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/AlbumFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/SingerFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/left_library/src/main/java/t3/henu/left_library/YYN_solve/NewSongActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/t3/henu/neteasymusic/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="75" column="41" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
+          <folding>
+            <element signature="method#solvePermisson#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onRequestPermissionsResult#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#initDrawerlayout#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#initToolbar#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#initViewPager#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#initflow#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onDestroy#0;class#MainActivity#0" expanded="false" />
+            <element signature="method#onKeyDown#0;class#MainActivity#0" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>

@@ -127,11 +127,6 @@
         android:background="@color/red"
         android:gravity="center_vertical">
 
-        <ImageButton
-            android:id="@+id/gyb_id_love"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="" />
 
     </android.support.constraint.ConstraintLayout>
 
