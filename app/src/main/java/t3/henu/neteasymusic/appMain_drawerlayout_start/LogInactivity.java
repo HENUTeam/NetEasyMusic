@@ -75,7 +75,7 @@ public class LogInactivity extends AppCompatActivity implements View.OnClickList
             return ;
         }
 
-        UserPerson user=new UserPerson();
+        final UserPerson user = new UserPerson();
         user.setUsername(edit_userName.getText().toString());
         user.setPassword(edit_passWord.getText().toString());
         user.login(new SaveListener<UserPerson>(){
@@ -90,6 +90,7 @@ public class LogInactivity extends AppCompatActivity implements View.OnClickList
                             //Intent intent = new Intent();
                             //intent.putExtra("user",edit_userName.getText().toString());
                             // setResult(2, intent);
+                            MainActivity.log_btn.setText(user.getUsername());
                             finish();
                         }
                     }, 1000);

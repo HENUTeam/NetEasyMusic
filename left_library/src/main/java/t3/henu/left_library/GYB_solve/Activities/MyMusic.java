@@ -77,7 +77,7 @@ public class MyMusic extends MainActivity {
             fragments.add(new SongRecyclerview());
             fragments.add(new SingerFragment());
             fragments.add(new AlbumFragment());
-            fragments.add(new ChatFragment());
+            fragments.add(new FragmentFile());
             viewPager.setAdapter(new MyViewPagerAdapter(getSupportFragmentManager(),fragments));
         }
 

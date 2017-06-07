@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
+import t3.henu.left_library.CHY_solve.FragmentZhubo;
 import t3.henu.left_library.YHQ_solve.fz_fragment;
 import t3.henu.neteasymusic.BlankFragment;
 import t3.henu.neteasymusic.R;
@@ -65,7 +66,7 @@ public class TabLayout_Mid extends Fragment {
         if(fragments.size()<=0){
             fragments.add(new BlankFragment("第一个"));
             fragments.add(new fz_fragment());
-            fragments.add(new BlankFragment("第三个"));
+            fragments.add(new FragmentZhubo());
             fragments.add(new t3.henu.left_library.YHQ_solve.BillboardFragment());
         }
         MyViewPagerAdapter myAdapter=new MyViewPagerAdapter(getActivity().getSupportFragmentManager(),fragments);

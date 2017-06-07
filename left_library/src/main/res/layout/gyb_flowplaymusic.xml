@@ -65,16 +65,17 @@
             android:layout_height="50dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/touch_bg"
-            android:scaleType="centerCrop"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
             android:src="@drawable/icon_play1" />
 
         <ImageButton
             android:id="@+id/id_btn_liebiao"
-            android:layout_width="35dp"
-            android:layout_height="40dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/touch_bg"
-            android:scaleType="centerCrop"
+            android:scaleType="centerInside"
             android:src="@drawable/icon_liebiao1" />
     </LinearLayout>
 

@@ -39,6 +39,7 @@ import t3.henu.left_library.GYB_solve.Activities.NetWork.SearchActivity;
 import t3.henu.left_library.GYB_solve.Collect;
 import t3.henu.left_library.GYB_solve.Fragments.LeftRecyclerView;
 import t3.henu.left_library.GYB_solve.PlayActivity;
+import t3.henu.left_library.GYB_solve.RobotFragment.ChatFragment;
 import t3.henu.left_library.GYB_solve.Services.PlayService;
 import t3.henu.neteasymusic.appMain.MyViewPagerAdapter;
 import t3.henu.neteasymusic.appMain.TabLayout_Mid;
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
     public static ImageView play_imageView;
     public static RoundedImageView user_image;
     public static boolean is_log = false;
+    public static Button log_btn;
     final private int REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS = 124;
     final private int WRITE_EXTERNAL_STORAGE_REQUEST_CODE = 122;
     final private int READ_SMS_REQUES_CODE = 122;
@@ -66,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private RecyclerView recyclerView;
     private RelativeLayout play_layout;
-    private Button btn_finish, btn_setting, log_btn;
+    private Button btn_finish, btn_setting;
     private Intent search_intent;
     private long exitTime = 0;
 
@@ -306,7 +308,7 @@ public class MainActivity extends AppCompatActivity {
             }
             fragments.add(new LeftRecyclerView());
             fragments.add(new TabLayout_Mid());
-            fragments.add(new BlankFragment("第三个"));
+            fragments.add(new ChatFragment());
         }
         MyViewPagerAdapter myAdapter = new MyViewPagerAdapter(getSupportFragmentManager(), fragments);
         viewPager.setAdapter(myAdapter);
