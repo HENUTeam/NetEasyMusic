@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     final private int WRITE_EXTERNAL_STORAGE_REQUEST_CODE = 122;
     final private int READ_SMS_REQUES_CODE = 122;
     final private int READ_EXTERNAL_STORAGE_REQUEST_CODE = 123;
-    Fragment fragment_appmain_left = null;
+    Fragment fragment_appmain_left = null,chatFragment=null;
     List<RecyclerViewData> lists = new ArrayList<RecyclerViewData>();
     Intent intent_setting;
     private TabLayout tabLayout;
@@ -247,8 +247,13 @@ public class MainActivity extends AppCompatActivity {
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
-                            Intent in=new Intent(MainActivity.this, LogInactivity.class);
-                            startActivity(in);
+                            if(!is_log){
+                                Intent in=new Intent(MainActivity.this, LogInactivity.class);
+                                startActivity(in);
+                            }else {
+                                toast("已经登录！！！");
+                            }
+
                         }
                     },500);
 
@@ -310,9 +315,12 @@ public class MainActivity extends AppCompatActivity {
             if (fragment_appmain_left != null) {
                 fragment_appmain_left = new BlankFragment("第三个");
             }
+            if(chatFragment==null){
+                chatFragment=new ChatFragment();
+            }
             fragments.add(new LeftRecyclerView());
             fragments.add(new TabLayout_Mid());
-            fragments.add(new ChatFragment());
+            fragments.add(chatFragment);
         }
         MyViewPagerAdapter myAdapter = new MyViewPagerAdapter(getSupportFragmentManager(), fragments);
         viewPager.setAdapter(myAdapter);
