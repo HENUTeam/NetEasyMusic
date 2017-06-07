@@ -53,9 +53,8 @@ public class RegistActivity extends AppCompatActivity {
                 if(!TextUtils.isEmpty(et_email.getText())){
                     user.setEmail(et_email.getText().toString());
                 }
-                if(TextUtils.isEmpty(et_phoneNumber.getText())){
-                    Toast.makeText(RegistActivity.this,"手机号码格式不对！",Toast.LENGTH_SHORT).show();
-                    return ;
+                if (!TextUtils.isEmpty(et_phoneNumber.getText())) {
+                    et_phoneNumber.setText("");
                 }
                 user.setUsername(et_userName.getText().toString());
                 user.setPassword(et_passWord.getText().toString());
@@ -69,7 +68,8 @@ public class RegistActivity extends AppCompatActivity {
                             et_passWord.setText("");
                             et_re_passWord.setText("");
                             et_email.setText("");
-                            et_phoneNumber.setText("");
+
+                            finish();
                         }else{
                             Toast.makeText(RegistActivity.this,"注册失败,"+e.getMessage(),Toast.LENGTH_SHORT).show();
                         }
