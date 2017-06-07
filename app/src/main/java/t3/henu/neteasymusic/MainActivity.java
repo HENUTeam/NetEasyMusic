@@ -311,7 +311,7 @@ public class MainActivity extends AppCompatActivity {//
 
     private void initViewPager() {
         viewPager = (ViewPager) findViewById(R.id.id_appmain_viewpager);
-        if (fragments.size() <= 0) {
+        if (fragments.size() <= 0) {//
             if (fragment_appmain_left != null) {
                 fragment_appmain_left = new BlankFragment("第三个");
             }
