@@ -47,7 +47,7 @@ import t3.henu.neteasymusic.appMain_drawerlayout_start.LogInactivity;
 import t3.henu.neteasymusic.appMain_drawerlayout_start.RecyclerViewData;
 import t3.henu.neteasymusic.appMain_drawerlayout_start.RecyclerviewAdapter;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {//
     public static TextView text_singer, text_song;
     public static ImageButton btn_play;
     public static ImageView play_imageView;
