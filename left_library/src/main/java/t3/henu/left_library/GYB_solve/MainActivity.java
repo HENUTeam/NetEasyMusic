@@ -1,19 +1,26 @@
 package t3.henu.left_library.GYB_solve;
 
+import android.app.Dialog;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.IBinder;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -76,9 +83,58 @@ public class MainActivity extends AppCompatActivity {
         btn_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                popWindowMenu=new PopWindowMenu(MainActivity.this,itemsOnClick);
-                popWindowMenu.showAtLocation(MainActivity.this.findViewById(R.id.id_base_play),
-                        Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
+
+                final Dialog dialog = new Dialog(getBaseContext(), R.style.ActionSheetDialogStyle);//填充对话框的布局
+                View inflate = LayoutInflater.from(getBaseContext()).inflate(R.layout.yhq_music_dialog, null);//初始化控件
+                final ImageView dialogStatus = (ImageView) inflate.findViewById(R.id.dialog_status);
+                final TextView textStatus = (TextView) inflate.findViewById(R.id.musicdialog_status);
+                LinearLayout status = (LinearLayout) inflate.findViewById(R.id.dialog_linearlayout1);
+                ListView listView = (ListView) inflate.findViewById(R.id.musicdialog_list);
+
+                final DialogAdapter mAdapter = new DialogAdapter(PlayService.play_list, getBaseContext(), PlayService.current);
+                listView.setAdapter(mAdapter);
+                mAdapter.notifyDataSetChanged();
+                int st = PlayService.status;
+                dialogStatus.setImageResource(PlayActivity.images[st - 1]);
+                textStatus.setText(PlayActivity.texts[st - 1]);
+                status.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        PlayService.status = (PlayService.status + 1) % 4;
+                        if (PlayService.status == 0) PlayService.status = 1;
+                        int st = PlayService.status;
+                        dialogStatus.setImageResource(PlayActivity.images[st - 1]);
+                        textStatus.setText(PlayActivity.texts[st - 1]);
+                    }
+                });
+
+
+                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, final View view, final int position, long id) {
+                        MainActivity.playBinder.setCurrent(position);
+                        mAdapter.notifyDataSetChanged();
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                mAdapter.setCurrent(position);
+                                mAdapter.notifyDataSetChanged();
+                            }
+                        }, 1000);
+
+                    }
+                });
+
+
+                dialog.setContentView(inflate);//将布局设置给Dialog
+                Window dialogWindow = dialog.getWindow();//获取当前Activity所在的窗体
+                dialogWindow.setGravity(Gravity.BOTTOM);//设置Dialog从窗体底部弹出
+                WindowManager.LayoutParams lp = dialogWindow.getAttributes();//获得窗体的属性
+                lp.y = 20;//设置Dialog距离底部的距离
+                lp.width = (int) getResources().getDisplayMetrics().widthPixels;
+                dialogWindow.setAttributes(lp);
+                dialog.show();//显示对话框
+                toast("菜单");
             }
         });
         play_layout = (RelativeLayout)mFloatView.findViewById(R.id.id_base_play);

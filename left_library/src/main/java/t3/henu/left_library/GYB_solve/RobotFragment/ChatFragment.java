@@ -62,10 +62,13 @@ public class ChatFragment extends Fragment {
 
     private void initDatas() {
         ChatMessage ch = new ChatMessage();
-        ch.setMsg("你好，我是小机器人枯瑜，可以陪你聊哦，但要保持网络畅通哦！！");
+        ch.setMsg("你好，我是小机器人枯瑜，可以陪你聊天哦，但要保持网络畅通哦！！");
         ch.setType(ChatMessage.Type.INCOMING);
         ch.setDate(new Date());
-        list_message.add(ch);
+        if (list_message.size() <= 0) {
+            list_message.add(ch);
+        }
+
         chatMessageAdapter = new ChatMessageAdapter(getContext(), list_message);
         recycleView.setAdapter(chatMessageAdapter);
     }

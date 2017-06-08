@@ -54,7 +54,7 @@ public class DialogAdapter extends BaseAdapter {
             artist.setTextColor(0xffff0000);
         } else {
             title.setTextColor(0xff000000);
-            artist.setTextColor(0xff000000);
+            artist.setTextColor(0xffb3b3b3);
         }
         return convertView;
     }

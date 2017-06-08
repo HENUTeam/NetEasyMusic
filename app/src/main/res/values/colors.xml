@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <color name="colorContent">#ff333333</color>
     <color name="colorPrimary1">#3d48c3</color>
     <color name="colorPrimaryDark1">#030789</color>
     <color name="colorPrimaryLight1">#235ea7</color>
@@ -33,4 +33,6 @@
     <color name="list_item_focus">#0a000000</color>
     <color name="white_alpha_percent_45">#73ffffff</color>
     <color name="light_black_color">#3B3B3B</color>
+
+    <color name="colorTitle">#666</color>
 </resources>

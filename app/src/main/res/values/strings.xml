@@ -7,4 +7,33 @@
     <string name="str_search_hint">搜索</string>
     <string name="str_searchHistory">搜索历史</string>
     <string name="str_clearSearchHistory">清除历史</string>
+    <string name="string_about">由于网易云音乐用了很久，特别喜爱它的界面风格，所以仿写了它的UI。如构成侵权请及时通知我修改或删除。。
+        \n\n 整体采用volley+okhttp框架。
+        \n\n 项目地址GitHub：https://github.com/HENUTeam/NetEasyMusic/tree/dev_%E9%AB%98%E9%80%B8%E5%8D%9A
+        \n\n 项目完全开源，如果你觉得不错，请帮忙Star一下吧，或帮忙分享给你的朋友，这是给我们最大的动力与支持，非常感谢！
+        </string>
+    <string name="string_about_me">
+        \nqq:1468165899
+        \nEmail:1468165899@qq.com
+    </string>
+
+    <string name="string_lib">
+        \n  com.android.support:appcompat-v7:25.1.1
+        \n  com.android.support:design:25.1.1
+        \n  com.android.support:cardview-v7:25.1.1
+        \n  compile com.github.CymChad:BaseRecyclerViewAdapterHelper:v2.9.16
+        \n  compile com.android.support:recyclerview-v7:21.0.0
+        \n  compile com.makeramen:roundedimageview:2.3.0
+        \n  compile(cn.bmob.android:bmob-sdk:3.5.3)
+        \n    { exclude group: com.google.code.gson.JsonSerializer}
+        \n  compile(com.zhy:okhttputils:2.6.2)
+        \n   {exclude group: com.google.code.gson
+        \n        exclude group: com.squareup.okhttp3}
+        \n  compile com.android.support:appcompat-v7:25.3.1
+        \n  compile com.android.support.constraint:constraint-layout:1.0.2
+        \n  compile com.github.CymChad:BaseRecyclerViewAdapterHelper:v1.9.7
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

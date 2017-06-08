@@ -76,7 +76,7 @@ public class SongRecyclerview extends Fragment {
                 if (song.getAlbum_bitmap() == null) {
                     Bitmap bitmap = SongInfo.getBitMap(getContext(), (int) song.getAlbumId());
                     listsong.get(i).setAlbum_bitmap(bitmap);
-                    toast(String.valueOf(bitmap == null));
+                    //toast(String.valueOf(bitmap == null));
                 }
 
                 adapter.notifyDataSetChanged();

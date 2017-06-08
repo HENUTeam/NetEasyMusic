@@ -1,6 +1,7 @@
 package t3.henu.neteasymusic.appMain_drawerlayout_start;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
@@ -54,11 +55,10 @@ public class RegistActivity extends AppCompatActivity {
                     user.setEmail(et_email.getText().toString());
                 }
                 if (!TextUtils.isEmpty(et_phoneNumber.getText())) {
-                    et_phoneNumber.setText("");
+                    et_phoneNumber.setText(et_phoneNumber.getText().toString());
                 }
                 user.setUsername(et_userName.getText().toString());
                 user.setPassword(et_passWord.getText().toString());
-                user.setMobilePhoneNumber(et_phoneNumber.getText().toString());
                 user.signUp(new SaveListener<UserPerson>() {
                     @Override
                     public void done(UserPerson userPerson, BmobException e) {
@@ -68,8 +68,13 @@ public class RegistActivity extends AppCompatActivity {
                             et_passWord.setText("");
                             et_re_passWord.setText("");
                             et_email.setText("");
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    finish();
+                                }
+                            }, 1000);
 
-                            finish();
                         }else{
                             Toast.makeText(RegistActivity.this,"注册失败,"+e.getMessage(),Toast.LENGTH_SHORT).show();
                         }

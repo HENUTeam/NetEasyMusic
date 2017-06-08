@@ -21,19 +21,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SeekBar;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.makeramen.roundedimageview.RoundedImageView;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-
-import t3.henu.left_library.GYB_solve.Activities.SongInfo;
-import t3.henu.left_library.GYB_solve.MainActivity;
 import t3.henu.left_library.GYB_solve.Services.PlayService;
 import t3.henu.left_library.R;
 
@@ -49,14 +41,15 @@ public class PlayActivity extends AppCompatActivity implements View.OnClickListe
     public static RoundedImageView album_imageview;
     public static SeekBar seecbar;
     public static TextView text_song_name,text_song_singer;
+    public static int[] images = {R.drawable.play_icn_loop_prs, R.drawable.play_icn_shuffle,
+            R.drawable.play_icn_one_prs};
+    public static String[] texts = {"顺序播放", "随机播放", "单曲循环"};
     public ImageView disc, needle;
     private ObjectAnimator discAnimation,needleAnimation;
     private boolean isPlaying = true;
     private DialogAdapter mAdapter;
     private ImageButton imageButton;
-    private int[] images = {R.drawable.play_icn_loop_prs, R.drawable.play_icn_shuffle,
-            R.drawable.play_icn_one_prs};
-    private String []texts={"顺序播放","随机播放","单曲循环"};
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -167,58 +160,64 @@ public class PlayActivity extends AppCompatActivity implements View.OnClickListe
             MainActivity.playBinder.next();
 
         } else if (id == R.id.id_btn_show_liebiao) {
-            final Dialog dialog = new Dialog(PlayActivity.this, R.style.ActionSheetDialogStyle);//填充对话框的布局
-            View inflate = LayoutInflater.from(PlayActivity.this).inflate(R.layout.yhq_music_dialog, null);//初始化控件
-            final ImageView dialogStatus = (ImageView) inflate.findViewById(R.id.dialog_status);
-            final TextView textStatus = (TextView) inflate.findViewById(R.id.musicdialog_status);
-            LinearLayout status = (LinearLayout) inflate.findViewById(R.id.dialog_linearlayout1);
-            ListView listView = (ListView) inflate.findViewById(R.id.musicdialog_list);
+            showPlayList();
 
-            mAdapter = new DialogAdapter(PlayService.play_list, this, PlayService.current);
-            listView.setAdapter(mAdapter);
-            mAdapter.notifyDataSetChanged();
-            int st = PlayService.status;
-            dialogStatus.setImageResource(images[st - 1]);
-            textStatus.setText(texts[st - 1]);
-            status.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    PlayService.status = (PlayService.status + 1) % 4;
-                    if (PlayService.status == 0) PlayService.status = 1;
-                    int st = PlayService.status;
-                    dialogStatus.setImageResource(images[st - 1]);
-                    textStatus.setText(texts[st - 1]);
-                }
-            });
-
-
-            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, final View view, final int position, long id) {
-                    MainActivity.playBinder.setCurrent(position);
-                    mAdapter.notifyDataSetChanged();
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            mAdapter.setCurrent(position);
-                            mAdapter.notifyDataSetChanged();
-                        }
-                    }, 1000);
-
-                }
-            });
-
-
-            dialog.setContentView(inflate);//将布局设置给Dialog
-            Window dialogWindow = dialog.getWindow();//获取当前Activity所在的窗体
-            dialogWindow.setGravity(Gravity.BOTTOM);//设置Dialog从窗体底部弹出
-            WindowManager.LayoutParams lp = dialogWindow.getAttributes();//获得窗体的属性
-            lp.y = 20;//设置Dialog距离底部的距离
-            lp.width = (int) getResources().getDisplayMetrics().widthPixels;
-            dialogWindow.setAttributes(lp);
-            dialog.show();//显示对话框
         }
     }
+
+    public void showPlayList() {
+        final Dialog dialog = new Dialog(PlayActivity.this, R.style.ActionSheetDialogStyle);//填充对话框的布局
+        View inflate = LayoutInflater.from(PlayActivity.this).inflate(R.layout.yhq_music_dialog, null);//初始化控件
+        final ImageView dialogStatus = (ImageView) inflate.findViewById(R.id.dialog_status);
+        final TextView textStatus = (TextView) inflate.findViewById(R.id.musicdialog_status);
+        LinearLayout status = (LinearLayout) inflate.findViewById(R.id.dialog_linearlayout1);
+        ListView listView = (ListView) inflate.findViewById(R.id.musicdialog_list);
+
+        mAdapter = new DialogAdapter(PlayService.play_list, this, PlayService.current);
+        listView.setAdapter(mAdapter);
+        mAdapter.notifyDataSetChanged();
+        int st = PlayService.status;
+        dialogStatus.setImageResource(images[st - 1]);
+        textStatus.setText(texts[st - 1]);
+        status.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PlayService.status = (PlayService.status + 1) % 4;
+                if (PlayService.status == 0) PlayService.status = 1;
+                int st = PlayService.status;
+                dialogStatus.setImageResource(images[st - 1]);
+                textStatus.setText(texts[st - 1]);
+            }
+        });
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, final View view, final int position, long id) {
+                MainActivity.playBinder.setCurrent(position);
+                mAdapter.notifyDataSetChanged();
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        mAdapter.setCurrent(position);
+                        mAdapter.notifyDataSetChanged();
+                    }
+                }, 1000);
+
+            }
+        });
+
+
+        dialog.setContentView(inflate);//将布局设置给Dialog
+        Window dialogWindow = dialog.getWindow();//获取当前Activity所在的窗体
+        dialogWindow.setGravity(Gravity.BOTTOM);//设置Dialog从窗体底部弹出
+        WindowManager.LayoutParams lp = dialogWindow.getAttributes();//获得窗体的属性
+        lp.y = 20;//设置Dialog距离底部的距离
+        lp.width = (int) getResources().getDisplayMetrics().widthPixels;
+        dialogWindow.setAttributes(lp);
+        dialog.show();//显示对话框
+    }
+
     private String getTime(long current) {
         String s1="",s2="";
         long min=current/1000/60;
