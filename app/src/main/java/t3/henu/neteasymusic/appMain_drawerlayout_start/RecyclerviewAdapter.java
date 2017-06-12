@@ -44,6 +44,7 @@ public class RecyclerviewAdapter extends BaseMultiItemQuickAdapter<RecyclerViewD
                 break;
             case RecyclerViewData.TYPE3:
                 baseViewHolder.setOnClickListener(R.id.id_appmain_drawelayout_left_btn_signin, new OnItemChildClickListener());
+                baseViewHolder.setOnClickListener(R.id.id_user_roundedImageView, new OnItemChildClickListener());
                 break;
         }
     }

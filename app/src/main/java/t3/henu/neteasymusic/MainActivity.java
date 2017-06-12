@@ -17,7 +17,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
@@ -41,6 +40,7 @@ import t3.henu.left_library.GYB_solve.Fragments.LeftRecyclerView;
 import t3.henu.left_library.GYB_solve.PlayActivity;
 import t3.henu.left_library.GYB_solve.RobotFragment.ChatFragment;
 import t3.henu.left_library.GYB_solve.Services.PlayService;
+import t3.henu.left_library.XPD_solve.MainActivity_XPD;
 import t3.henu.neteasymusic.appMain.MyViewPagerAdapter;
 import t3.henu.neteasymusic.appMain.TabLayout_Mid;
 import t3.henu.neteasymusic.appMain_drawerlayout_start.LogInactivity;
@@ -264,13 +264,20 @@ public class MainActivity extends AppCompatActivity {//
             @Override
             public void onItemChildClick(BaseQuickAdapter baseQuickAdapter, View view, int i) {
                 switch (view.getId()){
+
+
                     case R.id.id_appmain_drawelayout_left_btn_signin:
+                        Intent in;
                         if (!is_log) {
-                            log_btn = (Button) view;
-                            Intent in = new Intent(MainActivity.this, LogInactivity.class);
-                            startActivity(in);
+                            if (view.getId() == R.id.id_appmain_drawelayout_left_btn_signin) {
+                                log_btn = (Button) view;
+                            }
+                            in = new Intent(MainActivity.this, LogInactivity.class);
+                        } else {
+                            in = new Intent(MainActivity.this, MainActivity_XPD.class);
                         }
 
+                        startActivity(in);
                         break;
                 }
             }

@@ -46,6 +46,8 @@
         <activity android:name=".GYB_solve.Activities.NetWork.SearchActivity" />
         <activity android:name=".GYB_solve.Activities.NetWork.SearchResult"></activity>
         <activity android:name=".GYB_solve.PlayActivity" />
+        <activity android:name=".XPD_solve.MainActivity_XPD" />
+        <activity android:name=".XPD_solve.Main2Activity" />
     </application>
 
 </manifest>

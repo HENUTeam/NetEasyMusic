@@ -9,7 +9,7 @@
     <color name="colorPrimaryDark">#058903</color>
     <color name="colorPrimaryLight">#90e37d</color>
     <color name="colorAccent">#942fcf</color>
-    <color name="colorWhite">#fffdfe</color>
+    <color name="colorWhite">#8dfffdfe</color>
     <color name="colornone">#00000000</color>
     <color name="colorGreenLightGreater">#6acf2f</color>
     <color name="color_bantoumin">#515050</color>
@@ -345,6 +345,8 @@
     <color name="trackContentContainerPressBg">@color/pressedColor</color>
     <color name="videoWindowBg">#ff1e2123</color>
     <color name="videoWindowBgPrs">#e5000000</color>
+    <color name="text">#1296DB</color>
+    <color name="yuan">#FFFFFF</color>
 
     <color name="smallRed">#cda2a6</color>
 

@@ -64,7 +64,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginRight="10dp"
-            android:background="@drawable/touch_bg"
+            android:background="@color/colornone"
             android:padding="8dp"
             android:scaleType="centerCrop"
             android:src="@drawable/icon_play1" />
@@ -74,7 +74,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginRight="10dp"
-            android:background="@drawable/touch_bg"
+            android:background="@color/colornone"
             android:scaleType="centerInside"
             android:src="@drawable/icon_liebiao1" />
     </LinearLayout>
