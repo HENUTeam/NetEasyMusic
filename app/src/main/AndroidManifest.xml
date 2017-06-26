@@ -47,6 +47,11 @@
         </receiver>
 
         <activity android:name=".SettingActivity"></activity>
+        <service android:name=".AlarmService"/>
+
+
+        <receiver android:name=".AlarmReceiver" >
+        </receiver>
     </application>
 
 </manifest>

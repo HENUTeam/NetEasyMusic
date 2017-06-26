@@ -2,6 +2,8 @@ package t3.henu.neteasymusic;
 
 
 import android.Manifest;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -243,7 +245,54 @@ public class MainActivity extends AppCompatActivity {//
         adapter.setOnRecyclerViewItemClickListener(new BaseQuickAdapter.OnRecyclerViewItemClickListener() {
             @Override
             public void onItemClick(View view, int i) {
-                if(i!=0&&i!=5&&i!=8){
+                if(i==11){
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                    final String[] array = new String[]{"不关闭了","10s","20s","30s","60s"};
+                    builder.setTitle("请选择时间")
+                            .setIcon(R.mipmap.ic_search)
+                            .setItems(array, new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    Intent intent = new Intent(MainActivity.this, AlarmService.class);
+                                    int time=0;
+                                    switch(i){
+                                        case 0:
+                                            break;
+                                        case 1:
+
+                                            time=AlarmService.timelong = 10;
+                                            break;
+                                        case 2:
+                                            time=AlarmService.timelong = 20;
+                                            break;
+                                        case 3:
+                                            time=AlarmService.timelong = 30;
+                                            break;
+                                        case 4:
+                                            time=AlarmService.timelong = 60;
+                                            break;
+                                    }//startService(intent);
+                                    if(time!=0){
+                                        new Handler().postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                finish();
+                                            }
+                                        },time*1000);
+                                    }
+
+                                }
+                            })
+                            .setNeutralButton("取消", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+
+                                }
+                            });
+                    AlertDialog ad = builder.create();
+                    ad.show();
+                }
+                else if(i!=0&&i!=5&&i!=8){
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {

@@ -54,41 +54,43 @@ public class SearchResult extends MainActivity {
         Collect.removeView(all_view);
     }
 
-    private void onLoad( int Offset) {
-        MusicNetWork.SearchMusic(getContext(), music_name, MUSIC_LIST_SIZE, 1, mOffset, new MusicNetWork.VolleyCallback() {
-            @Override
-            public void onSuccess(String result) {
-                Gson gson=new Gson();
-                music=gson.fromJson(result,MusicResponse.class);
-                if(music.getResult()==null||music.getResult().getSongCount()<=0){
-                    return;
-                }
-                 get_songs=music.getResult().getSongs();
-                Log.d(TAG, "onSuccess: "+result);
-                List<SongInfo> li=new ArrayList<SongInfo>();
-                for(int i=0;i<get_songs.size();i++){
-                    SongInfo info=new SongInfo();
-                    Song s=get_songs.get(i);
-                    info.setSong(s.getName());
-                    info.setSinger(s.getArtists().get(0).getName());
-                    info.setPath(s.getAudio()); Album album=s.getAlbum();
-                    info.setAlbum(album.getName());
-                    if(s.getPicUrl()!=null){
-                        info.setPucUrl(s.getPicUrl());
-                    }else if(s.getArtists().get(0).getPicUrl()!=null){
-                        info.setPucUrl(s.getArtists().get(0).getPicUrl());
-                    }else {
-
-                        info.setPucUrl(album.getPicUrl());
-                    }
-                    li.add(info);
-                }
-                songs.addAll(li);
-               mOffset+=MUSIC_LIST_SIZE;
-                //toast(songs.size()+"");
-                resultAdapter.notifyDataSetChanged();
+    public MusicNetWork.VolleyCallback volleyCallback=new MusicNetWork.VolleyCallback() {
+        @Override
+        public void onSuccess(String result) {
+            Gson gson=new Gson();
+            music=gson.fromJson(result,MusicResponse.class);
+            if(music.getResult()==null||music.getResult().getSongCount()<=0){
+                return;
             }
-        });
+            get_songs=music.getResult().getSongs();
+            Log.d(TAG, "onSuccess: "+result);
+            List<SongInfo> li=new ArrayList<SongInfo>();
+            for(int i=0;i<get_songs.size();i++){
+                SongInfo info=new SongInfo();
+                Song s=get_songs.get(i);
+                info.setSong(s.getName());
+                info.setSinger(s.getArtists().get(0).getName());
+                info.setPath(s.getAudio()); Album album=s.getAlbum();
+                info.setAlbum(album.getName());
+                if(s.getPicUrl()!=null){
+                    info.setPucUrl(s.getPicUrl());
+                }else if(s.getArtists().get(0).getPicUrl()!=null){
+                    info.setPucUrl(s.getArtists().get(0).getPicUrl());
+                }else {
+
+                    info.setPucUrl(album.getPicUrl());
+                }
+                li.add(info);
+            }
+            songs.addAll(li);
+            mOffset+=MUSIC_LIST_SIZE;
+            //toast(songs.size()+"");
+            resultAdapter.notifyDataSetChanged();
+        }
+    };
+
+    private void onLoad( int Offset) {
+        MusicNetWork.SearchMusic(getContext(), music_name, MUSIC_LIST_SIZE, 1, mOffset,volleyCallback );
        /* MusicNetWork.Cloud_Music_MusicInfoAPI(getContext(), music_id, music_id, new MusicNetWork.VolleyCallback() {
             @Override
             public void onSuccess(String result) {

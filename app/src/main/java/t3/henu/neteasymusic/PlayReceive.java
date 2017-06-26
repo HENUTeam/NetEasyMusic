@@ -22,8 +22,14 @@ public class PlayReceive extends BroadcastReceiver {
         // an Intent broadcast.
         Bundle bun=intent.getBundleExtra("Bunde");
         SongInfo songInfo= (SongInfo) bun.getParcelable("songinfo");
-       MainActivity.text_singer.setText(songInfo.getSinger());
-        MainActivity.text_song.setText(songInfo.getSong());
+        if(MainActivity.text_singer!=null){
+            MainActivity.text_singer.setText(songInfo.getSinger());
+        }
+        if(MainActivity.text_song!=null){
+            MainActivity.text_song.setText(songInfo.getSong());
+        }
+
+
         if (t3.henu.left_library.GYB_solve.MainActivity.t_singer != null) {
             t3.henu.left_library.GYB_solve.MainActivity.t_singer.setText(songInfo.getSinger());
             t3.henu.left_library.GYB_solve.MainActivity.t_songname.setText(songInfo.getSong());
@@ -51,10 +57,13 @@ public class PlayReceive extends BroadcastReceiver {
             });
             mQueue.add(imageRequest);
         }
-        if(status==false){
-           MainActivity.btn_play.setImageResource(t3.henu.left_library.R.drawable.icon_play1);
-        }else{
-           MainActivity.btn_play.setImageResource(t3.henu.left_library.R.drawable.icon_pause);
+        if(MainActivity.btn_play!=null){
+            if(status==false){
+                MainActivity.btn_play.setImageResource(t3.henu.left_library.R.drawable.icon_play1);
+            }else{
+                MainActivity.btn_play.setImageResource(t3.henu.left_library.R.drawable.icon_pause);
+            }
         }
+
     }
 }

@@ -125,6 +125,7 @@ public class PlayService extends Service {
                         mediaPlayer.setOnPreparedListener(new PreparedListener(currentTime));// 注册一个监听器
                         // toast(current+":"+play_list.get(current).path);
                     } catch (Exception e) {
+                        toast("播放错误");
                         e.printStackTrace();
                     }
                 }else{
