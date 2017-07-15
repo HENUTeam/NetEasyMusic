@@ -34,26 +34,6 @@ public class SearchResult extends MainActivity {
     private int mOffset = 0;
     private List<SongInfo> songs=new ArrayList<SongInfo>();
     private ResultAdapter resultAdapter;
-    private All_View all_view=null;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.gyb_activity_search_result);
-        Intent intent=getIntent();
-        music_name=intent.getStringExtra("music_name");
-        music_id=intent.getStringExtra("music_id");
-        initView();
-        all_view=new All_View(SearchResult.t_singer,SearchResult.t_songname,
-                SearchResult.imageView,SearchResult.btn_play);
-        Collect.addView(all_view);
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Collect.removeView(all_view);
-    }
-
     public MusicNetWork.VolleyCallback volleyCallback=new MusicNetWork.VolleyCallback() {
         @Override
         public void onSuccess(String result) {
@@ -88,6 +68,26 @@ public class SearchResult extends MainActivity {
             resultAdapter.notifyDataSetChanged();
         }
     };
+    private All_View all_view = null;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.gyb_activity_search_result);
+        Intent intent = getIntent();
+        music_name = intent.getStringExtra("music_name");
+        music_id = intent.getStringExtra("music_id");
+        initView();//
+        all_view = new All_View(SearchResult.t_singer, SearchResult.t_songname,
+                SearchResult.imageView, SearchResult.btn_play);
+        Collect.addView(all_view);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Collect.removeView(all_view);
+    }
 
     private void onLoad( int Offset) {
         MusicNetWork.SearchMusic(getContext(), music_name, MUSIC_LIST_SIZE, 1, mOffset,volleyCallback );
